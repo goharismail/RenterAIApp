@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - RenterAI</title>
+<meta name="description" content="Learn about RenterAI - free AI-powered tools helping American renters understand their rights and protect themselves.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0f1e; --surface: #111827; --accent: #3b82f6;
+    --accent2: #60a5fa; --text: #f1f5f9; --text2: #94a3b8;
+    --border: #1e293b; --success: #10b981;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.2rem 2rem; background: rgba(10,15,30,0.95);
+    backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 900; color: var(--text); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: var(--text2); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--text); }
+
+  .page-hero {
+    padding: 8rem 2rem 4rem; text-align: center;
+    background: radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.12) 0%, transparent 70%);
+  }
+  .page-tag { font-size: 0.8rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
+  .page-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 1rem; }
+  .page-sub { color: var(--text2); font-size: 1.05rem; max-width: 550px; margin: 0 auto; line-height: 1.7; }
+
+  .content { max-width: 780px; margin: 0 auto; padding: 4rem 2rem; }
+  .section { margin-bottom: 3rem; }
+  .section h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; color: var(--text); }
+  .section p { color: var(--text2); line-height: 1.8; margin-bottom: 1rem; font-size: 0.95rem; }
+
+  .mission-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; padding: 2rem; margin-bottom: 2rem;
+    border-left: 4px solid var(--accent);
+  }
+  .mission-card p { color: var(--text); font-size: 1.05rem; line-height: 1.8; font-style: italic; }
+
+  .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+  .value-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
+  .value-icon { font-size: 1.8rem; margin-bottom: 0.7rem; }
+  .value-title { font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem; }
+  .value-desc { color: var(--text2); font-size: 0.85rem; line-height: 1.6; }
+
+  .disclaimer {
+    background: rgba(245,158,11,0.05); border: 1px solid rgba(245,158,11,0.2);
+    border-radius: 12px; padding: 1.5rem; margin-top: 2rem;
+  }
+  .disclaimer h3 { color: #f59e0b; font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .disclaimer p { color: var(--text2); font-size: 0.85rem; line-height: 1.7; }
+
+  footer { padding: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--text2); font-size: 0.85rem; }
+  footer a { color: var(--text2); text-decoration: none; margin: 0 1rem; }
+  footer a:hover { color: var(--text); }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 900; color: var(--text); margin-bottom: 0.8rem; }
+  .footer-logo span { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Renter<span>AI</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#tools">Tools</a></li>
+    <li><a href="index.html#how">How It Works</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-tag">About Us</div>
+  <h1 class="page-title">Helping Renters <span style="color:var(--accent)">Fight Back</span></h1>
+  <p class="page-sub">We believe every renter deserves to understand their rights — regardless of income or legal knowledge.</p>
+</div>
+
+<div class="content">
+
+  <div class="mission-card">
+    <p>"44 million American households rent their homes. Most of them have never read their full lease — and landlords know it. RenterAI exists to change that."</p>
+  </div>
+
+  <div class="section">
+    <h2>Our Mission</h2>
+    <p>RenterAI was built with one simple goal: give everyday American renters access to the same quality of legal information that wealthy tenants get from expensive attorneys.</p>
+    <p>Most renters don't know their rights. They sign leases with hidden clauses. They lose security deposits they're legally owed. They get illegally evicted because they don't know how to fight back.</p>
+    <p>Our free AI-powered tools change that — instantly, at no cost, and without any sign-up required.</p>
+  </div>
+
+  <div class="section">
+    <h2>What We Do</h2>
+    <p>We build free, AI-powered tools specifically designed for USA renters:</p>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">📄</div>
+        <div class="value-title">Lease Analysis</div>
+        <div class="value-desc">AI reads your lease and flags anything unfair or illegal in plain English.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">⚖️</div>
+        <div class="value-title">Demand Letters</div>
+        <div class="value-desc">Generate professional legal letters to your landlord in seconds.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🏛️</div>
+        <div class="value-title">Know Your Rights</div>
+        <div class="value-desc">State-specific tenant rights explained clearly and actionably.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🔒</div>
+        <div class="value-title">100% Private</div>
+        <div class="value-desc">Your data is never stored on our servers. Everything stays in your browser.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Our Values</h2>
+    <p><strong style="color:var(--text)">Free Forever:</strong> Our core tools will always be free. We believe access to legal information should not be gated by income.</p>
+    <p><strong style="color:var(--text)">No Sign-Up Required:</strong> We don't ask for your email, name, or any personal information. Just use the tools and go.</p>
+    <p><strong style="color:var(--text)">Privacy First:</strong> Your lease text and personal details are never stored, sold, or shared. Period.</p>
+    <p><strong style="color:var(--text)">Accuracy Matters:</strong> We constantly improve our AI prompts and tools to ensure the most accurate, up-to-date legal information possible.</p>
+  </div>
+
+  <div class="disclaimer">
+    <h3>⚠️ Important Disclaimer</h3>
+    <p>RenterAI provides general legal information for educational purposes only. We are not a law firm, and our tools do not constitute legal advice. Laws vary by state and locality. For serious legal matters, please consult a licensed attorney or your local legal aid society.</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">Renter<span>AI</span></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+  </div>
+  <p style="margin-top:1rem;">© 2026 RenterAI. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

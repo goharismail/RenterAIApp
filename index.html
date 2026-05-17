@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RenterAI - Free AI Tools for USA Renters</title>
+<meta name="description" content="Free AI-powered tools for USA renters. Analyze your lease, write demand letters, check tenant rights, and more. Powered by AI.">
+<meta name="keywords" content="lease analyzer, tenant rights, demand letter, rental agreement, AI lease review, renter tools">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #0a0f1e;
+    --surface: #111827;
+    --surface2: #1a2234;
+    --accent: #3b82f6;
+    --accent2: #60a5fa;
+    --gold: #f59e0b;
+    --text: #f1f5f9;
+    --text2: #94a3b8;
+    --border: #1e293b;
+    --success: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.2rem 2rem;
+    background: rgba(10,15,30,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; font-weight: 900;
+    color: var(--text);
+  }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: var(--text2); text-decoration: none; font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--text); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 8rem 2rem 4rem;
+    position: relative; overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.15) 0%, transparent 70%),
+                radial-gradient(ellipse at 80% 80%, rgba(245,158,11,0.08) 0%, transparent 60%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 800px; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3);
+    color: var(--accent2); padding: 0.4rem 1rem; border-radius: 50px;
+    font-size: 0.8rem; font-weight: 500; margin-bottom: 2rem;
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900; line-height: 1.1;
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero p {
+    font-size: 1.15rem; color: var(--text2); max-width: 560px;
+    margin: 0 auto 2.5rem; line-height: 1.7;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+  .hero-cta {
+    display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+    animation: fadeUp 0.6s 0.3s ease both;
+  }
+  .btn-primary {
+    background: var(--accent); color: white;
+    padding: 0.85rem 2rem; border-radius: 8px;
+    font-size: 0.95rem; font-weight: 500;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: all 0.2s; display: inline-block;
+  }
+  .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent; color: var(--text);
+    padding: 0.85rem 2rem; border-radius: 8px;
+    font-size: 0.95rem; font-weight: 500;
+    border: 1px solid var(--border); cursor: pointer;
+    transition: all 0.2s; text-decoration: none; display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* STATS */
+  .stats {
+    padding: 3rem 2rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .stats-inner {
+    max-width: 900px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem; text-align: center;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem; font-weight: 700; color: var(--accent);
+  }
+  .stat-label { font-size: 0.85rem; color: var(--text2); margin-top: 0.3rem; }
+
+  /* TOOLS SECTION */
+  .tools-section {
+    padding: 5rem 2rem;
+    max-width: 1100px; margin: 0 auto;
+  }
+  .section-header { text-align: center; margin-bottom: 3rem; }
+  .section-tag {
+    font-size: 0.8rem; font-weight: 500; color: var(--accent);
+    text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700; margin-bottom: 1rem;
+  }
+  .section-sub { color: var(--text2); font-size: 1rem; }
+
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+  .tool-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px; padding: 2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .tool-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: var(--accent); transform: scaleX(0);
+    transition: transform 0.3s; transform-origin: left;
+  }
+  .tool-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-4px); }
+  .tool-card:hover::before { transform: scaleX(1); }
+  .tool-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    background: rgba(59,130,246,0.1);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; margin-bottom: 1.2rem;
+  }
+  .tool-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;
+  }
+  .tool-desc { color: var(--text2); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.2rem; }
+  .tool-badge {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-size: 0.75rem; color: var(--success);
+    background: rgba(16,185,129,0.1); padding: 0.25rem 0.7rem;
+    border-radius: 50px; border: 1px solid rgba(16,185,129,0.2);
+  }
+  .tool-badge.coming {
+    color: var(--gold); background: rgba(245,158,11,0.1);
+    border-color: rgba(245,158,11,0.2);
+  }
+  .use-tool-btn {
+    display: block; width: 100%; margin-top: 1.2rem;
+    background: rgba(59,130,246,0.1); color: var(--accent);
+    border: 1px solid rgba(59,130,246,0.3); border-radius: 8px;
+    padding: 0.7rem; font-size: 0.9rem; font-weight: 500;
+    cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+  }
+  .use-tool-btn:hover { background: var(--accent); color: white; }
+
+  /* TOOL INTERFACE */
+  .tool-interface {
+    display: none;
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(0,0,0,0.8); backdrop-filter: blur(10px);
+    padding: 2rem; overflow-y: auto;
+    align-items: flex-start; justify-content: center;
+  }
+  .tool-interface.active { display: flex; }
+  .tool-modal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px; width: 100%; max-width: 800px;
+    padding: 2.5rem; margin: auto;
+    position: relative;
+  }
+  .modal-close {
+    position: absolute; top: 1.5rem; right: 1.5rem;
+    background: var(--surface2); border: 1px solid var(--border);
+    color: var(--text2); width: 36px; height: 36px; border-radius: 8px;
+    cursor: pointer; font-size: 1.1rem; display: flex;
+    align-items: center; justify-content: center; transition: all 0.2s;
+  }
+  .modal-close:hover { color: var(--text); border-color: var(--accent); }
+  .modal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; font-weight: 700; margin-bottom: 0.5rem;
+  }
+  .modal-sub { color: var(--text2); font-size: 0.9rem; margin-bottom: 2rem; }
+  .input-label { font-size: 0.85rem; font-weight: 500; margin-bottom: 0.5rem; color: var(--text2); }
+  .tool-textarea {
+    width: 100%; background: var(--bg);
+    border: 1px solid var(--border); border-radius: 10px;
+    color: var(--text); padding: 1rem; font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem; resize: vertical; min-height: 180px;
+    outline: none; transition: border-color 0.2s; line-height: 1.6;
+  }
+  .tool-textarea:focus { border-color: var(--accent); }
+  .tool-input {
+    width: 100%; background: var(--bg);
+    border: 1px solid var(--border); border-radius: 10px;
+    color: var(--text); padding: 0.8rem 1rem;
+    font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
+    outline: none; transition: border-color 0.2s; margin-bottom: 1rem;
+  }
+  .tool-input:focus { border-color: var(--accent); }
+  .tool-select {
+    width: 100%; background: var(--bg);
+    border: 1px solid var(--border); border-radius: 10px;
+    color: var(--text); padding: 0.8rem 1rem;
+    font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
+    outline: none; margin-bottom: 1rem; cursor: pointer;
+  }
+  .analyze-btn {
+    width: 100%; background: var(--accent); color: white;
+    border: none; border-radius: 10px; padding: 1rem;
+    font-size: 1rem; font-weight: 500; cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    margin-top: 1rem; transition: all 0.2s;
+  }
+  .analyze-btn:hover { background: var(--accent2); }
+  .analyze-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  /* RESULT */
+  .result-box {
+    margin-top: 2rem; background: var(--bg);
+    border: 1px solid var(--border); border-radius: 12px;
+    padding: 1.5rem; display: none;
+  }
+  .result-box.show { display: block; }
+  .result-header {
+    display: flex; align-items: center; gap: 0.7rem;
+    margin-bottom: 1.2rem; padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .result-header h3 { font-size: 1rem; font-weight: 600; }
+  .result-content {
+    font-size: 0.9rem; line-height: 1.8; color: var(--text2);
+    white-space: pre-wrap;
+  }
+  .result-content strong { color: var(--text); }
+  .copy-btn {
+    display: flex; align-items: center; gap: 0.5rem;
+    margin-top: 1.2rem; padding: 0.7rem 1.4rem;
+    background: rgba(16,185,129,0.1); color: var(--success);
+    border: 1px solid rgba(16,185,129,0.3); border-radius: 8px;
+    font-size: 0.85rem; font-weight: 500; cursor: pointer;
+    font-family: 'DM Sans', sans-serif; transition: all 0.2s;
+    margin-left: auto;
+  }
+  .copy-btn:hover { background: var(--success); color: white; }
+  .copy-btn.copied { background: var(--success); color: white; }
+
+  .loading-dots {
+    display: flex; gap: 6px; align-items: center; justify-content: center;
+    padding: 2rem;
+  }
+  .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent); animation: bounce 1.2s infinite;
+  }
+  .dot:nth-child(2) { animation-delay: 0.2s; }
+  .dot:nth-child(3) { animation-delay: 0.4s; }
+
+  /* HOW IT WORKS */
+  .how-section {
+    padding: 5rem 2rem;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+  }
+  .how-inner { max-width: 900px; margin: 0 auto; }
+  .steps {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem; margin-top: 3rem;
+  }
+  .step { text-align: center; }
+  .step-num {
+    width: 48px; height: 48px; border-radius: 50%;
+    background: rgba(59,130,246,0.1); border: 2px solid rgba(59,130,246,0.3);
+    color: var(--accent); font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1rem;
+  }
+  .step h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .step p { color: var(--text2); font-size: 0.85rem; line-height: 1.6; }
+
+  /* FOOTER */
+  footer {
+    padding: 3rem 2rem;
+    border-top: 1px solid var(--border);
+    text-align: center; color: var(--text2); font-size: 0.85rem;
+  }
+  footer a { color: var(--text2); text-decoration: none; margin: 0 1rem; }
+  footer a:hover { color: var(--text); }
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; font-weight: 900;
+    color: var(--text); margin-bottom: 1rem;
+  }
+  .footer-logo span { color: var(--accent); }
+
+  /* API KEY INPUT */
+  .api-setup {
+    background: rgba(245,158,11,0.05);
+    border: 1px solid rgba(245,158,11,0.2);
+    border-radius: 12px; padding: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .api-setup p { font-size: 0.85rem; color: var(--gold); margin-bottom: 0.7rem; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes bounce {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-10px); }
+  }
+
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+    .hero h1 { font-size: 2.2rem; }
+    .tool-modal { padding: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Renter<span>AI</span></div>
+  <ul class="nav-links">
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🤖 Powered by Artificial Intelligence</div>
+    <h1>Free AI Tools for<br><span>USA Renters</span></h1>
+    <p>Understand your lease, know your rights, and protect yourself — all with free AI-powered tools designed specifically for American renters.</p>
+    <div class="hero-cta">
+      <a href="#tools" class="btn-primary">Try Free Tools →</a>
+      <a href="#how" class="btn-outline">How It Works</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-num">44M+</div>
+      <div class="stat-label">American Renter Households</div>
+    </div>
+    <div>
+      <div class="stat-num">6</div>
+      <div class="stat-label">Free AI Tools Available</div>
+    </div>
+    <div>
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Free — No Sign Up Needed</div>
+    </div>
+    <div>
+      <div class="stat-num">50</div>
+      <div class="stat-label">States Covered</div>
+    </div>
+  </div>
+</div>
+
+<!-- TOOLS -->
+<section class="tools-section" id="tools">
+  <div class="section-header">
+    <div class="section-tag">AI Tools</div>
+    <h2 class="section-title">Everything a Renter Needs</h2>
+    <p class="section-sub">Free, instant, and powered by AI. No account required.</p>
+  </div>
+
+  <div class="tools-grid">
+
+    <!-- Tool 1: Lease Analyzer -->
+    <div class="tool-card">
+      <div class="tool-icon">📄</div>
+      <div class="tool-name">AI Lease Analyzer</div>
+      <div class="tool-desc">Paste your lease agreement and our AI will identify red flags, hidden clauses, and explain your rights in plain English.</div>
+      <span class="tool-badge">✓ Live</span>
+      <button class="use-tool-btn" onclick="openTool('lease')">Use This Tool →</button>
+    </div>
+
+    <!-- Tool 2: Demand Letter -->
+    <div class="tool-card">
+      <div class="tool-icon">⚖️</div>
+      <div class="tool-name">AI Demand Letter Writer</div>
+      <div class="tool-desc">Generate a professional legal demand letter to your landlord for repairs, deposit return, or lease violations — in seconds.</div>
+      <span class="tool-badge">✓ Live</span>
+      <button class="use-tool-btn" onclick="openTool('demand')">Use This Tool →</button>
+    </div>
+
+    <!-- Tool 3: Tenant Rights -->
+    <div class="tool-card">
+      <div class="tool-icon">🏛️</div>
+      <div class="tool-name">Tenant Rights Checker</div>
+      <div class="tool-desc">Enter your state and situation — AI explains your exact legal rights as a tenant, from eviction protection to habitability standards.</div>
+      <span class="tool-badge">✓ Live</span>
+      <button class="use-tool-btn" onclick="openTool('rights')">Use This Tool →</button>
+    </div>
+
+    <!-- Tool 4: Security Deposit -->
+    <div class="tool-card">
+      <div class="tool-icon">💰</div>
+      <div class="tool-name">Security Deposit Checker</div>
+      <div class="tool-desc">Find out if your landlord legally owes you your security deposit back, and what steps to take if they refuse to return it.</div>
+      <span class="tool-badge coming">⚡ Coming Soon</span>
+      <button class="use-tool-btn" style="opacity:0.5;cursor:not-allowed">Coming Soon</button>
+    </div>
+
+    <!-- Tool 5: Rent Increase -->
+    <div class="tool-card">
+      <div class="tool-icon">📈</div>
+      <div class="tool-name">Rent Increase Analyzer</div>
+      <div class="tool-desc">Is your rent increase legal? Check your state's rent control laws and find out if your landlord is within legal limits.</div>
+      <span class="tool-badge coming">⚡ Coming Soon</span>
+      <button class="use-tool-btn" style="opacity:0.5;cursor:not-allowed">Coming Soon</button>
+    </div>
+
+    <!-- Tool 6: Roommate Agreement -->
+    <div class="tool-card">
+      <div class="tool-icon">🤝</div>
+      <div class="tool-name">Roommate Agreement Generator</div>
+      <div class="tool-desc">Generate a legally-informed roommate agreement covering rent split, house rules, and dispute resolution — free and instant.</div>
+      <span class="tool-badge coming">⚡ Coming Soon</span>
+      <button class="use-tool-btn" style="opacity:0.5;cursor:not-allowed">Coming Soon</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="how-inner">
+    <div class="section-header">
+      <div class="section-tag">Simple Process</div>
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub">Get answers in seconds — no legal expertise needed.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Choose Your Tool</h4>
+        <p>Pick the AI tool that matches your situation — lease review, demand letter, or rights check.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Enter Your Info</h4>
+        <p>Paste your lease text or describe your situation in plain English. No legal jargon needed.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Get AI Analysis</h4>
+        <p>Our AI analyzes your input and gives you clear, actionable results in seconds.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Take Action</h4>
+        <p>Use the insights to protect yourself, negotiate with your landlord, or take legal action.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Renter<span>AI</span></div>
+  <p style="margin-bottom:1rem;">Free AI tools for American renters. Not legal advice.</p>
+  <div>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+  </div>
+  <p style="margin-top:1.5rem;">© 2026 RenterAI. All rights reserved.</p>
+</footer>
+
+<!-- ==================== TOOL MODALS ==================== -->
+
+<!-- API KEY SETUP (stored locally) -->
+<div class="tool-interface" id="apiSetup">
+  <div class="tool-modal" style="max-width:480px;">
+    <button class="modal-close" onclick="closeApiSetup()">✕</button>
+    <div class="tool-icon">🔑</div>
+    <div class="modal-title">Enter Your API Key</div>
+    <div class="modal-sub">To use AI tools, enter your free Gemini API key below.</div>
+    <div style="background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.2);border-radius:10px;padding:1rem;margin-bottom:1.2rem;font-size:0.82rem;color:var(--text2);line-height:1.7;">
+      📌 <strong style="color:var(--text);">How to get free API key:</strong><br>
+      1. Go to <strong style="color:var(--accent);">aistudio.google.com/apikey</strong><br>
+      2. Click <strong style="color:var(--text);">"Create API Key"</strong><br>
+      3. Copy the key and paste below<br>
+      <span style="color:var(--success);">✓ Free • Stored only in your browser</span>
+    </div>
+    <label class="input-label">Gemini API Key</label>
+    <input type="password" class="tool-input" id="apiKeyInput" placeholder="AIzaSy...">
+    <button class="analyze-btn" onclick="saveApiKey()">Save & Continue</button>
+  </div>
+</div>
+
+<!-- LEASE ANALYZER -->
+<div class="tool-interface" id="leaseTool">
+  <div class="tool-modal">
+    <button class="modal-close" onclick="closeTool('leaseTool')">✕</button>
+    <div class="tool-icon">📄</div>
+    <div class="modal-title">AI Lease Analyzer</div>
+    <div class="modal-sub">Paste your lease agreement below. AI will find red flags, hidden clauses, and explain your rights.</div>
+    <label class="input-label">Paste Your Lease Agreement Text</label>
+    <textarea class="tool-textarea" id="leaseText" placeholder="Paste your full lease agreement here... (you can paste just a section too)"></textarea>
+    <button class="analyze-btn" onclick="analyzeLease()">🔍 Analyze My Lease</button>
+    <div class="result-box" id="leaseResult">
+      <div class="result-header">
+        <span>📋</span>
+        <h3>AI Lease Analysis</h3>
+      </div>
+      <div class="result-content" id="leaseResultContent"></div>
+      <button class="copy-btn" onclick="copyResult('leaseResultContent', this)">📋 Copy Result</button>
+    </div>
+  </div>
+</div>
+
+<!-- DEMAND LETTER -->
+<div class="tool-interface" id="demandTool">
+  <div class="tool-modal">
+    <button class="modal-close" onclick="closeTool('demandTool')">✕</button>
+    <div class="tool-icon">⚖️</div>
+    <div class="modal-title">AI Demand Letter Writer</div>
+    <div class="modal-sub">Fill in the details and AI will write a professional demand letter to your landlord.</div>
+    <label class="input-label">Your Name</label>
+    <input type="text" class="tool-input" id="tenantName" placeholder="John Smith">
+    <label class="input-label">Landlord Name</label>
+    <input type="text" class="tool-input" id="landlordName" placeholder="ABC Property Management">
+    <label class="input-label">Your State</label>
+    <select class="tool-select" id="demandState">
+      <option value="">Select State...</option>
+      <option>California</option><option>Texas</option><option>Florida</option>
+      <option>New York</option><option>Illinois</option><option>Pennsylvania</option>
+      <option>Ohio</option><option>Georgia</option><option>North Carolina</option>
+      <option>Michigan</option><option>Other</option>
+    </select>
+    <label class="input-label">What is the Issue?</label>
+    <select class="tool-select" id="demandIssue">
+      <option value="">Select Issue...</option>
+      <option>Security deposit not returned</option>
+      <option>Needed repairs not done</option>
+      <option>Illegal rent increase</option>
+      <option>Lease violation by landlord</option>
+      <option>Harassment by landlord</option>
+      <option>Other issue</option>
+    </select>
+    <label class="input-label">Describe the Situation</label>
+    <textarea class="tool-textarea" id="demandDesc" placeholder="Describe what happened in detail..." style="min-height:120px;"></textarea>
+    <button class="analyze-btn" onclick="writeDemandLetter()">✍️ Generate Demand Letter</button>
+    <div class="result-box" id="demandResult">
+      <div class="result-header">
+        <span>⚖️</span>
+        <h3>Your Demand Letter</h3>
+      </div>
+      <div class="result-content" id="demandResultContent"></div>
+      <button class="copy-btn" onclick="copyResult('demandResultContent', this)">📋 Copy Letter</button>
+    </div>
+  </div>
+</div>
+
+<!-- TENANT RIGHTS -->
+<div class="tool-interface" id="rightsTool">
+  <div class="tool-modal">
+    <button class="modal-close" onclick="closeTool('rightsTool')">✕</button>
+    <div class="tool-icon">🏛️</div>
+    <div class="modal-title">Tenant Rights Checker</div>
+    <div class="modal-sub">Select your state and situation — AI will explain your exact legal rights as a tenant.</div>
+    <label class="input-label">Your State</label>
+    <select class="tool-select" id="rightsState">
+      <option value="">Select State...</option>
+      <option>California</option><option>Texas</option><option>Florida</option>
+      <option>New York</option><option>Illinois</option><option>Pennsylvania</option>
+      <option>Ohio</option><option>Georgia</option><option>North Carolina</option>
+      <option>Michigan</option><option>Washington</option><option>Arizona</option>
+      <option>Other</option>
+    </select>
+    <label class="input-label">What is Your Situation?</label>
+    <select class="tool-select" id="rightsSituation">
+      <option value="">Select Situation...</option>
+      <option>Landlord wants to evict me</option>
+      <option>My unit has serious repair issues</option>
+      <option>Landlord entered without notice</option>
+      <option>Security deposit dispute</option>
+      <option>Rent increase question</option>
+      <option>Landlord is harassing me</option>
+      <option>Lease ending / not renewing</option>
+      <option>General tenant rights question</option>
+    </select>
+    <label class="input-label">Any Additional Details? (Optional)</label>
+    <textarea class="tool-textarea" id="rightsDesc" placeholder="Add any extra details about your situation..." style="min-height:100px;"></textarea>
+    <button class="analyze-btn" onclick="checkRights()">🏛️ Check My Rights</button>
+    <div class="result-box" id="rightsResult">
+      <div class="result-header">
+        <span>📜</span>
+        <h3>Your Tenant Rights</h3>
+      </div>
+      <div class="result-content" id="rightsResultContent"></div>
+      <button class="copy-btn" onclick="copyResult('rightsResultContent', this)">📋 Copy Rights Info</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // COPY FUNCTION
+  function copyResult(elementId, btn) {
+    const el = document.getElementById(elementId);
+    const text = el.innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      btn.innerHTML = '✅ Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.innerHTML = '📋 Copy Result';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+
+  // API Key management
+  let GEMINI_API_KEY = localStorage.getItem('renterai_key') || 'AIzaSyA7NLDaTEnBpKCgokpbHx2z07Q-8L-HwEw';
+  let pendingTool = '';
+
+  function openTool(tool) {
+    if (!GEMINI_API_KEY) {
+      pendingTool = tool;
+      document.getElementById('apiSetup').classList.add('active');
+      return;
+    }
+    showTool(tool);
+  }
+
+  function showTool(tool) {
+    const map = { lease: 'leaseTool', demand: 'demandTool', rights: 'rightsTool' };
+    if (map[tool]) {
+      document.getElementById(map[tool]).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeTool(id) {
+    document.getElementById(id).classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function saveApiKey() {
+    const key = document.getElementById('apiKeyInput').value.trim();
+    if (!key) { alert('Please enter your API key'); return; }
+    GEMINI_API_KEY = key;
+    localStorage.setItem('renterai_key', key);
+    document.getElementById('apiSetup').classList.remove('active');
+    if (pendingTool) { showTool(pendingTool); pendingTool = ''; }
+  }
+
+  function closeApiSetup() {
+    document.getElementById('apiSetup').classList.remove('active');
+  }
+
+  // Call Gemini API
+  async function callGemini(prompt) {
+    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_API_KEY}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: prompt }] }],
+        generationConfig: { temperature: 0.7, maxOutputTokens: 1500 }
+      })
+    });
+    const data = await res.json();
+    if (data.error) throw new Error(data.error.message);
+    return data.candidates[0].content.parts[0].text;
+  }
+
+  function showLoading(contentId) {
+    document.getElementById(contentId).innerHTML = `
+      <div class="loading-dots">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      </div>`;
+  }
+
+  // LEASE ANALYZER
+  async function analyzeLease() {
+    const text = document.getElementById('leaseText').value.trim();
+    if (!text) { alert('Please paste your lease text first'); return; }
+    const resultBox = document.getElementById('leaseResult');
+    const contentEl = document.getElementById('leaseResultContent');
+    resultBox.classList.add('show');
+    showLoading('leaseResultContent');
+
+    const prompt = `You are a tenant rights expert. Analyze this lease agreement and provide:
+
+1. 🚩 RED FLAGS - List any concerning or unfair clauses
+2. ✅ GOOD CLAUSES - Mention any tenant-friendly terms
+3. 💡 PLAIN ENGLISH SUMMARY - Explain the key terms simply
+4. ⚠️ IMPORTANT THINGS TO KNOW - What the tenant must be aware of
+5. 📋 RECOMMENDED ACTIONS - What should the tenant do or negotiate
+
+Be specific, practical, and helpful. Format clearly with headers.
+
+LEASE TEXT:
+${text}`;
+
+    try {
+      const result = await callGemini(prompt);
+      contentEl.innerHTML = result.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    } catch (e) {
+      contentEl.innerHTML = `<span style="color:var(--danger)">Error: ${e.message}. Please check your API key.</span>`;
+    }
+  }
+
+  // DEMAND LETTER
+  async function writeDemandLetter() {
+    const name = document.getElementById('tenantName').value.trim();
+    const landlord = document.getElementById('landlordName').value.trim();
+    const state = document.getElementById('demandState').value;
+    const issue = document.getElementById('demandIssue').value;
+    const desc = document.getElementById('demandDesc').value.trim();
+
+    if (!name || !landlord || !state || !issue) { alert('Please fill in all required fields'); return; }
+
+    const resultBox = document.getElementById('demandResult');
+    const contentEl = document.getElementById('demandResultContent');
+    resultBox.classList.add('show');
+    showLoading('demandResultContent');
+
+    const prompt = `Write a professional legal demand letter for a tenant in the USA.
+
+Tenant Name: ${name}
+Landlord/Property Manager: ${landlord}
+State: ${state}
+Issue: ${issue}
+Situation Details: ${desc || 'Not provided'}
+
+Write a formal demand letter that:
+- Is professional and legally appropriate for ${state}
+- States the issue clearly
+- References relevant tenant rights
+- Makes a specific demand with a deadline
+- Mentions potential legal action if ignored
+- Is ready to send
+
+Format as a proper letter with date placeholder, addresses, and signature line.`;
+
+    try {
+      const result = await callGemini(prompt);
+      contentEl.innerHTML = result.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    } catch (e) {
+      contentEl.innerHTML = `<span style="color:var(--danger)">Error: ${e.message}. Please check your API key.</span>`;
+    }
+  }
+
+  // TENANT RIGHTS
+  async function checkRights() {
+    const state = document.getElementById('rightsState').value;
+    const situation = document.getElementById('rightsSituation').value;
+    const desc = document.getElementById('rightsDesc').value.trim();
+
+    if (!state || !situation) { alert('Please select your state and situation'); return; }
+
+    const resultBox = document.getElementById('rightsResult');
+    const contentEl = document.getElementById('rightsResultContent');
+    resultBox.classList.add('show');
+    showLoading('rightsResultContent');
+
+    const prompt = `You are a tenant rights expert for ${state}, USA.
+
+Situation: ${situation}
+Additional details: ${desc || 'None provided'}
+
+Provide a comprehensive, helpful explanation of:
+
+1. 📜 YOUR LEGAL RIGHTS in ${state} for this situation
+2. ⚖️ RELEVANT STATE LAWS that protect you
+3. 🛡️ WHAT YOUR LANDLORD CAN AND CANNOT DO
+4. 📋 STEP-BY-STEP ACTIONS you should take
+5. 🆘 WHERE TO GET HELP - organizations, hotlines, resources in ${state}
+
+Be specific to ${state} law. Be practical and actionable. Use clear headers.`;
+
+    try {
+      const result = await callGemini(prompt);
+      contentEl.innerHTML = result.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    } catch (e) {
+      contentEl.innerHTML = `<span style="color:var(--danger)">Error: ${e.message}. Please check your API key.</span>`;
+    }
+  }
+
+  // Close on backdrop click
+  document.querySelectorAll('.tool-interface').forEach(el => {
+    el.addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
