@@ -676,16 +676,9 @@
     });
   }
 
-  // API Key management
-  let GEMINI_API_KEY = localStorage.getItem('renterai_key') || 'AIzaSyA7NLDaTEnBpKCgokpbHx2z07Q-8L-HwEw';
   let pendingTool = '';
 
   function openTool(tool) {
-    if (!GEMINI_API_KEY) {
-      pendingTool = tool;
-      document.getElementById('apiSetup').classList.add('active');
-      return;
-    }
     showTool(tool);
   }
 
@@ -702,22 +695,11 @@
     document.body.style.overflow = '';
   }
 
-  function saveApiKey() {
-    const key = document.getElementById('apiKeyInput').value.trim();
-    if (!key) { alert('Please enter your API key'); return; }
-    GEMINI_API_KEY = key;
-    localStorage.setItem('renterai_key', key);
-    document.getElementById('apiSetup').classList.remove('active');
-    if (pendingTool) { showTool(pendingTool); pendingTool = ''; }
-  }
 
-  function closeApiSetup() {
-    document.getElementById('apiSetup').classList.remove('active');
-  }
 
   // Call Gemini API
   async function callGemini(prompt) {
-    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_API_KEY}`, {
+    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_API_KEY}}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
