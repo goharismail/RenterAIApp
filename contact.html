@@ -116,7 +116,8 @@
     <div class="contact-card">
       <div class="contact-icon">📧</div>
       <div class="contact-title">Email Us</div>
-      <a class="contact-info" href="mailto:support@renterai.com">support@renterai.com</a>
+      <div class="contact-info">Use the form below</div>
+      <!-- <a class="contact-info" href="mailto:support@renterai.com">support@renterai.com</a> -->
       <div class="contact-desc">We respond within 24-48 hours on business days.</div>
     </div>
     <div class="contact-card">
@@ -197,15 +198,44 @@
 </footer>
 
 <script>
-  function submitForm() {
+  async function submitForm() {
     const name = document.getElementById('contactName').value.trim();
     const email = document.getElementById('contactEmail').value.trim();
+    const subject = document.getElementById('contactSubject').value;
     const message = document.getElementById('contactMessage').value.trim();
     if (!name || !email || !message) { alert('Please fill in all required fields.'); return; }
-    document.getElementById('successMsg').style.display = 'block';
-    document.getElementById('contactName').value = '';
-    document.getElementById('contactEmail').value = '';
-    document.getElementById('contactMessage').value = '';
+
+    const btn = document.querySelector('.submit-btn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: '13f6e288-ec9c-4cac-bf67-07ad6c37a979',
+          name: name,
+          email: email,
+          subject: subject || 'RenterAI Contact Form',
+          message: message
+        })
+      });
+      const data = await res.json();
+      if (data.success) {
+        document.getElementById('successMsg').style.display = 'block';
+        document.getElementById('contactName').value = '';
+        document.getElementById('contactEmail').value = '';
+        document.getElementById('contactSubject').value = '';
+        document.getElementById('contactMessage').value = '';
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    } catch(e) {
+      alert('Error sending message. Please try again.');
+    }
+    btn.textContent = 'Send Message →';
+    btn.disabled = false;
   }
 </script>
 </body>
