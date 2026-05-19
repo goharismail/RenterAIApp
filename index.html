@@ -867,10 +867,25 @@ Be specific to ${state} law. Be practical and actionable. Use clear headers.`;
       document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
     });
   });
+
+  // COOKIE CONSENT
+  function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    document.getElementById('cookieBanner').style.display = 'none';
+  }
+  function declineCookies() {
+    localStorage.setItem('cookieConsent', 'declined');
+    document.getElementById('cookieBanner').style.display = 'none';
+  }
+  window.addEventListener('DOMContentLoaded', function() {
+    if (!localStorage.getItem('cookieConsent')) {
+      document.getElementById('cookieBanner').style.display = 'flex';
+    }
+  });
 </script>
 
 <!-- COOKIE CONSENT BANNER -->
-<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#111827;border-top:1px solid #1e293b;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+<div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#111827;border-top:1px solid #1e293b;padding:1rem 2rem;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;display:none;">
   <p style="color:#94a3b8;font-size:0.85rem;margin:0;max-width:700px;">
     🍪 We use cookies to improve your experience and show relevant ads. By using RenterAI, you agree to our 
     <a href="privacy.html" style="color:#3b82f6;">Privacy Policy</a>.
