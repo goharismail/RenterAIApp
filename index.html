@@ -6,6 +6,7 @@
 <title>RenterAI - Free AI Tools for USA Renters</title>
 <meta name="description" content="Free AI-powered tools for USA renters. Analyze your lease, write demand letters, check tenant rights, and more. Powered by AI.">
 <meta name="keywords" content="lease analyzer, tenant rights, demand letter, rental agreement, AI lease review, renter tools">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
@@ -485,7 +486,7 @@
     </div>
 
     <!-- Tool 4: Security Deposit -->
-    <div class="tool-card">
+    <div class="tool-card" data-nosnippet>
       <div class="tool-icon">💰</div>
       <div class="tool-name">Security Deposit Checker</div>
       <div class="tool-desc">Find out if your landlord legally owes you your security deposit back, and what steps to take if they refuse to return it.</div>
@@ -494,7 +495,7 @@
     </div>
 
     <!-- Tool 5: Rent Increase -->
-    <div class="tool-card">
+    <div class="tool-card" data-nosnippet>
       <div class="tool-icon">📈</div>
       <div class="tool-name">Rent Increase Analyzer</div>
       <div class="tool-desc">Is your rent increase legal? Check your state's rent control laws and find out if your landlord is within legal limits.</div>
@@ -503,7 +504,7 @@
     </div>
 
     <!-- Tool 6: Roommate Agreement -->
-    <div class="tool-card">
+    <div class="tool-card" data-nosnippet>
       <div class="tool-icon">🤝</div>
       <div class="tool-name">Roommate Agreement Generator</div>
       <div class="tool-desc">Generate a legally-informed roommate agreement covering rent split, house rules, and dispute resolution — free and instant.</div>
@@ -562,25 +563,7 @@
 
 <!-- ==================== TOOL MODALS ==================== -->
 
-<!-- API KEY SETUP (stored locally) -->
-<div class="tool-interface" id="apiSetup">
-  <div class="tool-modal" style="max-width:480px;">
-    <button class="modal-close" onclick="closeApiSetup()">✕</button>
-    <div class="tool-icon">🔑</div>
-    <div class="modal-title">Enter Your API Key</div>
-    <div class="modal-sub">To use AI tools, enter your free Gemini API key below.</div>
-    <div style="background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.2);border-radius:10px;padding:1rem;margin-bottom:1.2rem;font-size:0.82rem;color:var(--text2);line-height:1.7;">
-      📌 <strong style="color:var(--text);">How to get free API key:</strong><br>
-      1. Go to <strong style="color:var(--accent);">aistudio.google.com/apikey</strong><br>
-      2. Click <strong style="color:var(--text);">"Create API Key"</strong><br>
-      3. Copy the key and paste below<br>
-      <span style="color:var(--success);">✓ Free • Stored only in your browser</span>
-    </div>
-    <label class="input-label">Gemini API Key</label>
-    <input type="password" class="tool-input" id="apiKeyInput" placeholder="AIzaSy...">
-    <button class="analyze-btn" onclick="saveApiKey()">Save & Continue</button>
-  </div>
-</div>
+
 
 <!-- LEASE ANALYZER -->
 <div class="tool-interface" id="leaseTool">
@@ -702,8 +685,6 @@
       }, 2000);
     });
   }
-
-  let pendingTool = '';
 
   function openTool(tool) {
     showTool(tool);
