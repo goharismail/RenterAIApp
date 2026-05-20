@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog - Tenant Rights & Renter Guides | RenterAI</title>
+<meta name="description" content="Free guides for USA renters. Learn about tenant rights, lease agreements, security deposits, eviction laws, and more.">
+<meta name="keywords" content="tenant rights, lease agreement guide, renter tips, security deposit, eviction law USA">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Renter Guides & Tenant Rights Blog | RenterAI">
+<meta property="og:description" content="Free guides helping USA renters understand their rights, read leases, and protect themselves.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0f1e; --surface: #111827; --accent: #3b82f6;
+    --accent2: #60a5fa; --text: #f1f5f9; --text2: #94a3b8;
+    --border: #1e293b; --success: #10b981; --gold: #f59e0b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.2rem 2rem; background: rgba(10,15,30,0.95);
+    backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 900; color: var(--text); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: var(--text2); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--text); }
+
+  .page-hero {
+    padding: 8rem 2rem 4rem; text-align: center;
+    background: radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.12) 0%, transparent 70%);
+  }
+  .page-tag { font-size: 0.8rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
+  .page-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 1rem; }
+  .page-sub { color: var(--text2); font-size: 1.05rem; max-width: 550px; margin: 0 auto; line-height: 1.7; }
+
+  .blog-section { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .blog-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; padding: 2rem;
+    text-decoration: none; color: var(--text);
+    transition: all 0.3s; position: relative; overflow: hidden;
+    display: block;
+  }
+  .blog-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: var(--accent); transform: scaleX(0);
+    transition: transform 0.3s; transform-origin: left;
+  }
+  .blog-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-4px); }
+  .blog-card:hover::before { transform: scaleX(1); }
+
+  .blog-cat {
+    display: inline-block; font-size: 0.72rem; font-weight: 500;
+    color: var(--accent); background: rgba(59,130,246,0.1);
+    border: 1px solid rgba(59,130,246,0.2);
+    padding: 0.2rem 0.7rem; border-radius: 50px;
+    text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;
+  }
+  .blog-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.7rem; line-height: 1.4; }
+  .blog-desc { color: var(--text2); font-size: 0.88rem; line-height: 1.7; margin-bottom: 1.2rem; }
+  .blog-meta { display: flex; align-items: center; gap: 1rem; font-size: 0.8rem; color: var(--text2); }
+  .blog-read { color: var(--accent); font-size: 0.85rem; font-weight: 500; margin-top: 1rem; display: block; }
+
+  .featured-card {
+    grid-column: 1 / -1;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2rem; align-items: center;
+  }
+  .featured-card .blog-title { font-size: 1.6rem; }
+  .featured-badge {
+    display: inline-block; font-size: 0.72rem; font-weight: 500;
+    color: var(--gold); background: rgba(245,158,11,0.1);
+    border: 1px solid rgba(245,158,11,0.2);
+    padding: 0.2rem 0.7rem; border-radius: 50px;
+    text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; margin-right: 0.5rem;
+  }
+  .featured-visual {
+    background: rgba(59,130,246,0.05);
+    border: 1px solid rgba(59,130,246,0.1);
+    border-radius: 12px; padding: 2rem;
+    text-align: center; font-size: 4rem;
+  }
+
+  @media(max-width:700px) {
+    .featured-card { grid-template-columns: 1fr; }
+    .featured-visual { display: none; }
+    .nav-links { display: none; }
+  }
+
+  footer { padding: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--text2); font-size: 0.85rem; margin-top: 2rem; }
+  footer a { color: var(--text2); text-decoration: none; margin: 0 1rem; }
+  footer a:hover { color: var(--text); }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 900; color: var(--text); margin-bottom: 0.8rem; }
+  .footer-logo span { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Renter<span>AI</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#tools">Tools</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-tag">Renter Guides</div>
+  <h1 class="page-title">Know Your Rights as a <span style="color:var(--accent)">USA Renter</span></h1>
+  <p class="page-sub">Free guides to help you understand leases, tenant rights, and how to protect yourself from unfair landlords.</p>
+</div>
+
+<div class="blog-section">
+  <div class="blog-grid">
+
+    <!-- Featured -->
+    <a href="blog-how-to-read-lease.html" class="blog-card featured-card">
+      <div>
+        <span class="featured-badge">⭐ Featured</span>
+        <span class="blog-cat">Lease Guide</span>
+        <div class="blog-title">How to Read a Lease Agreement: Complete Guide for USA Renters</div>
+        <div class="blog-desc">Most renters sign a lease without fully reading it. This comprehensive guide walks you through every section of a standard US lease agreement — what to look for, what red flags to watch, and what you should never agree to.</div>
+        <div class="blog-meta">
+          <span>📖 8 min read</span>
+          <span>🏛️ All States</span>
+        </div>
+        <span class="blog-read">Read Guide →</span>
+      </div>
+      <div class="featured-visual">📄</div>
+    </a>
+
+    <!-- Article 2 -->
+    <a href="blog-tenant-rights-california.html" class="blog-card">
+      <span class="blog-cat">Tenant Rights</span>
+      <div class="blog-title">Tenant Rights in California: Complete 2026 Guide</div>
+      <div class="blog-desc">California has some of the strongest tenant protections in the USA. Learn about rent control, eviction rules, security deposit laws, and more.</div>
+      <div class="blog-meta"><span>📖 7 min read</span><span>📍 California</span></div>
+      <span class="blog-read">Read Guide →</span>
+    </a>
+
+    <!-- Article 3 -->
+    <a href="blog-tenant-rights-texas.html" class="blog-card">
+      <span class="blog-cat">Tenant Rights</span>
+      <div class="blog-title">Tenant Rights in Texas: What Every Renter Must Know</div>
+      <div class="blog-desc">Texas landlord-tenant law explained clearly. From security deposits to eviction procedures, know your rights as a Texas renter.</div>
+      <div class="blog-meta"><span>📖 6 min read</span><span>📍 Texas</span></div>
+      <span class="blog-read">Read Guide →</span>
+    </a>
+
+    <!-- Article 4 -->
+    <a href="blog-security-deposit.html" class="blog-card">
+      <span class="blog-cat">Security Deposit</span>
+      <div class="blog-title">How to Get Your Security Deposit Back: Step-by-Step</div>
+      <div class="blog-desc">Landlords illegally keep millions in security deposits every year. Learn exactly what steps to take to get every dollar back.</div>
+      <div class="blog-meta"><span>📖 6 min read</span><span>🏛️ All States</span></div>
+      <span class="blog-read">Read Guide →</span>
+    </a>
+
+    <!-- Article 5 -->
+    <a href="blog-lease-red-flags.html" class="blog-card">
+      <span class="blog-cat">Lease Guide</span>
+      <div class="blog-title">10 Lease Red Flags You Should Never Ignore</div>
+      <div class="blog-desc">Before you sign, know what warning signs to look for. These 10 red flags in a lease could cost you thousands or trap you in an unfair contract.</div>
+      <div class="blog-meta"><span>📖 5 min read</span><span>🏛️ All States</span></div>
+      <span class="blog-read">Read Guide →</span>
+    </a>
+
+    <!-- Article 6 -->
+    <a href="blog-illegal-eviction.html" class="blog-card">
+      <span class="blog-cat">Eviction</span>
+      <div class="blog-title">What is an Illegal Eviction? Know Your Rights</div>
+      <div class="blog-desc">Your landlord cannot just lock you out. Learn what constitutes an illegal eviction and exactly what to do if it happens to you.</div>
+      <div class="blog-meta"><span>📖 6 min read</span><span>🏛️ All States</span></div>
+      <span class="blog-read">Read Guide →</span>
+    </a>
+
+    <!-- Article 7 -->
+    <a href="blog-demand-letter.html" class="blog-card">
+      <span class="blog-cat">Legal Letters</span>
+      <div class="blog-title">How to Write a Demand Letter to Your Landlord</div>
+      <div class="blog-desc">A demand letter is your first legal step. Learn how to write one that gets results — or use our free AI tool to generate one instantly.</div>
+      <div class="blog-meta"><span>📖 5 min read</span><span>🏛️ All States</span></div>
+      <span class="blog-read">Read Guide →</span>
+    </a>
+
+    <!-- Article 8 -->
+    <a href="blog-rent-increase.html" class="blog-card">
+      <span class="blog-cat">Rent Increase</span>
+      <div class="blog-title">Rent Increase Laws in the USA: Is Yours Legal?</div>
+      <div class="blog-desc">Your landlord can't just raise rent whenever they want. Learn the rules for rent increases in your state and how to fight back if it's illegal.</div>
+      <div class="blog-meta"><span>📖 6 min read</span><span>🏛️ All States</span></div>
+      <span class="blog-read">Read Guide →</span>
+    </a>
+
+    <!-- Article 9 -->
+    <a href="blog-tenant-rights-new-york.html" class="blog-card">
+      <span class="blog-cat">Tenant Rights</span>
+      <div class="blog-title">Tenant Rights in New York: NYC & State Guide 2026</div>
+      <div class="blog-desc">New York has unique tenant protections especially in NYC. Rent stabilization, eviction rules, and tenant rights explained in plain English.</div>
+      <div class="blog-meta"><span>📖 7 min read</span><span>📍 New York</span></div>
+      <span class="blog-read">Read Guide →</span>
+    </a>
+
+    <!-- Article 10 -->
+    <a href="blog-landlord-wont-fix.html" class="blog-card">
+      <span class="blog-cat">Repairs</span>
+      <div class="blog-title">What to Do If Your Landlord Refuses to Make Repairs</div>
+      <div class="blog-desc">You have a legal right to a habitable home. If your landlord is ignoring repairs, here are your options — including rent withholding and repair-and-deduct.</div>
+      <div class="blog-meta"><span>📖 6 min read</span><span>🏛️ All States</span></div>
+      <span class="blog-read">Read Guide →</span>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Renter<span>AI</span></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="index.html#tools">Tools</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+  </div>
+  <p style="margin-top:1rem;">© 2026 RenterAI. All rights reserved. Not legal advice.</p>
+</footer>
+
+</body>
+</html>
