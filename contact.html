@@ -5,101 +5,401 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Us - RenterAI</title>
 <meta name="description" content="Contact RenterAI - Get in touch with us for support, feedback, or questions about our free renter tools.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
   :root {
-    --bg: #0a0f1e; --surface: #111827; --accent: #3b82f6;
-    --accent2: #60a5fa; --text: #f1f5f9; --text2: #94a3b8;
-    --border: #1e293b; --success: #10b981;
+    --bg: #0a0f1e;
+    --surface: #111827;
+    --accent: #3b82f6;
+    --accent2: #60a5fa;
+    --text: #f1f5f9;
+    --text2: #94a3b8;
+    --border: #1e293b;
+    --success: #10b981;
   }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
   nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    padding: 1.2rem 2rem; background: rgba(10,15,30,0.95);
-    backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1.2rem 2rem;
+    background: rgba(10,15,30,0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-  .logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 900; color: var(--text); text-decoration: none; }
-  .logo span { color: var(--accent); }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a { color: var(--text2); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--text); }
+
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .logo span {
+    color: var(--accent);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text2);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover {
+    color: var(--text);
+  }
+
+  .mobile-menu-btn{
+    display:none;
+    background:transparent;
+    border:1px solid var(--border);
+    color:var(--text);
+    width:42px;
+    height:42px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:1.2rem;
+    align-items:center;
+    justify-content:center;
+  }
 
   .page-hero {
-    padding: 8rem 2rem 4rem; text-align: center;
-    background: radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.12) 0%, transparent 70%);
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    background: radial-gradient(
+      ellipse at 50% 0%,
+      rgba(59,130,246,0.12) 0%,
+      transparent 70%
+    );
   }
-  .page-tag { font-size: 0.8rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
-  .page-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 1rem; }
-  .page-sub { color: var(--text2); font-size: 1.05rem; max-width: 500px; margin: 0 auto; line-height: 1.7; }
 
-  .content { max-width: 780px; margin: 0 auto; padding: 4rem 2rem; }
+  .page-tag {
+    font-size: 0.8rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
 
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem; }
-  @media(max-width:600px) { .contact-grid { grid-template-columns: 1fr; } }
+  .page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+
+  .page-sub {
+    color: var(--text2);
+    font-size: 1.05rem;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .content {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
 
   .contact-card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 16px; padding: 2rem; text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
   }
-  .contact-icon { font-size: 2rem; margin-bottom: 1rem; }
-  .contact-title { font-weight: 600; margin-bottom: 0.5rem; font-size: 1rem; }
-  .contact-info { color: var(--accent); font-size: 0.9rem; text-decoration: none; }
-  .contact-desc { color: var(--text2); font-size: 0.82rem; margin-top: 0.4rem; line-height: 1.5; }
 
-  .form-section { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2.5rem; }
-  .form-section h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 0.5rem; }
-  .form-section p { color: var(--text2); font-size: 0.9rem; margin-bottom: 2rem; }
+  .contact-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
 
-  .form-group { margin-bottom: 1.2rem; }
-  .form-label { display: block; font-size: 0.85rem; font-weight: 500; color: var(--text2); margin-bottom: 0.5rem; }
+  .contact-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .contact-info {
+    color: var(--accent);
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  .contact-desc {
+    color: var(--text2);
+    font-size: 0.82rem;
+    margin-top: 0.4rem;
+    line-height: 1.5;
+  }
+
+  .form-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.5rem;
+  }
+
+  .form-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-section p {
+    color: var(--text2);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text2);
+    margin-bottom: 0.5rem;
+  }
+
   .form-input {
-    width: 100%; background: var(--bg); border: 1px solid var(--border);
-    border-radius: 10px; color: var(--text); padding: 0.85rem 1rem;
-    font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
-    outline: none; transition: border-color 0.2s;
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    padding: 0.85rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
   }
-  .form-input:focus { border-color: var(--accent); }
-  .form-textarea { min-height: 140px; resize: vertical; }
-  .form-select { cursor: pointer; }
+
+  .form-input:focus {
+    border-color: var(--accent);
+  }
+
+  .form-textarea {
+    min-height: 140px;
+    resize: vertical;
+  }
+
+  .form-select {
+    cursor: pointer;
+  }
+
   .submit-btn {
-    width: 100%; background: var(--accent); color: white;
-    border: none; border-radius: 10px; padding: 1rem;
-    font-size: 1rem; font-weight: 500; cursor: pointer;
-    font-family: 'DM Sans', sans-serif; transition: all 0.2s; margin-top: 0.5rem;
+    width: 100%;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s;
+    margin-top: 0.5rem;
   }
-  .submit-btn:hover { background: var(--accent2); }
+
+  .submit-btn:hover {
+    background: var(--accent2);
+  }
 
   .success-msg {
-    display: none; background: rgba(16,185,129,0.1);
-    border: 1px solid rgba(16,185,129,0.3); border-radius: 10px;
-    padding: 1rem; text-align: center; color: var(--success);
-    margin-top: 1rem; font-size: 0.9rem;
+    display: none;
+    background: rgba(16,185,129,0.1);
+    border: 1px solid rgba(16,185,129,0.3);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    color: var(--success);
+    margin-top: 1rem;
+    font-size: 0.9rem;
   }
 
-  .faq-section { margin-top: 3rem; }
-  .faq-section h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 1.5rem; }
-  .faq-item { border-bottom: 1px solid var(--border); padding: 1.2rem 0; }
-  .faq-q { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem; }
-  .faq-a { color: var(--text2); font-size: 0.88rem; line-height: 1.7; }
+  .faq-section {
+    margin-top: 3rem;
+  }
 
-  footer { padding: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--text2); font-size: 0.85rem; margin-top: 3rem; }
-  footer a { color: var(--text2); text-decoration: none; margin: 0 1rem; }
-  footer a:hover { color: var(--text); }
-  .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 900; color: var(--text); margin-bottom: 0.8rem; }
-  .footer-logo span { color: var(--accent); }
+  .faq-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 1.2rem 0;
+  }
+
+  .faq-q {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .faq-a {
+    color: var(--text2);
+    font-size: 0.88rem;
+    line-height: 1.7;
+  }
+
+  footer {
+    padding: 2rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--text2);
+    font-size: 0.85rem;
+    margin-top: 3rem;
+  }
+
+  footer a {
+    color: var(--text2);
+    text-decoration: none;
+    margin: 0 1rem;
+  }
+
+  footer a:hover {
+    color: var(--text);
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-logo span {
+    color: var(--accent);
+  }
+
+  @media(max-width:768px){
+
+    nav{
+      padding:1rem 1.2rem;
+    }
+
+    .mobile-menu-btn{
+      display:flex;
+    }
+
+    .nav-links{
+      position:absolute;
+      top:100%;
+      left:0;
+      right:0;
+      background:#111827;
+      border-bottom:1px solid var(--border);
+      flex-direction:column;
+      gap:0;
+      padding:0.5rem 0;
+      display:none;
+    }
+
+    .nav-links.active{
+      display:flex;
+    }
+
+    .nav-links li{
+      width:100%;
+    }
+
+    .nav-links a{
+      display:block;
+      width:100%;
+      padding:1rem 1.5rem;
+      border-bottom:1px solid rgba(255,255,255,0.05);
+    }
+
+    .page-hero{
+      padding:7rem 1.2rem 3rem;
+    }
+
+    .content{
+      padding:3rem 1.2rem;
+    }
+
+    .contact-grid{
+      grid-template-columns:1fr;
+    }
+
+    .form-section{
+      padding:1.5rem;
+    }
+
+    footer{
+      padding:2rem 1.2rem;
+    }
+
+    footer div{
+      display:flex;
+      flex-direction:column;
+      gap:0.8rem;
+      align-items:center;
+    }
+
+    footer a{
+      margin:0;
+    }
+  }
 </style>
 </head>
+
 <body>
 
 <nav>
   <a href="index.html" class="logo">Renter<span>AI</span></a>
-  <ul class="nav-links">
+
+  <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+
+  <ul class="nav-links" id="mobileNav">
     <li><a href="index.html#tools">Tools</a></li>
     <li><a href="index.html#how">How It Works</a></li>
     <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
@@ -113,22 +413,25 @@
 <div class="content">
 
   <div class="contact-grid">
+
     <div class="contact-card">
       <div class="contact-icon">📧</div>
       <div class="contact-title">Email Us</div>
       <div class="contact-info">Use the form below</div>
-      <!-- <a class="contact-info" href="mailto:support@renterai.com">support@renterai.com</a> -->
       <div class="contact-desc">We respond within 24-48 hours on business days.</div>
     </div>
+
     <div class="contact-card">
       <div class="contact-icon">💬</div>
       <div class="contact-title">Send a Message</div>
       <div class="contact-info">Use the form below</div>
       <div class="contact-desc">Fill out the form and we'll get back to you shortly.</div>
     </div>
+
   </div>
 
   <div class="form-section">
+
     <h2>Send Us a Message</h2>
     <p>We read every message and respond as quickly as possible.</p>
 
@@ -136,10 +439,12 @@
       <label class="form-label">Your Name</label>
       <input type="text" class="form-input" placeholder="John Smith" id="contactName">
     </div>
+
     <div class="form-group">
       <label class="form-label">Email Address</label>
       <input type="email" class="form-input" placeholder="john@email.com" id="contactEmail">
     </div>
+
     <div class="form-group">
       <label class="form-label">Subject</label>
       <select class="form-input form-select" id="contactSubject">
@@ -151,92 +456,103 @@
         <option>Other</option>
       </select>
     </div>
+
     <div class="form-group">
       <label class="form-label">Message</label>
       <textarea class="form-input form-textarea" placeholder="Describe your question or feedback..." id="contactMessage"></textarea>
     </div>
+
     <button class="submit-btn" onclick="submitForm()">Send Message →</button>
-    <div class="success-msg" id="successMsg">✅ Message sent! We'll get back to you within 24-48 hours.</div>
-  </div>
 
-  <div class="faq-section">
-    <h2>Frequently Asked Questions</h2>
+    <div class="success-msg" id="successMsg">
+      ✅ Message sent! We'll get back to you within 24-48 hours.
+    </div>
 
-    <div class="faq-item">
-      <div class="faq-q">Is RenterAI really free?</div>
-      <div class="faq-a">Yes, completely free. No credit card, no sign-up, no hidden fees. Our core tools will always remain free.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Is my lease information stored anywhere?</div>
-      <div class="faq-a">No. Your lease text and personal information are never stored on our servers. Everything is processed in real-time and immediately discarded.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Is this legal advice?</div>
-      <div class="faq-a">No. RenterAI provides general legal information for educational purposes only. We are not a law firm. For serious legal matters, please consult a licensed attorney.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Which states does RenterAI cover?</div>
-      <div class="faq-a">All 50 US states. Our AI is trained on federal landlord-tenant law as well as state-specific laws across the entire United States.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How accurate is the AI?</div>
-      <div class="faq-a">Our AI is highly accurate for general legal information, but laws change frequently. Always verify important legal information with your state's official resources or a local attorney.</div>
-    </div>
   </div>
 
 </div>
 
 <footer>
   <div class="footer-logo">Renter<span>AI</span></div>
+
   <div>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
     <a href="privacy.html">Privacy Policy</a>
     <a href="terms.html">Terms of Service</a>
   </div>
+
   <p style="margin-top:1rem;">© 2026 RenterAI. All rights reserved.</p>
 </footer>
 
 <script>
-  async function submitForm() {
-    const name = document.getElementById('contactName').value.trim();
-    const email = document.getElementById('contactEmail').value.trim();
-    const subject = document.getElementById('contactSubject').value;
-    const message = document.getElementById('contactMessage').value.trim();
-    if (!name || !email || !message) { alert('Please fill in all required fields.'); return; }
+function toggleMenu() {
+  document.getElementById('mobileNav').classList.toggle('active');
+}
 
-    const btn = document.querySelector('.submit-btn');
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
+document.querySelectorAll('#mobileNav a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('mobileNav').classList.remove('active');
+  });
+});
 
-    try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          access_key: '13f6e288-ec9c-4cac-bf67-07ad6c37a979',
-          name: name,
-          email: email,
-          subject: subject || 'RenterAI Contact Form',
-          message: message
-        })
-      });
-      const data = await res.json();
-      if (data.success) {
-        document.getElementById('successMsg').style.display = 'block';
-        document.getElementById('contactName').value = '';
-        document.getElementById('contactEmail').value = '';
-        document.getElementById('contactSubject').value = '';
-        document.getElementById('contactMessage').value = '';
-      } else {
-        alert('Something went wrong. Please try again.');
-      }
-    } catch(e) {
-      alert('Error sending message. Please try again.');
-    }
-    btn.textContent = 'Send Message →';
-    btn.disabled = false;
+async function submitForm() {
+
+  const name = document.getElementById('contactName').value.trim();
+  const email = document.getElementById('contactEmail').value.trim();
+  const subject = document.getElementById('contactSubject').value;
+  const message = document.getElementById('contactMessage').value.trim();
+
+  if (!name || !email || !message) {
+    alert('Please fill in all required fields.');
+    return;
   }
+
+  const btn = document.querySelector('.submit-btn');
+
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  try {
+
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        access_key: '13f6e288-ec9c-4cac-bf67-07ad6c37a979',
+        name: name,
+        email: email,
+        subject: subject || 'RenterAI Contact Form',
+        message: message
+      })
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+
+      document.getElementById('successMsg').style.display = 'block';
+
+      document.getElementById('contactName').value = '';
+      document.getElementById('contactEmail').value = '';
+      document.getElementById('contactSubject').value = '';
+      document.getElementById('contactMessage').value = '';
+
+    } else {
+      alert('Something went wrong. Please try again.');
+    }
+
+  } catch(e) {
+    alert('Error sending message. Please try again.');
+  }
+
+  btn.textContent = 'Send Message →';
+  btn.disabled = false;
+}
 </script>
+
 </body>
 </html>
