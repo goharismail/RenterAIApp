@@ -3,8 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Contact Us - RenterAI</title>
+
 <meta name="description" content="Contact RenterAI - Get in touch with us for support, feedback, or questions about our free renter tools.">
+<meta name="keywords" content="contact renterai, renter support, tenant help, renter questions, landlord tenant support">
+<meta name="robots" content="index, follow">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+<text y='.9em' font-size='90'>🏠</text>
+</svg>">
+
+<meta property="og:title" content="Contact RenterAI">
+<meta property="og:description" content="Contact RenterAI for support, feedback, or questions about our free renter tools.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://renterai.org/contact.html">
+<meta property="og:image" content="https://renterai.org/preview.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact RenterAI">
+<meta name="twitter:description" content="Get support, ask questions, or send feedback to RenterAI.">
+<meta name="twitter:image" content="https://renterai.org/preview.png">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ContactPage",
+  "name":"RenterAI Contact",
+  "url":"https://renterai.org/contact.html",
+  "description":"Contact RenterAI for support and renter assistance.",
+  "publisher":{
+    "@type":"Organization",
+    "name":"RenterAI"
+  }
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -45,10 +79,11 @@ nav{
   background:rgba(10,15,30,0.95);
   backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);
+
   display:flex;
-  flex-direction:column;
   align-items:center;
-  justify-content:center;
+  justify-content:space-between;
+  gap:1rem;
 }
 
 .logo{
@@ -57,7 +92,7 @@ nav{
   font-weight:900;
   color:var(--text);
   text-decoration:none;
-  margin-bottom:.8rem;
+  flex-shrink:0;
 }
 
 .logo span{
@@ -69,7 +104,7 @@ nav{
   gap:1.5rem;
   list-style:none;
   flex-wrap:wrap;
-  justify-content:center;
+  justify-content:flex-end;
 }
 
 .nav-links a{
@@ -86,8 +121,9 @@ nav{
 /* HERO */
 
 .page-hero{
-  padding:11rem 1.5rem 4rem;
+  padding:8rem 1.5rem 4rem;
   text-align:center;
+
   background:
   radial-gradient(
     ellipse at 50% 0%,
@@ -327,15 +363,24 @@ footer{
 @media(max-width:768px){
 
   nav{
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     padding:1rem;
+    gap:.9rem;
+  }
+
+  .logo{
+    margin-bottom:0;
   }
 
   .nav-links{
-    gap:1rem;
+    justify-content:center;
+    gap:.8rem 1.2rem;
   }
 
   .nav-links a{
-    font-size:.85rem;
+    font-size:.84rem;
   }
 
   .contact-grid{
@@ -352,6 +397,18 @@ footer{
 
   .footer-nav{
     gap:1rem;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .page-title{
+    font-size:2rem;
+  }
+
+  .page-sub{
+    font-size:.95rem;
   }
 
 }
