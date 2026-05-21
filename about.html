@@ -3,7 +3,41 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <title>About Us - RenterAI</title>
+
+<!-- SEO -->
+<meta name="description" content="Learn about RenterAI — our mission is to help USA renters understand their rights with free AI-powered legal tools.">
+
+<meta name="keywords" content="about renterai, renter rights, AI legal tools, tenant help, lease analyzer">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml"
+href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+
+<!-- Open Graph -->
+<meta property="og:title" content="About RenterAI">
+<meta property="og:description" content="Learn about RenterAI and our mission to help renters understand their rights.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://renteraiapp.com/about.html">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About RenterAI">
+<meta name="twitter:description" content="Free AI-powered tools helping USA renters understand their rights.">
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AboutPage",
+  "name":"About RenterAI",
+  "url":"https://renteraiapp.com/about.html",
+  "description":"About RenterAI and its mission to help renters."
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -51,9 +85,12 @@ nav{
   border-bottom:1px solid var(--border);
 
   display:flex;
-  justify-content:space-between;
+  flex-direction:column;
+  justify-content:center;
   align-items:center;
+  gap:.9rem;
 }
+
 .logo{
   font-family:'Playfair Display',serif;
   font-size:1.7rem;
@@ -267,12 +304,8 @@ footer{
 
 @media(max-width:768px){
 
- nav{
+  nav{
     padding:1rem;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    gap:.9rem;
   }
 
   .logo{
