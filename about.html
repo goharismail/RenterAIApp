@@ -85,10 +85,8 @@ nav{
   border-bottom:1px solid var(--border);
 
   display:flex;
-  flex-direction:column;
-  justify-content:center;
+  justify-content:space-between;
   align-items:center;
-  gap:.9rem;
 }
 
 .logo{
@@ -304,8 +302,12 @@ footer{
 
 @media(max-width:768px){
 
-  nav{
+ nav{
     padding:1rem;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:.9rem;
   }
 
   .logo{
