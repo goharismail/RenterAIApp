@@ -1,441 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-39KXXC0T3M"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-39KXXC0T3M');
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="google-site-verification" content="I1Adk5jxUz4kvs1_zF7SIr129NJIUfysOiG0nAxhG-0" />
 <title>Blog - Tenant Rights & Renter Guides | RenterAI</title>
-
-<!-- SEO -->
 <meta name="description" content="Free guides for USA renters. Learn about tenant rights, lease agreements, security deposits, eviction laws, and more.">
-
-<meta name="keywords" content="tenant rights, lease agreement guide, renter tips, security deposit, eviction law USA">
-
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-
-<!-- Favicon -->
-<link rel="icon" type="image/svg+xml"
-href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
-
-<!-- Open Graph -->
-<meta property="og:title" content="RenterAI Blog - Tenant Rights & Renter Guides">
-<meta property="og:description" content="Free guides for USA renters. Learn about leases, tenant rights, eviction laws, and security deposits.">
+<meta name="keywords" content="tenant rights, lease agreement guide, renter tips, security deposit, eviction laws USA">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="RenterAI Blog - Free Renter Guides">
+<meta property="og:description" content="Expert guides on tenant rights, lease agreements, and renter protections across all 50 US states.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://renteraiapp.com/blog.html">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="RenterAI Blog - Tenant Rights & Renter Guides">
-<meta name="twitter:description" content="Free guides helping USA renters understand leases and tenant rights.">
-
-<!-- Schema -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Blog",
-  "name":"RenterAI Blog",
-  "url":"https://renteraiapp.com/blog.html",
-  "description":"Free renter guides and tenant rights education for USA renters."
-}
-</script>
-
+<meta name="google-site-verification" content="I1Adk5jxUz4kvs1_zF7SIr129NJIUfysOiG0nAxhG-0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
 <style>
-:root{
-  --bg:#0a0f1e;
-  --surface:#111827;
-  --accent:#3b82f6;
-  --accent2:#60a5fa;
-  --text:#f1f5f9;
-  --text2:#94a3b8;
-  --border:#1e293b;
-  --gold:#f59e0b;
-}
+  :root {
+    --bg: #0a0f1e; --surface: #111827; --accent: #3b82f6;
+    --accent2: #60a5fa; --text: #f1f5f9; --text2: #94a3b8;
+    --border: #1e293b; --success: #10b981;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 0.8rem 1.5rem; background: rgba(10,15,30,0.95);
+    backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 900; color: var(--text); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+  .nav-links a { color: var(--text2); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; white-space: nowrap; }
+  .nav-links a:hover, .nav-links a.active { color: var(--text); }
 
-body{
-  font-family:'DM Sans',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  overflow-x:hidden;
-}
-
-/* NAVBAR */
-
-nav{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index:1000;
-  padding:1.1rem 2rem;
-  background:rgba(10,15,30,0.95);
-  backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border);
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:1rem;
-}
-
-.logo{
-  font-family:'Playfair Display',serif;
-  font-size:1.6rem;
-  font-weight:900;
-  color:var(--text);
-  text-decoration:none;
-  flex-shrink:0;
-}
-
-.logo span{
-  color:var(--accent);
-}
-
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:2rem;
-  list-style:none;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-}
-
-.nav-links a{
-  color:var(--text2);
-  text-decoration:none;
-  font-size:0.92rem;
-  transition:0.2s;
-  white-space:nowrap;
-}
-
-.nav-links a:hover,
-.nav-links a.active{
-  color:var(--text);
-}
-
-/* HERO */
-
-.page-hero{
-  padding:8rem 2rem 4rem;
-  text-align:center;
-
-  background:radial-gradient(
-    ellipse at 50% 0%,
-    rgba(59,130,246,0.12) 0%,
-    transparent 70%
-  );
-}
-
-.page-tag{
-  font-size:0.8rem;
-  color:var(--accent);
-  text-transform:uppercase;
-  letter-spacing:2px;
-  margin-bottom:1rem;
-}
-
-.page-title{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(2rem,5vw,3.5rem);
-  font-weight:900;
-  line-height:1.15;
-  margin-bottom:1rem;
-}
-
-.page-sub{
-  color:var(--text2);
-  font-size:1.05rem;
-  max-width:650px;
-  margin:auto;
-  line-height:1.7;
-}
-
-/* BLOG */
-
-.blog-section{
-  max-width:1150px;
-  margin:auto;
-  padding:4rem 2rem;
-}
-
-.blog-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:1.5rem;
-}
-
-.blog-card{
-  background:var(--surface);
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:2rem;
-  text-decoration:none;
-  color:var(--text);
-  transition:0.3s;
-  position:relative;
-  overflow:hidden;
-  display:block;
-}
-
-.blog-card::before{
-  content:'';
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  height:2px;
-  background:var(--accent);
-  transform:scaleX(0);
-  transform-origin:left;
-  transition:0.3s;
-}
-
-.blog-card:hover{
-  transform:translateY(-5px);
-  border-color:rgba(59,130,246,0.45);
-}
-
-.blog-card:hover::before{
-  transform:scaleX(1);
-}
-
-.blog-cat{
-  display:inline-block;
-  font-size:0.72rem;
-  font-weight:500;
-  color:var(--accent);
-  background:rgba(59,130,246,0.1);
-  border:1px solid rgba(59,130,246,0.2);
-  padding:0.25rem 0.7rem;
-  border-radius:50px;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  margin-bottom:1rem;
-}
-
-.blog-title{
-  font-family:'Playfair Display',serif;
-  font-size:1.2rem;
-  font-weight:700;
-  line-height:1.4;
-  margin-bottom:0.8rem;
-}
-
-.blog-desc{
-  color:var(--text2);
-  font-size:0.9rem;
-  line-height:1.7;
-  margin-bottom:1.2rem;
-}
-
-.blog-meta{
-  display:flex;
-  flex-wrap:wrap;
-  gap:1rem;
-  font-size:0.82rem;
-  color:var(--text2);
-}
-
-.blog-read{
-  display:inline-block;
-  margin-top:1rem;
-  color:var(--accent);
-  font-size:0.9rem;
-  font-weight:500;
-}
-
-/* FEATURED */
-
-.featured-card{
-  grid-column:1/-1;
-
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:2rem;
-  align-items:center;
-}
-
-.featured-card .blog-title{
-  font-size:1.7rem;
-}
-
-.featured-badge{
-  display:inline-block;
-  font-size:0.72rem;
-  font-weight:500;
-  color:var(--gold);
-  background:rgba(245,158,11,0.1);
-  border:1px solid rgba(245,158,11,0.2);
-  padding:0.25rem 0.7rem;
-  border-radius:50px;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  margin-right:0.5rem;
-  margin-bottom:1rem;
-}
-
-.featured-visual{
-  background:rgba(59,130,246,0.05);
-  border:1px solid rgba(59,130,246,0.12);
-  border-radius:16px;
-  padding:3rem;
-  text-align:center;
-  font-size:4rem;
-}
-
-/* FOOTER */
-
-footer{
-  border-top:1px solid var(--border);
-  padding:2.5rem 1.5rem;
-  text-align:center;
-  margin-top:2rem;
-}
-
-.footer-logo{
-  font-family:'Playfair Display',serif;
-  font-size:1.35rem;
-  font-weight:900;
-  color:var(--text);
-  margin-bottom:1rem;
-}
-
-.footer-logo span{
-  color:var(--accent);
-}
-
-.footer-links{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:0.8rem 1.5rem;
-  margin-top:1rem;
-}
-
-.footer-links a{
-  color:var(--text2);
-  text-decoration:none;
-  transition:0.2s;
-  white-space:nowrap;
-}
-
-.footer-links a:hover{
-  color:var(--text);
-}
-
-.footer-copy{
-  margin-top:1.2rem;
-  color:var(--text2);
-  font-size:0.85rem;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-  nav{
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    padding:1rem;
-    gap:0.9rem;
+  /* Mobile nav - logo top, links below */
+  @media (max-width: 640px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      gap: 0.6rem;
+    }
+    .logo { font-size: 1.4rem; }
+    .nav-links { gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .nav-links a { font-size: 0.8rem; }
   }
 
-  .nav-links{
-    justify-content:center;
-    gap:0.8rem 1.2rem;
+  .page-hero {
+    padding: 8rem 2rem 4rem; text-align: center;
+    background: radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.12) 0%, transparent 70%);
   }
+  .page-tag { font-size: 0.8rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
+  .page-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 1rem; }
+  .page-sub { color: var(--text2); font-size: 1.05rem; max-width: 550px; margin: 0 auto; line-height: 1.7; }
 
-  .nav-links a{
-    font-size:0.84rem;
+  .blog-section { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+  .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+
+  .blog-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; padding: 1.8rem;
+    text-decoration: none; color: var(--text);
+    transition: all 0.3s; position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
   }
-
-  .page-hero{
-    padding-top:11rem;
-    padding-left:1.2rem;
-    padding-right:1.2rem;
+  .blog-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: var(--accent); transform: scaleX(0);
+    transition: transform 0.3s; transform-origin: left;
   }
+  .blog-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-4px); }
+  .blog-card:hover::before { transform: scaleX(1); }
+  .blog-cat { font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; margin-bottom: 0.8rem; }
+  .blog-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.8rem; line-height: 1.4; }
+  .blog-excerpt { color: var(--text2); font-size: 0.88rem; line-height: 1.7; flex: 1; }
+  .blog-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text2); }
+  .read-more { color: var(--accent); font-weight: 500; }
 
-  .blog-section{
-    padding:3rem 1.2rem;
-  }
-
-  .featured-card{
-    grid-template-columns:1fr;
-  }
-
-  .featured-visual{
-    display:none;
-  }
-
-  .footer-links{
-    gap:0.7rem 1rem;
-  }
-}
-
-@media(max-width:480px){
-
-  .logo{
-    font-size:1.4rem;
-  }
-
-  .nav-links{
-    gap:0.65rem 1rem;
-  }
-
-  .nav-links a{
-    font-size:0.8rem;
-  }
-
-  .page-title{
-    font-size:2rem;
-  }
-
-  .page-hero{
-    padding-top:11.5rem;
-  }
-
-  .blog-card{
-    padding:1.4rem;
-  }
-
-  .featured-card .blog-title{
-    font-size:1.35rem;
-  }
-
-  .footer-links{
-    flex-direction:row;
-    justify-content:center;
-  }
-}
+  footer { padding: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--text2); font-size: 0.85rem; }
+  footer a { color: var(--text2); text-decoration: none; margin: 0 0.8rem; }
+  footer a:hover { color: var(--text); }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 900; color: var(--text); margin-bottom: 0.8rem; }
+  .footer-logo span { color: var(--accent); }
 </style>
 </head>
-
 <body>
 
 <nav>
   <a href="index.html" class="logo">Renter<span>AI</span></a>
-
   <ul class="nav-links">
     <li><a href="index.html#tools">Tools</a></li>
+    <li><a href="index.html#how">How It Works</a></li>
     <li><a href="blog.html" class="active">Blog</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
@@ -444,178 +111,97 @@ footer{
 
 <div class="page-hero">
   <div class="page-tag">Renter Guides</div>
-
-  <h1 class="page-title">
-    Know Your Rights as a
-    <span style="color:var(--accent)">USA Renter</span>
-  </h1>
-
-  <p class="page-sub">
-    Free guides to help you understand leases, tenant rights,
-    and how to protect yourself from unfair landlords.
-  </p>
+  <h1 class="page-title">Know Your <span style="color:var(--accent)">Rights</span></h1>
+  <p class="page-sub">Free expert guides on tenant rights, lease agreements, and renter protections across all 50 US states.</p>
 </div>
 
 <div class="blog-section">
-
   <div class="blog-grid">
 
-    <!-- FEATURED -->
-
-    <a href="blog-how-to-read-lease.html" class="blog-card featured-card">
-
-      <div>
-        <span class="featured-badge">⭐ Featured</span>
-        <span class="blog-cat">Lease Guide</span>
-
-        <div class="blog-title">
-          How to Read a Lease Agreement: Complete Guide for USA Renters
-        </div>
-
-        <div class="blog-desc">
-          Most renters sign a lease without fully reading it.
-          This guide explains what to look for, hidden clauses,
-          red flags, and what you should never agree to.
-        </div>
-
-        <div class="blog-meta">
-          <span>📖 8 min read</span>
-          <span>🏛️ All States</span>
-        </div>
-
-        <span class="blog-read">Read Guide →</span>
-      </div>
-
-      <div class="featured-visual">
-        📄
-      </div>
-
+    <a href="blog-how-to-read-lease.html" class="blog-card">
+      <div class="blog-cat">📄 Lease Guide</div>
+      <div class="blog-title">How to Read a Lease Agreement: Complete Guide for USA Renters</div>
+      <div class="blog-excerpt">Most renters sign leases without reading them. Learn exactly what to look for, which clauses are red flags, and how to protect yourself before signing.</div>
+      <div class="blog-meta"><span>8 min read</span><span class="read-more">Read More →</span></div>
     </a>
 
     <a href="blog-tenant-rights-california.html" class="blog-card">
-      <span class="blog-cat">Tenant Rights</span>
-
-      <div class="blog-title">
-        Tenant Rights in California: Complete 2026 Guide
-      </div>
-
-      <div class="blog-desc">
-        Learn about rent control, eviction rules,
-        security deposits, and tenant protections in California.
-      </div>
-
-      <div class="blog-meta">
-        <span>📖 7 min read</span>
-        <span>📍 California</span>
-      </div>
-
-      <span class="blog-read">Read Guide →</span>
+      <div class="blog-cat">🏛️ State Rights</div>
+      <div class="blog-title">Tenant Rights in California: What Every Renter Must Know in 2026</div>
+      <div class="blog-excerpt">California has some of the strongest tenant protections in the USA. Learn about rent control, eviction protections, habitability standards, and more.</div>
+      <div class="blog-meta"><span>10 min read</span><span class="read-more">Read More →</span></div>
     </a>
 
-    <a href="#" class="blog-card">
-      <span class="blog-cat">Security Deposit</span>
-
-      <div class="blog-title">
-        How to Get Your Security Deposit Back
-      </div>
-
-      <div class="blog-desc">
-        Step-by-step guide to getting your full deposit back
-        and handling unfair deductions legally.
-      </div>
-
-      <div class="blog-meta">
-        <span>📖 6 min read</span>
-        <span>🏛️ All States</span>
-      </div>
-
-      <span class="blog-read">Read Guide →</span>
+    <a href="blog-tenant-rights-texas.html" class="blog-card">
+      <div class="blog-cat">🏛️ State Rights</div>
+      <div class="blog-title">Tenant Rights in Texas: Complete Renter's Guide 2026</div>
+      <div class="blog-excerpt">Texas landlord-tenant law explained clearly. Security deposits, repairs, eviction process, and your rights as a Texas renter.</div>
+      <div class="blog-meta"><span>9 min read</span><span class="read-more">Read More →</span></div>
     </a>
 
-    <a href="#" class="blog-card">
-      <span class="blog-cat">Eviction</span>
-
-      <div class="blog-title">
-        What Is an Illegal Eviction?
-      </div>
-
-      <div class="blog-desc">
-        Your landlord cannot legally lock you out overnight.
-        Learn your rights and what actions to take immediately.
-      </div>
-
-      <div class="blog-meta">
-        <span>📖 5 min read</span>
-        <span>🏛️ USA</span>
-      </div>
-
-      <span class="blog-read">Read Guide →</span>
+    <a href="blog-tenant-rights-new-york.html" class="blog-card">
+      <div class="blog-cat">🏛️ State Rights</div>
+      <div class="blog-title">Tenant Rights in New York: Full Guide for NYC & State Renters</div>
+      <div class="blog-excerpt">New York has powerful tenant protections. Learn about rent stabilization, lease renewals, eviction process, and your rights in NYC and beyond.</div>
+      <div class="blog-meta"><span>10 min read</span><span class="read-more">Read More →</span></div>
     </a>
 
-    <a href="#" class="blog-card">
-      <span class="blog-cat">Lease Guide</span>
-
-      <div class="blog-title">
-        10 Lease Red Flags Every Renter Should Know
-      </div>
-
-      <div class="blog-desc">
-        Spot dangerous lease clauses before signing anything.
-        Avoid unfair fees and risky agreements.
-      </div>
-
-      <div class="blog-meta">
-        <span>📖 5 min read</span>
-        <span>🏛️ USA</span>
-      </div>
-
-      <span class="blog-read">Read Guide →</span>
+    <a href="blog-security-deposit.html" class="blog-card">
+      <div class="blog-cat">💰 Security Deposit</div>
+      <div class="blog-title">How to Get Your Security Deposit Back: Step-by-Step Guide</div>
+      <div class="blog-excerpt">Landlords withhold billions in security deposits illegally every year. Learn exactly how to get your full deposit back — and what to do if they refuse.</div>
+      <div class="blog-meta"><span>7 min read</span><span class="read-more">Read More →</span></div>
     </a>
 
-    <a href="#" class="blog-card">
-      <span class="blog-cat">Repairs</span>
+    <a href="blog-lease-red-flags.html" class="blog-card">
+      <div class="blog-cat">🚩 Lease Warning</div>
+      <div class="blog-title">10 Lease Red Flags Every Renter Must Know Before Signing</div>
+      <div class="blog-excerpt">These common lease clauses could cost you thousands. Learn which provisions are unfair, potentially illegal, and how to negotiate them out.</div>
+      <div class="blog-meta"><span>6 min read</span><span class="read-more">Read More →</span></div>
+    </a>
 
-      <div class="blog-title">
-        What To Do If Your Landlord Ignores Repairs
-      </div>
+    <a href="blog-illegal-eviction.html" class="blog-card">
+      <div class="blog-cat">⚖️ Eviction</div>
+      <div class="blog-title">What is an Illegal Eviction? Know Your Rights & How to Fight Back</div>
+      <div class="blog-excerpt">Landlords cannot simply change your locks or throw out your belongings. Learn what constitutes an illegal eviction and what legal options you have.</div>
+      <div class="blog-meta"><span>8 min read</span><span class="read-more">Read More →</span></div>
+    </a>
 
-      <div class="blog-desc">
-        Learn your legal options when your landlord refuses
-        to fix unsafe or broken conditions.
-      </div>
+    <a href="blog-demand-letter.html" class="blog-card">
+      <div class="blog-cat">📝 Legal Action</div>
+      <div class="blog-title">How to Write a Demand Letter to Your Landlord (With Template)</div>
+      <div class="blog-excerpt">A demand letter is often the fastest way to resolve issues with your landlord. Learn how to write one that gets results — without hiring a lawyer.</div>
+      <div class="blog-meta"><span>7 min read</span><span class="read-more">Read More →</span></div>
+    </a>
 
-      <div class="blog-meta">
-        <span>📖 6 min read</span>
-        <span>🏛️ All States</span>
-      </div>
+    <a href="blog-rent-increase.html" class="blog-card">
+      <div class="blog-cat">📈 Rent Laws</div>
+      <div class="blog-title">Rent Increase Laws in the USA: Is Your Landlord's Increase Legal?</div>
+      <div class="blog-excerpt">Not all rent increases are legal. Learn about rent control laws, notice requirements, and how to challenge an illegal rent increase in your state.</div>
+      <div class="blog-meta"><span>8 min read</span><span class="read-more">Read More →</span></div>
+    </a>
 
-      <span class="blog-read">Read Guide →</span>
+    <a href="blog-landlord-wont-fix.html" class="blog-card">
+      <div class="blog-cat">🔧 Repairs</div>
+      <div class="blog-title">Landlord Won't Fix Repairs? Here's Exactly What To Do</div>
+      <div class="blog-excerpt">You have a legal right to a habitable home. If your landlord ignores repair requests, here are your options — from withholding rent to legal action.</div>
+      <div class="blog-meta"><span>8 min read</span><span class="read-more">Read More →</span></div>
     </a>
 
   </div>
-
 </div>
 
 <footer>
-
-  <div class="footer-logo">
-    Renter<span>AI</span>
-  </div>
-
-  <div class="footer-links">
+  <div class="footer-logo">Renter<span>AI</span></div>
+  <div>
     <a href="index.html">Home</a>
-    <a href="index.html#tools">Tools</a>
     <a href="blog.html">Blog</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
     <a href="privacy.html">Privacy Policy</a>
     <a href="terms.html">Terms of Service</a>
   </div>
-
-  <div class="footer-copy">
-    © 2026 RenterAI. All rights reserved. Not legal advice.
-  </div>
-
+  <p style="margin-top:1rem;">© 2026 RenterAI. All rights reserved.</p>
 </footer>
 
 </body>
