@@ -33,15 +33,13 @@
     <priority>0.5</priority>
   </url>
 
-  <!-- Blog Listing -->
+  <!-- Blog -->
   <url>
     <loc>https://www.renteraiapp.com/blog.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Blog Articles -->
   <url>
     <loc>https://www.renteraiapp.com/blog-how-to-read-lease.html</loc>
     <lastmod>2026-05-21</lastmod>
@@ -69,6 +67,36 @@
   <url>
     <loc>https://www.renteraiapp.com/blog-illegal-eviction.html</loc>
     <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.renteraiapp.com/blog-rent-increase.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.renteraiapp.com/blog-landlord-wont-fix.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.renteraiapp.com/blog-demand-letter.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.renteraiapp.com/blog-tenant-rights-texas.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.renteraiapp.com/blog-tenant-rights-new-york.html</loc>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
