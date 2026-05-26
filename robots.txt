@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://renteraiapp.com/sitemap.xml
+Sitemap: https://www.renteraiapp.com/sitemap.xml
