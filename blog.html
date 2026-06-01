@@ -3,7 +3,6 @@
 <head>
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4583731085701106"
      crossorigin="anonymous"></script>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-39KXXC0T3M"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -14,7 +13,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="I1Adk5jxUz4kvs1_zF7SIr129NJIUfysOiG0nAxhG-0" />
-<title>Blog - Tenant Rights & Renter Guides | RenterAI</title>
+<title>Blog - Tenant Rights &amp; Renter Guides | RenterAI</title>
 <meta name="description" content="Free guides for USA renters. Learn about tenant rights, lease agreements, security deposits, eviction laws, and more.">
 <meta name="keywords" content="tenant rights, lease agreement guide, renter tips, security deposit, eviction laws USA">
 <meta name="robots" content="index, follow">
@@ -47,14 +46,8 @@
   .nav-links a { color: var(--text2); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; white-space: nowrap; }
   .nav-links a:hover, .nav-links a.active { color: var(--text); }
 
-  /* Mobile nav - logo top, links below */
   @media (max-width: 640px) {
-    nav {
-      flex-direction: column;
-      align-items: center;
-      padding: 0.8rem 1rem;
-      gap: 0.6rem;
-    }
+    nav { flex-direction: column; align-items: center; padding: 0.8rem 1rem; gap: 0.6rem; }
     .logo { font-size: 1.4rem; }
     .nav-links { gap: 1rem; justify-content: center; flex-wrap: wrap; }
     .nav-links a { font-size: 0.8rem; }
@@ -68,7 +61,33 @@
   .page-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 1rem; }
   .page-sub { color: var(--text2); font-size: 1.05rem; max-width: 550px; margin: 0 auto; line-height: 1.7; }
 
-  .blog-section { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+  .filter-section { max-width: 1100px; margin: 0 auto; padding: 0 2rem 2rem; }
+
+  .search-wrap { position: relative; margin-bottom: 1.5rem; }
+  .search-wrap input {
+    width: 100%; padding: 0.85rem 1.2rem 0.85rem 3rem;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; color: var(--text); font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem; outline: none; transition: border-color 0.2s;
+  }
+  .search-wrap input::placeholder { color: var(--text2); }
+  .search-wrap input:focus { border-color: var(--accent); }
+  .search-icon { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text2); font-size: 1.1rem; pointer-events: none; }
+
+  .filter-bar { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.2rem; }
+  .filter-btn {
+    padding: 0.45rem 1.1rem; border-radius: 50px;
+    border: 1px solid var(--border); background: transparent;
+    color: var(--text2); font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem; cursor: pointer; transition: all 0.2s; white-space: nowrap;
+  }
+  .filter-btn:hover { border-color: var(--accent); color: var(--text); }
+  .filter-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 500; }
+
+  .results-info { font-size: 0.83rem; color: var(--text2); margin-bottom: 0.5rem; }
+  .results-info span { color: var(--accent); font-weight: 500; }
+
+  .blog-section { max-width: 1100px; margin: 0 auto; padding: 0 2rem 0; }
   .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
 
   .blog-card {
@@ -85,11 +104,30 @@
   }
   .blog-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-4px); }
   .blog-card:hover::before { transform: scaleX(1); }
+  .blog-card.hidden { display: none !important; }
+
   .blog-cat { font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; margin-bottom: 0.8rem; }
   .blog-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.8rem; line-height: 1.4; }
   .blog-excerpt { color: var(--text2); font-size: 0.88rem; line-height: 1.7; flex: 1; }
   .blog-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text2); }
   .read-more { color: var(--accent); font-weight: 500; }
+
+  .no-results { display: none; text-align: center; padding: 4rem 2rem; color: var(--text2); grid-column: 1 / -1; }
+  .no-results.show { display: block; }
+  .no-results h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--text); margin-bottom: 0.5rem; }
+
+  /* Load More */
+  .load-more-wrap { text-align: center; padding: 2.5rem 0 5rem; }
+  .load-more-btn {
+    padding: 0.85rem 2.8rem; border-radius: 50px;
+    border: 1px solid var(--accent); background: transparent;
+    color: var(--accent); font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem; font-weight: 500; cursor: pointer;
+    transition: all 0.25s; letter-spacing: 0.3px;
+  }
+  .load-more-btn:hover { background: var(--accent); color: #fff; }
+  .load-more-btn:active { transform: scale(0.97); }
+  .load-more-btn.hidden { display: none; }
 
   footer { padding: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--text2); font-size: 0.85rem; }
   footer a { color: var(--text2); text-decoration: none; margin: 0 0.8rem; }
@@ -117,80 +155,107 @@
   <p class="page-sub">Free expert guides on tenant rights, lease agreements, and renter protections across all 50 US states.</p>
 </div>
 
-<div class="blog-section">
-  <div class="blog-grid">
+<div class="filter-section">
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="Search articles... (e.g. California, eviction, deposit)" oninput="applyFilters()" />
+  </div>
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all" onclick="setFilter(this)">All Articles</button>
+    <button class="filter-btn" data-filter="state" onclick="setFilter(this)">🏛️ State Rights</button>
+    <button class="filter-btn" data-filter="lease" onclick="setFilter(this)">📄 Lease Guide</button>
+    <button class="filter-btn" data-filter="deposit" onclick="setFilter(this)">💰 Security Deposit</button>
+    <button class="filter-btn" data-filter="eviction" onclick="setFilter(this)">⚖️ Eviction</button>
+    <button class="filter-btn" data-filter="repairs" onclick="setFilter(this)">🔧 Repairs</button>
+    <button class="filter-btn" data-filter="legal" onclick="setFilter(this)">📝 Legal Action</button>
+    <button class="filter-btn" data-filter="rentlaws" onclick="setFilter(this)">📈 Rent Laws</button>
+  </div>
+  <div class="results-info" id="resultsInfo">Showing <span id="resultsCount">6</span> of 10 articles</div>
+</div>
 
-    <a href="blog-how-to-read-lease.html" class="blog-card">
+<div class="blog-section">
+  <div class="blog-grid" id="blogGrid">
+
+    <a href="blog-how-to-read-lease.html" class="blog-card" data-cat="lease" data-text="how to read lease agreement renters">
       <div class="blog-cat">📄 Lease Guide</div>
       <div class="blog-title">How to Read a Lease Agreement: Complete Guide for USA Renters</div>
       <div class="blog-excerpt">Most renters sign leases without reading them. Learn exactly what to look for, which clauses are red flags, and how to protect yourself before signing.</div>
       <div class="blog-meta"><span>8 min read</span><span class="read-more">Read More →</span></div>
     </a>
 
-    <a href="blog-tenant-rights-california.html" class="blog-card">
-      <div class="blog-cat">🏛️ State Rights</div>
+    <a href="blog-tenant-rights-california.html" class="blog-card" data-cat="state" data-text="tenant rights california rent control eviction 2026">
+      <div class="blog-cat">🏛️ State Rights — California</div>
       <div class="blog-title">Tenant Rights in California: What Every Renter Must Know in 2026</div>
       <div class="blog-excerpt">California has some of the strongest tenant protections in the USA. Learn about rent control, eviction protections, habitability standards, and more.</div>
       <div class="blog-meta"><span>10 min read</span><span class="read-more">Read More →</span></div>
     </a>
 
-    <a href="blog-tenant-rights-texas.html" class="blog-card">
-      <div class="blog-cat">🏛️ State Rights</div>
+    <a href="blog-tenant-rights-texas.html" class="blog-card" data-cat="state" data-text="tenant rights texas security deposit repairs eviction 2026">
+      <div class="blog-cat">🏛️ State Rights — Texas</div>
       <div class="blog-title">Tenant Rights in Texas: Complete Renter's Guide 2026</div>
       <div class="blog-excerpt">Texas landlord-tenant law explained clearly. Security deposits, repairs, eviction process, and your rights as a Texas renter.</div>
       <div class="blog-meta"><span>9 min read</span><span class="read-more">Read More →</span></div>
     </a>
 
-    <a href="blog-tenant-rights-new-york.html" class="blog-card">
-      <div class="blog-cat">🏛️ State Rights</div>
+    <a href="blog-tenant-rights-new-york.html" class="blog-card" data-cat="state" data-text="tenant rights new york nyc rent stabilization eviction 2026">
+      <div class="blog-cat">🏛️ State Rights — New York</div>
       <div class="blog-title">Tenant Rights in New York: Full Guide for NYC & State Renters</div>
       <div class="blog-excerpt">New York has powerful tenant protections. Learn about rent stabilization, lease renewals, eviction process, and your rights in NYC and beyond.</div>
       <div class="blog-meta"><span>10 min read</span><span class="read-more">Read More →</span></div>
     </a>
 
-    <a href="blog-security-deposit.html" class="blog-card">
+    <a href="blog-security-deposit.html" class="blog-card" data-cat="deposit" data-text="security deposit get back landlord withhold refund">
       <div class="blog-cat">💰 Security Deposit</div>
       <div class="blog-title">How to Get Your Security Deposit Back: Step-by-Step Guide</div>
       <div class="blog-excerpt">Landlords withhold billions in security deposits illegally every year. Learn exactly how to get your full deposit back — and what to do if they refuse.</div>
       <div class="blog-meta"><span>7 min read</span><span class="read-more">Read More →</span></div>
     </a>
 
-    <a href="blog-lease-red-flags.html" class="blog-card">
+    <a href="blog-lease-red-flags.html" class="blog-card" data-cat="lease" data-text="lease red flags warning clauses illegal unfair signing">
       <div class="blog-cat">🚩 Lease Warning</div>
       <div class="blog-title">10 Lease Red Flags Every Renter Must Know Before Signing</div>
       <div class="blog-excerpt">These common lease clauses could cost you thousands. Learn which provisions are unfair, potentially illegal, and how to negotiate them out.</div>
       <div class="blog-meta"><span>6 min read</span><span class="read-more">Read More →</span></div>
     </a>
 
-    <a href="blog-illegal-eviction.html" class="blog-card">
+    <a href="blog-illegal-eviction.html" class="blog-card" data-cat="eviction" data-text="illegal eviction lockout tenant rights fight back" style="display:none">
       <div class="blog-cat">⚖️ Eviction</div>
       <div class="blog-title">What is an Illegal Eviction? Know Your Rights & How to Fight Back</div>
       <div class="blog-excerpt">Landlords cannot simply change your locks or throw out your belongings. Learn what constitutes an illegal eviction and what legal options you have.</div>
       <div class="blog-meta"><span>8 min read</span><span class="read-more">Read More →</span></div>
     </a>
 
-    <a href="blog-demand-letter.html" class="blog-card">
+    <a href="blog-demand-letter.html" class="blog-card" data-cat="legal" data-text="demand letter landlord template write legal action" style="display:none">
       <div class="blog-cat">📝 Legal Action</div>
       <div class="blog-title">How to Write a Demand Letter to Your Landlord (With Template)</div>
       <div class="blog-excerpt">A demand letter is often the fastest way to resolve issues with your landlord. Learn how to write one that gets results — without hiring a lawyer.</div>
       <div class="blog-meta"><span>7 min read</span><span class="read-more">Read More →</span></div>
     </a>
 
-    <a href="blog-rent-increase.html" class="blog-card">
+    <a href="blog-rent-increase.html" class="blog-card" data-cat="rentlaws" data-text="rent increase laws legal landlord notice rent control challenge" style="display:none">
       <div class="blog-cat">📈 Rent Laws</div>
       <div class="blog-title">Rent Increase Laws in the USA: Is Your Landlord's Increase Legal?</div>
       <div class="blog-excerpt">Not all rent increases are legal. Learn about rent control laws, notice requirements, and how to challenge an illegal rent increase in your state.</div>
       <div class="blog-meta"><span>8 min read</span><span class="read-more">Read More →</span></div>
     </a>
 
-    <a href="blog-landlord-wont-fix.html" class="blog-card">
+    <a href="blog-landlord-wont-fix.html" class="blog-card" data-cat="repairs" data-text="landlord repairs fix habitable withhold rent legal action" style="display:none">
       <div class="blog-cat">🔧 Repairs</div>
       <div class="blog-title">Landlord Won't Fix Repairs? Here's Exactly What To Do</div>
       <div class="blog-excerpt">You have a legal right to a habitable home. If your landlord ignores repair requests, here are your options — from withholding rent to legal action.</div>
       <div class="blog-meta"><span>8 min read</span><span class="read-more">Read More →</span></div>
     </a>
 
+    <div class="no-results" id="noResults">
+      <h3>No articles found</h3>
+      <p>Try a different search term or category.</p>
+    </div>
+
   </div>
+</div>
+
+<div class="load-more-wrap">
+  <button class="load-more-btn" id="loadMoreBtn" onclick="loadMore()">Load More Articles</button>
 </div>
 
 <footer>
@@ -205,6 +270,78 @@
   </div>
   <p style="margin-top:1rem;">© 2026 RenterAI. All rights reserved.</p>
 </footer>
+
+<script>
+  const CARDS_PER_PAGE = 6;
+  let activeFilter = 'all';
+  let currentlyShown = 0;
+  let matchedCards = [];
+
+  function getAllCards() {
+    return Array.from(document.querySelectorAll('.blog-card'));
+  }
+
+  function setFilter(btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const query = document.getElementById('searchInput').value.toLowerCase().trim();
+    const allCards = getAllCards();
+
+    // Hide all first
+    allCards.forEach(card => {
+      card.style.display = 'none';
+      card.classList.remove('hidden');
+    });
+
+    // Find matching cards
+    matchedCards = allCards.filter(card => {
+      const catMatch = activeFilter === 'all' || card.dataset.cat === activeFilter;
+      const cardText = (card.dataset.text + ' ' + card.innerText).toLowerCase();
+      const searchMatch = !query || cardText.includes(query);
+      return catMatch && searchMatch;
+    });
+
+    currentlyShown = 0;
+    showMore();
+  }
+
+  function showMore() {
+    const end = Math.min(currentlyShown + CARDS_PER_PAGE, matchedCards.length);
+    for (let i = currentlyShown; i < end; i++) {
+      matchedCards[i].style.display = 'flex';
+    }
+    currentlyShown = end;
+
+    // Update counter
+    document.getElementById('resultsCount').textContent = currentlyShown;
+    document.getElementById('resultsInfo').innerHTML =
+      'Showing <span id="resultsCount">' + currentlyShown + '</span> of ' + matchedCards.length + ' articles';
+
+    // Show/hide Load More button
+    const btn = document.getElementById('loadMoreBtn');
+    if (currentlyShown >= matchedCards.length) {
+      btn.classList.add('hidden');
+    } else {
+      btn.classList.remove('hidden');
+    }
+
+    // No results
+    const noResults = document.getElementById('noResults');
+    noResults.classList.toggle('show', matchedCards.length === 0);
+  }
+
+  function loadMore() {
+    showMore();
+  }
+
+  // Init on page load
+  applyFilters();
+</script>
 
 </body>
 </html>
