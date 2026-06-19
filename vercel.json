@@ -1,0 +1,26 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "renteraiapp.com"
+        }
+      ],
+      "destination": "https://www.renteraiapp.com/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "renteraiapp.com"
+        }
+      ],
+      "destination": "https://www.renteraiapp.com/:path*",
+      "permanent": true
+    }
+  ]
+}
