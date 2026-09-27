@@ -1,0 +1,28 @@
+<style>
+  :root { --bg: #0a0f1e; --surface: #111827; --surface2: #1a2234; --accent: #3b82f6; --accent2: #60a5fa; --text: #f1f5f9; --text2: #94a3b8; --border: #1e293b; --success: #10b981; --danger: #ef4444; --gold: #f59e0b; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0.8rem 1.5rem; background: rgba(10,15,30,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; font-family: 'DM Sans', sans-serif; }
+  .logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 900; color: var(--text); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+  .nav-links a { color: var(--text2); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; white-space: nowrap; }
+  .nav-links a:hover, .nav-links a.active { color: var(--text); }
+  @media (max-width: 640px) {
+    nav { flex-direction: column; align-items: center; padding: 0.8rem 1rem; gap: 0.6rem; }
+    .logo { font-size: 1.4rem; }
+    .nav-links { gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
+    .nav-links a { font-size: 0.8rem; }
+  }
+</style>
+
+<nav>
+  <a href="/index.html" class="logo">Renter<span>AI</span></a>
+  <ul class="nav-links">
+    <li><a href="/index.html#tools" data-nav="tools">Tools</a></li>
+    <li><a href="/calculators.html" data-nav="calculators">Calculators</a></li>
+    <li><a href="/index.html#how" data-nav="how">How It Works</a></li>
+    <li><a href="/blog.html" data-nav="blog">Blog</a></li>
+    <li><a href="/about.html" data-nav="about">About</a></li>
+    <li><a href="/contact.html" data-nav="contact">Contact</a></li>
+  </ul>
+</nav>
