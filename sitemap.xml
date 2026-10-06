@@ -345,7 +345,12 @@
 </url>
 
   <url>
-  <loc>https://www.renteraiapp.com/blog-how-to-split-rent-fairly.html</loc>
+  <loc>https://www.renteraiapp.com/blog-how-to-split-rent-fairly</loc>
+  <lastmod>2026-10-06</lastmod>
+  <priority>0.80</priority>
+</url>
+  <url>
+  <loc>https://www.renteraiapp.com/blog-student-housing-hostel-tenant-rights</loc>
   <lastmod>2026-10-06</lastmod>
   <priority>0.80</priority>
 </url>
