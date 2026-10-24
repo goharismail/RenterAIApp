@@ -84,56 +84,6 @@ body{
   overflow-x:hidden;
 }
 
-/* NAVBAR */
-
-nav{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index:1000;
-  padding:1.2rem 2rem;
-  background:rgba(10,15,30,.95);
-  backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border);
-
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.logo{
-  font-family:'Playfair Display',serif;
-  font-size:1.7rem;
-  font-weight:900;
-  color:var(--text);
-  text-decoration:none;
-}
-
-.logo span{
-  color:var(--accent);
-}
-
-.nav-links{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:.8rem 1.4rem;
-  list-style:none;
-}
-
-.nav-links a{
-  color:var(--text2);
-  text-decoration:none;
-  font-size:.92rem;
-  transition:.2s;
-}
-
-.nav-links a:hover{
-  color:var(--text);
-}
-
 /* HERO */
 
 .page-hero{
@@ -266,74 +216,9 @@ nav{
   font-size:.9rem;
 }
 
-/* FOOTER */
-
-footer{
-  padding:2.5rem 1.5rem;
-  border-top:1px solid var(--border);
-  text-align:center;
-}
-
-.footer-logo{
-  font-family:'Playfair Display',serif;
-  font-size:1.4rem;
-  font-weight:900;
-  margin-bottom:1rem;
-}
-
-.footer-logo span{
-  color:var(--accent);
-}
-
-.footer-links{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:.8rem 1.2rem;
-  margin-top:1rem;
-}
-
-.footer-links a{
-  color:var(--text2);
-  text-decoration:none;
-  font-size:.9rem;
-  transition:.2s;
-}
-
-.footer-links a:hover{
-  color:var(--text);
-}
-
-.footer-copy{
-  margin-top:1.3rem;
-  color:var(--text2);
-  font-size:.85rem;
-}
-
 /* MOBILE */
 
 @media(max-width:768px){
-
- nav{
-    padding:1rem;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    gap:.9rem;
-  }
-
-  .logo{
-    font-size:1.5rem;
-  }
-
-  .nav-links{
-    gap:.7rem 1rem;
-  }
-
-  .nav-links a{
-    font-size:.82rem;
-  }
 
   .page-hero{
     padding-top:10.8rem;
@@ -355,13 +240,6 @@ footer{
     padding:1.25rem;
   }
 
-  .footer-links{
-    flex-direction:row;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:.7rem 1rem;
-  }
-
 }
 
 @media(max-width:480px){
@@ -378,27 +256,15 @@ footer{
 }
 
 </style>
+  <!-- Global Header/Footer Loader -->
+  <script src="/include.js" defer></script>
 </head>
 
 <body>
 
 <!-- NAV -->
 
-<nav>
-
-  <a href="index.html" class="logo">
-    Renter<span>AI</span>
-  </a>
-
-  <ul class="nav-links">
-    <li><a href="index.html#tools">Tools</a></li>
-    <li><a href="index.html#how">How It Works</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-
-</nav>
+<div id="site-header"></div>
 
 <!-- HERO -->
 
@@ -535,26 +401,7 @@ footer{
 
 <!-- FOOTER -->
 
-<footer>
-
-  <div class="footer-logo">
-    Renter<span>AI</span>
-  </div>
-
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Service</a>
-  </div>
-
-  <div class="footer-copy">
-    © 2026 RenterAI. All rights reserved.
-  </div>
-
-</footer>
+<div id="site-footer"></div>
 
 </body>
 </html>
