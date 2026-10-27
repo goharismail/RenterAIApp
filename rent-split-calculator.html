@@ -13,6 +13,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="I1Adk5jxUz4kvs1_zF7SIr129NJIUfysOiG0nAxhG-0" />
+<meta name="nav-section" content="calculators">
 <meta name="google-adsense-account" content="ca-pub-4583731085701106">
 <title>Free Rent Split Calculator | Split Rent by Room Size, Income, or Equally</title>
 <meta name="description" content="Calculate exactly how much each roommate should pay. Split rent equally, by room size, or by income, plus utilities. Free, instant, no signup required.">
@@ -20,8 +21,8 @@
 <meta property="og:title" content="Free Rent Split Calculator — Fair Rent for Every Roommate">
 <meta property="og:description" content="Split rent equally, by room size, or by income. Add utilities and get an instant, ready-to-share breakdown for everyone.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.renteraiapp.com/rent-split-calculator.html">
-<link rel="canonical" href="https://www.renteraiapp.com/rent-split-calculator.html">
+<meta property="og:url" content="https://www.renteraiapp.com/rent-split-calculator">
+<link rel="canonical" href="https://www.renteraiapp.com/rent-split-calculator">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
 <script type="application/ld+json">
 {
@@ -29,7 +30,7 @@
   "@type": "WebApplication",
   "name": "Rent Split Calculator",
   "description": "Free tool that calculates a fair rent split between roommates by equal share, room size, or income, including utilities.",
-  "url": "https://www.renteraiapp.com/rent-split-calculator.html",
+  "url": "https://www.renteraiapp.com/rent-split-calculator",
   "publisher": { "@type": "Organization", "name": "RenterAI", "url": "https://www.renteraiapp.com" },
   "applicationCategory": "FinanceApplication",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -285,25 +286,25 @@
   <div class="other-tools">
     <h2>More Free Renter Tools</h2>
     <div class="tools-row">
-      <a href="roommate-agreement.html" class="tool-card">
+      <a href="/roommate-agreement" class="tool-card">
         <div class="tool-card-icon">🤝</div>
         <div class="tool-card-name">Roommate Agreement Generator</div>
         <div class="tool-card-desc">Turn your rent split into a full roommate agreement with house rules.</div>
         <span class="tool-card-badge">✓ Live</span>
       </a>
-      <a href="lease-analyzer.html" class="tool-card">
+      <a href="/lease-analyzer" class="tool-card">
         <div class="tool-card-icon">📄</div>
         <div class="tool-card-name">AI Lease Analyzer</div>
         <div class="tool-card-desc">Paste your lease and AI finds red flags and hidden clauses instantly.</div>
         <span class="tool-card-badge">✓ Live</span>
       </a>
-      <a href="security-deposit-checker.html" class="tool-card">
+      <a href="/security-deposit-checker" class="tool-card">
         <div class="tool-card-icon">💰</div>
         <div class="tool-card-name">Security Deposit Checker</div>
         <div class="tool-card-desc">Find out if your landlord legally owes you your deposit back.</div>
         <span class="tool-card-badge">✓ Live</span>
       </a>
-      <a href="rent-increase-calculator.html" class="tool-card">
+      <a href="/rent-increase-calculator" class="tool-card">
         <div class="tool-card-icon">📈</div>
         <div class="tool-card-name">Rent Increase Analyzer</div>
         <div class="tool-card-desc">Check if your landlord's rent increase is legal in your state.</div>
@@ -316,15 +317,15 @@
   <div class="related-blogs">
     <h2>Related Guides</h2>
     <div class="blogs-row">
-      <a href="blog-roommate-agreement-guide.html" class="blog-card">
+      <a href="/blog-roommate-agreement-guide" class="blog-card">
         <div class="blog-card-cat">🤝 Roommates</div>
         <div class="blog-card-title">Complete Guide to Roommate Agreements</div>
       </a>
-      <a href="blog-how-to-read-lease.html" class="blog-card">
+      <a href="/blog-how-to-read-lease" class="blog-card">
         <div class="blog-card-cat">📄 Lease Guide</div>
         <div class="blog-card-title">How to Read a Lease Agreement</div>
       </a>
-      <a href="blog-lease-red-flags.html" class="blog-card">
+      <a href="/blog-lease-red-flags" class="blog-card">
         <div class="blog-card-cat">🚩 Warning Signs</div>
         <div class="blog-card-title">10 Lease Red Flags Every Renter Must Know</div>
       </a>
@@ -489,7 +490,7 @@ In 3-4 short sentences, explain in plain, friendly language why this split is fa
 
     try {
       const result = await callGemini(prompt);
-      box.innerHTML = `<strong>Why this split is fair:</strong><br>${result.replace(/\n/g, '<br>')}`;
+      box.innerHTML = `<strong>Why this split is fair:</strong><br>${result.replace(/\n/g, '<br>')}<br><br><em>AI-generated explanation for convenience. Check the numbers above and agree on the split with your roommates.</em>`;
     } catch (e) {
       box.innerHTML = `<span style="color:var(--danger)">Error: ${e.message}</span>`;
     }

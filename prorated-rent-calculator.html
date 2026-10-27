@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4583731085701106" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-39KXXC0T3M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-39KXXC0T3M');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="I1Adk5jxUz4kvs1_zF7SIr129NJIUfysOiG0nAxhG-0" />
+<meta name="google-adsense-account" content="ca-pub-4583731085701106">
+<meta name="nav-section" content="calculators">
+<title>Prorated Rent Calculator | Calculate Partial-Month Rent</title>
+<meta name="description" content="Free prorated rent calculator. Enter your rent and move-in or move-out date to see partial-month rent using actual days, a 30-day month, or a 365-day year.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:title" content="Prorated Rent Calculator | Calculate Partial-Month Rent">
+<meta property="og:description" content="Free prorated rent calculator. Enter your rent and move-in or move-out date to see partial-month rent using actual days, a 30-day month, or a 365-day year.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.renteraiapp.com/prorated-rent-calculator">
+<link rel="canonical" href="https://www.renteraiapp.com/prorated-rent-calculator">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Prorated Rent Calculator",
+  "description": "Free tool that calculates prorated rent for a partial month using actual days, a 30-day month or a 365-day year.",
+  "url": "https://www.renteraiapp.com/prorated-rent-calculator",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RenterAI",
+    "url": "https://www.renteraiapp.com"
+  },
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate prorated rent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the monthly rent by the number of days in the month to get a daily rate, then multiply by the number of days you will occupy the home. For $1,500 rent and 17 days in a 31-day month, that is $1,500 ÷ 31 × 17 = $822.58."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the move-in day counted in prorated rent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your lease. Many leases count the move-in day as a rented day, but some start charging the next day. Use the checkbox to compare both."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I prorate rent when I move out mid-month?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the same formula with the days from the first of the month through your move-out date. Choose the Move-out option in the calculator and enter your last day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do landlords have to prorate rent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not always. It depends on your lease, your landlord's policy and local rules. Ask how the first or last month will be handled and get it in writing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a security deposit prorated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deposits are usually charged in full rather than prorated, but your lease controls. Enter a deposit in the other charges field to see it added to your total."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I prorate rent across two months?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Choose Custom date range. The calculator splits the range by month and prorates each month separately when you use the actual-days method."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #0a0f1e; --surface: #111827; --surface2: #1a2234; --accent: #3b82f6; --accent2: #60a5fa; --text: #f1f5f9; --text2: #94a3b8; --border: #1e293b; --success: #10b981; --danger: #ef4444; --gold: #f59e0b; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); }
+
+  .tool-hero { padding: 7rem 2rem 3rem; text-align: center; background: radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.12) 0%, transparent 60%); border-bottom: 1px solid var(--border); }
+  .tool-tag { font-size: 0.78rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
+  .tool-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+  .tool-hero h1 span { color: var(--accent); }
+  .tool-hero p { color: var(--text2); font-size: 1.05rem; max-width: 580px; margin: 0 auto; line-height: 1.7; }
+  .hero-badges { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
+  .hero-badge { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); color: #6ee7b7; padding: 0.3rem 0.9rem; border-radius: 50px; font-size: 0.78rem; font-weight: 500; }
+  .tool-main { max-width: 860px; margin: 0 auto; padding: 3rem 2rem; }
+  .tool-box { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; margin-bottom: 2rem; }
+  .tool-box-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .tool-box-sub { color: var(--text2); font-size: 0.9rem; margin-bottom: 2rem; }
+  .input-label { font-size: 0.85rem; font-weight: 500; color: var(--text2); margin-bottom: 0.5rem; display: block; }
+  .tool-input { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: var(--text); padding: 0.9rem 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; outline: none; transition: border-color 0.2s; margin-bottom: 1.2rem; }
+  .tool-input:focus { border-color: var(--accent); }
+  .tool-select { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: var(--text); padding: 0.9rem 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; outline: none; margin-bottom: 1.2rem; cursor: pointer; }
+  .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 600px) { .input-row { grid-template-columns: 1fr; } }
+  .analyze-btn { width: 100%; background: var(--accent); color: white; border: none; border-radius: 12px; padding: 1.1rem; font-size: 1rem; font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif; margin-top: 0.5rem; transition: all 0.2s; }
+  .analyze-btn:hover { background: var(--accent2); transform: translateY(-1px); }
+  .analyze-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+  .secondary-btn { width: 100%; background: transparent; color: var(--accent2); border: 1px solid var(--border); border-radius: 12px; padding: 0.9rem; font-size: 0.9rem; font-weight: 500; cursor: pointer; font-family: 'DM Sans', sans-serif; margin-top: 0.8rem; transition: all 0.2s; }
+  .secondary-btn:hover { border-color: var(--accent); }
+  .secondary-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+  .result-box { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 1.8rem; margin-top: 1.5rem; display: none; }
+  .result-box.show { display: block; }
+  .result-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: 0.8rem; }
+  .result-header h3 { font-size: 1rem; font-weight: 600; }
+  .result-content { font-size: 0.92rem; line-height: 1.85; color: var(--text2); white-space: pre-wrap; }
+  .result-content strong { color: var(--text); }
+  .copy-btn { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: rgba(16,185,129,0.1); color: var(--success); border: 1px solid rgba(16,185,129,0.3); border-radius: 8px; font-size: 0.82rem; font-weight: 500; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s; }
+  .copy-btn:hover { background: var(--success); color: white; }
+  .loading-dots { display: flex; gap: 6px; align-items: center; justify-content: center; padding: 2.5rem; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: bounce 1.2s infinite; }
+  .dot:nth-child(2) { animation-delay: 0.2s; }
+  .dot:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-10px); } }
+
+  .roommates-list { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1rem; }
+  .roommate-row { display: grid; grid-template-columns: 1.3fr 1fr auto; gap: 0.7rem; align-items: center; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 0.7rem 0.9rem; }
+  .roommate-row.equal-mode { grid-template-columns: 1fr auto; }
+  .roommate-row input { background: transparent; border: none; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; outline: none; padding: 0.4rem 0; }
+  .roommate-row input::placeholder { color: var(--text2); }
+  .remove-roommate { background: rgba(239,68,68,0.1); color: var(--danger); border: 1px solid rgba(239,68,68,0.25); border-radius: 8px; width: 30px; height: 30px; cursor: pointer; font-size: 0.85rem; flex-shrink: 0; }
+  .remove-roommate:hover { background: var(--danger); color: white; }
+  .add-roommate-btn { width: 100%; background: transparent; border: 1px dashed var(--border); color: var(--accent2); border-radius: 12px; padding: 0.8rem; font-size: 0.88rem; font-weight: 500; cursor: pointer; font-family: 'DM Sans', sans-serif; margin-bottom: 1.4rem; transition: all 0.2s; }
+  .add-roommate-btn:hover { border-color: var(--accent); background: rgba(59,130,246,0.06); }
+
+  .split-row { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 0; border-bottom: 1px solid var(--border); }
+  .split-row:last-of-type { border-bottom: none; }
+  .split-name { font-weight: 600; font-size: 0.95rem; }
+  .split-percent { color: var(--text2); font-size: 0.78rem; margin-top: 0.15rem; }
+  .split-amount { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--accent2); }
+  .split-total { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); font-weight: 600; }
+  .split-total .split-amount { color: var(--success); }
+  .ai-explain-box { margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px dashed var(--border); font-size: 0.9rem; line-height: 1.8; color: var(--text2); display: none; }
+  .ai-explain-box.show { display: block; }
+  .ai-explain-box strong { color: var(--text); }
+
+  .other-tools { margin-bottom: 2rem; }
+  .other-tools h2 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 1.2rem; }
+  .tools-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+  .tool-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 0.5rem; }
+  .tool-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-2px); }
+  .tool-card-icon { font-size: 1.5rem; }
+  .tool-card-name { font-weight: 600; font-size: 0.95rem; }
+  .tool-card-desc { color: var(--text2); font-size: 0.82rem; line-height: 1.5; }
+  .tool-card-badge { display: inline-flex; align-items: center; font-size: 0.72rem; color: var(--success); background: rgba(16,185,129,0.1); padding: 0.2rem 0.6rem; border-radius: 50px; border: 1px solid rgba(16,185,129,0.2); margin-top: auto; width: fit-content; }
+  .related-blogs { margin-bottom: 2rem; }
+  .related-blogs h2 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 1.2rem; }
+  .blogs-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .blog-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.2rem; text-decoration: none; color: var(--text); transition: all 0.2s; }
+  .blog-card:hover { border-color: rgba(59,130,246,0.4); }
+  .blog-card-cat { font-size: 0.72rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+  .blog-card-title { font-size: 0.88rem; font-weight: 600; line-height: 1.4; }
+  .disclaimer { background: rgba(245,158,11,0.05); border: 1px solid rgba(245,158,11,0.2); border-radius: 12px; padding: 1.2rem; margin-bottom: 2rem; font-size: 0.82rem; color: var(--text2); line-height: 1.7; }
+
+  @media (max-width: 640px) { .tool-box { padding: 1.5rem; } .roommate-row { grid-template-columns: 1fr; } .roommate-row.equal-mode { grid-template-columns: 1fr auto; } }
+
+  .seo-content { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; margin-bottom: 2rem; }
+  .seo-content h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin: 2rem 0 0.8rem; }
+  .seo-content h2:first-child { margin-top: 0; }
+  .seo-content h3 { font-size: 1rem; margin: 1.3rem 0 0.4rem; }
+  .seo-content p, .seo-content li { color: var(--text2); font-size: 0.92rem; line-height: 1.8; }
+  .seo-content ul { padding-left: 1.3rem; margin-top: 0.8rem; }
+  .seo-content li { margin-bottom: 0.4rem; }
+  @media (max-width: 640px) { .seo-content { padding: 1.5rem; } }
+
+  .stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:0.8rem; margin-bottom:1.2rem; }
+  .stat { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:1rem; }
+  .stat-label { font-size:0.75rem; color:var(--text2); margin-bottom:0.3rem; }
+  .stat-value { font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:700; color:var(--accent2); }
+  .stat.good .stat-value { color:var(--success); }
+  .rtable { width:100%; border-collapse:collapse; margin:0.8rem 0; font-size:0.88rem; }
+  .rtable th, .rtable td { padding:0.6rem 0.5rem; border-bottom:1px solid var(--border); text-align:left; color:var(--text2); }
+  .rtable th { font-weight:500; color:var(--text); }
+  .rtable td.num, .rtable th.num { text-align:right; }
+  .rtable td strong { color:var(--text); }
+  .checkbox-line { display:flex; gap:0.6rem; align-items:center; margin-bottom:1.2rem; font-size:0.88rem; color:var(--text2); }
+  .checkbox-line input { accent-color:var(--accent); width:16px; height:16px; }
+  .group-title { font-family:'Playfair Display',serif; font-size:1.05rem; margin:1.2rem 0 0.8rem; color:var(--text); }
+  .err { color:var(--danger); font-size:0.88rem; margin:0.6rem 0; display:none; }
+  .err.show { display:block; }
+  .note-box { background:rgba(59,130,246,0.06); border:1px solid rgba(59,130,246,0.25); border-radius:12px; padding:1rem 1.2rem; font-size:0.86rem; line-height:1.7; color:var(--text2); margin-top:1rem; }
+  .verdict { border-radius:12px; padding:1rem 1.2rem; font-size:0.92rem; line-height:1.7; margin:1rem 0; border:1px solid var(--border); color:var(--text2); }
+  .verdict.ok { background:rgba(16,185,129,0.08); border-color:rgba(16,185,129,0.3); }
+  .verdict.warn { background:rgba(245,158,11,0.08); border-color:rgba(245,158,11,0.3); }
+  .verdict strong { color:var(--text); }
+  .seo-content table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:0.88rem; }
+  .seo-content th, .seo-content td { padding:0.6rem 0.5rem; border-bottom:1px solid var(--border); text-align:left; color:var(--text2); }
+  .seo-content th { color:var(--text); font-weight:500; }
+  .seo-content ol { padding-left:1.3rem; margin-top:0.8rem; }
+  .seo-content ol li { color:var(--text2); font-size:0.92rem; line-height:1.8; margin-bottom:0.4rem; }
+  .bill-row, .person-row { display:grid; gap:0.6rem; align-items:center; background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:0.6rem 0.8rem; margin-bottom:0.6rem; }
+  .bill-row { grid-template-columns:1.2fr 0.8fr 1fr auto; }
+  .person-row { grid-template-columns:1.2fr 0.8fr auto; }
+  .bill-row input, .person-row input, .bill-row select { background:transparent; border:none; color:var(--text); font-family:'DM Sans',sans-serif; font-size:0.88rem; outline:none; padding:0.4rem 0; width:100%; }
+  .bill-row select option { background:#111827; }
+  .bill-row input::placeholder, .person-row input::placeholder { color:var(--text2); }
+  @media (max-width:640px) { .bill-row, .person-row { grid-template-columns:1fr 1fr; } }
+</style>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ytfr7ibt7a");
+</script>
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<div class="tool-hero">
+  <div class="tool-tag">🧮 Free Calculator</div>
+  <h1><span>Prorated Rent</span> Calculator</h1>
+  <p>Moving in or out mid-month? Enter your rent and dates to see exactly what you owe for the partial month, with the math shown step by step.</p>
+  <div class="hero-badges"><span class="hero-badge">✓ 100% Free</span><span class="hero-badge">✓ No Signup</span><span class="hero-badge">✓ 3 Day-Count Methods</span><span class="hero-badge">✓ Move-In &amp; Move-Out</span></div>
+</div>
+
+<div class="tool-main">
+
+  <div class="tool-box">
+    <div class="tool-box-title">Calculate Prorated Rent</div>
+    <div class="tool-box-sub">Enter your rent and dates to see exactly what you owe for a partial month.</div>
+
+    <div class="input-row">
+      <div>
+        <label class="input-label" for="rent">Monthly Rent ($)</label>
+        <input type="number" class="tool-input" id="rent" placeholder="e.g. 1500" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="mode">What are you prorating?</label>
+        <select class="tool-select" id="mode" onchange="updateMode()">
+          <option value="movein">Move-in (partial first month)</option>
+          <option value="moveout">Move-out (partial last month)</option>
+          <option value="range">Custom date range</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="input-row">
+      <div>
+        <label class="input-label" for="d1" id="dateLabel1">Move-in date</label>
+        <input type="date" class="tool-input" id="d1">
+      </div>
+      <div id="d2wrap" style="display:none">
+        <label class="input-label" for="d2">End date</label>
+        <input type="date" class="tool-input" id="d2">
+      </div>
+    </div>
+
+    <div class="input-row">
+      <div>
+        <label class="input-label" for="method">Day-count method</label>
+        <select class="tool-select" id="method">
+          <option value="actual">Actual days in the month</option>
+          <option value="thirty">30-day month</option>
+          <option value="year">365-day year (annual rent ÷ 365)</option>
+        </select>
+      </div>
+      <div>
+        <label class="input-label" for="other">Other charges due at move-in ($, optional)</label>
+        <input type="number" class="tool-input" id="other" placeholder="e.g. 1500 for a deposit" min="0" step="0.01">
+      </div>
+    </div>
+
+    <div class="checkbox-line">
+      <input type="checkbox" id="inclusive" checked>
+      <label for="inclusive">Count the first or last day as a rented day (move-in day, move-out day, or both ends of a custom range)</label>
+    </div>
+
+    <button class="analyze-btn" onclick="calculate()">📆 Calculate Prorated Rent</button>
+    <div class="err" id="err"></div>
+
+    <div class="result-box" id="result">
+      <div class="result-header"><h3>📆 Your Prorated Rent</h3></div>
+      <div id="resultContent"></div>
+    </div>
+  </div>
+
+  <section class="seo-content">
+    <h2>What Is Prorated Rent?</h2>
+    <p>Prorated rent is rent charged for only part of a rental period. It usually comes up when you move in or out in the middle of a month. Instead of paying a full month, you pay for the days you actually have the home.</p>
+
+    <h2>How to Calculate Prorated Rent</h2>
+    <p>The basic formula has two steps:</p>
+    <ol>
+      <li>Daily rent = monthly rent ÷ number of days in the month</li>
+      <li>Prorated rent = daily rent × number of days you occupy the home</li>
+    </ol>
+    <p><strong>Example:</strong> Rent is $1,500 and you move in on October 15. October has 31 days, so daily rent is $1,500 ÷ 31 = $48.39. From October 15 to October 31 is 17 days (counting the move-in day), so prorated rent is 17 × $48.39 = <strong>$822.58</strong>.</p>
+
+    <h2>Day-Count Methods Compared</h2>
+    <p>Leases do not all calculate the daily rate the same way. For the example above:</p>
+    <table>
+      <tr><th>Method</th><th>How it works</th><th>Result</th></tr>
+      <tr><td>Actual days in the month</td><td>$1,500 × 17 ÷ 31</td><td>$822.58</td></tr>
+      <tr><td>30-day month</td><td>$1,500 × 17 ÷ 30</td><td>$850.00</td></tr>
+      <tr><td>365-day year</td><td>$1,500 × 12 ÷ 365 × 17</td><td>$838.36</td></tr>
+    </table>
+    <p>Many leases use the actual number of days in the month, but some use a 30-day month or a 365-day year. Check which one your lease or landlord uses, since the amounts can differ by tens of dollars.</p>
+
+    <h2>Do Landlords Have to Prorate Rent?</h2>
+    <p>That depends on your lease, your landlord's policy and local rules. Some landlords prorate the first month, some ask you to pay a full month, and some set the lease start date to the first of the month so no proration is needed. If you are unsure, ask your landlord how the first month will be calculated and get the amount in writing before you sign.</p>
+
+    <h2>Is the Move-In Day Counted?</h2>
+    <p>It depends on the lease. Counting the move-in day is common, but some leases start charging the following day. Use the checkbox in the calculator to match your lease and see how a one-day difference changes the result.</p>
+
+    <h2>Tips for Mid-Month Moves</h2>
+    <ul>
+      <li>Ask for the prorated amount and the due date of the next full payment in writing.</li>
+      <li>Check whether deposits and one-time fees are charged in full. They are often not prorated, but your lease controls.</li>
+      <li>For a move-out, confirm the last day you are responsible for rent and when your keys must be returned.</li>
+      <li>Compare the proration with the cost of choosing a start date on the first of the month.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>How do I calculate prorated rent?</h3>
+    <p>Divide the monthly rent by the number of days in the month to get a daily rate, then multiply by the number of days you will occupy the home. For $1,500 rent and 17 days in a 31-day month, that is $1,500 ÷ 31 × 17 = $822.58.</p>
+
+    <h3>Is the move-in day counted in prorated rent?</h3>
+    <p>It depends on your lease. Many leases count the move-in day as a rented day, but some start charging the next day. Use the checkbox to compare both.</p>
+
+    <h3>How do I prorate rent when I move out mid-month?</h3>
+    <p>Use the same formula with the days from the first of the month through your move-out date. Choose the Move-out option in the calculator and enter your last day.</p>
+
+    <h3>Do landlords have to prorate rent?</h3>
+    <p>Not always. It depends on your lease, your landlord's policy and local rules. Ask how the first or last month will be handled and get it in writing.</p>
+
+    <h3>Is a security deposit prorated?</h3>
+    <p>Deposits are usually charged in full rather than prorated, but your lease controls. Enter a deposit in the other charges field to see it added to your total.</p>
+
+    <h3>Can I prorate rent across two months?</h3>
+    <p>Yes. Choose Custom date range. The calculator splits the range by month and prorates each month separately when you use the actual-days method.</p>
+
+  </section>
+
+  <div class="other-tools">
+    <h2>More Free Renter Calculators and Tools</h2>
+    <div class="tools-row">
+      <a href="/rent-split-calculator" class="tool-card">
+        <div class="tool-card-icon">💰</div>
+        <div class="tool-card-name">Rent Split Calculator</div>
+        <div class="tool-card-desc">Split rent by room size, income, or equally.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/rent-affordability-calculator" class="tool-card">
+        <div class="tool-card-icon">🏠</div>
+        <div class="tool-card-name">Rent Affordability Calculator</div>
+        <div class="tool-card-desc">See how much rent fits your income.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/moving-cost-calculator" class="tool-card">
+        <div class="tool-card-icon">📦</div>
+        <div class="tool-card-name">Moving & Move-In Cost Calculator</div>
+        <div class="tool-card-desc">Add up deposits, fees, and moving costs.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/utility-split-calculator" class="tool-card">
+        <div class="tool-card-icon">💡</div>
+        <div class="tool-card-name">Utility Split Calculator</div>
+        <div class="tool-card-desc">Split bills between roommates and see who owes whom.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/security-deposit-interest-calculator" class="tool-card">
+        <div class="tool-card-icon">🏦</div>
+        <div class="tool-card-name">Security Deposit Interest Calculator</div>
+        <div class="tool-card-desc">Estimate interest on a deposit.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/roommate-agreement" class="tool-card">
+        <div class="tool-card-icon">🤝</div>
+        <div class="tool-card-name">Roommate Agreement Generator</div>
+        <div class="tool-card-desc">Turn your arrangement into a written roommate agreement.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="related-blogs">
+    <h2>Related Guides</h2>
+    <div class="blogs-row">
+      <a href="/blog-how-to-read-lease" class="blog-card">
+        <div class="blog-card-cat">📄 Lease Guide</div>
+        <div class="blog-card-title">How to Read a Lease Agreement</div>
+      </a>
+      <a href="/blog-move-in-checklist" class="blog-card">
+        <div class="blog-card-cat">📦 Moving</div>
+        <div class="blog-card-title">Move-In Checklist for Renters</div>
+      </a>
+      <a href="/blog-security-deposit" class="blog-card">
+        <div class="blog-card-cat">💰 Security Deposit</div>
+        <div class="blog-card-title">How to Get Your Security Deposit Back</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ <strong>Disclaimer:</strong> This calculator gives general estimates based on the numbers you enter. It is not financial or legal advice. Your lease and local law control what you actually owe, so confirm important figures with your landlord, lender or a qualified professional.
+  </div>
+
+</div>
+
+<div id="site-footer"></div>
+
+<script>
+function $(id){return document.getElementById(id);}
+const money=n=>'$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const DAY=86400000;
+function parseDate(v){if(!v)return null;const p=v.split('-').map(Number);return new Date(Date.UTC(p[0],p[1]-1,p[2]));}
+function dim(y,m){return new Date(Date.UTC(y,m+1,0)).getUTCDate();}
+function monthLabel(y,m){return new Date(Date.UTC(y,m,1)).toLocaleString('en-US',{month:'long',year:'numeric',timeZone:'UTC'});}
+function segmentsBetween(start,end){
+  const segs=[];let cur=new Date(start.getTime());
+  while(cur<=end){
+    const y=cur.getUTCFullYear(),m=cur.getUTCMonth(),n=dim(y,m);
+    const monthEnd=new Date(Date.UTC(y,m,n));
+    const segEnd=monthEnd<end?monthEnd:end;
+    const days=Math.round((segEnd-cur)/DAY)+1;
+    segs.push({y:y,m:m,dim:n,days:days,full:days===n});
+    cur=new Date(Date.UTC(y,m+1,1));
+  }
+  return segs;
+}
+function computeProration(rent,mode,d1,d2,method,inclusive){
+  const a=parseDate(d1);if(!a)return{error:'Please enter a date.'};
+  let start,end;
+  if(mode==='movein'){start=new Date(a.getTime());end=new Date(Date.UTC(a.getUTCFullYear(),a.getUTCMonth(),dim(a.getUTCFullYear(),a.getUTCMonth())));if(!inclusive)start=new Date(start.getTime()+DAY);}
+  else if(mode==='moveout'){start=new Date(Date.UTC(a.getUTCFullYear(),a.getUTCMonth(),1));end=new Date(a.getTime());if(!inclusive)end=new Date(end.getTime()-DAY);}
+  else{const b=parseDate(d2);if(!b)return{error:'Please enter an end date.'};start=a;end=new Date(b.getTime());if(!inclusive)end=new Date(end.getTime()-DAY);}
+  if(end<start)return{error:'The end date must be after the start date.'};
+  const segs=segmentsBetween(start,end);
+  let rows=[],total=0,days=0;
+  for(const s of segs){
+    let amt,calc;
+    if(method==='actual'){amt=s.full?rent:rent*s.days/s.dim;calc=s.full?'Full month':money(rent)+' × '+s.days+' ÷ '+s.dim;}
+    else if(method==='thirty'){amt=s.full?rent:rent*s.days/30;calc=s.full?'Full month':money(rent)+' × '+s.days+' ÷ 30';}
+    else{const daily=rent*12/365;amt=daily*s.days;calc=money(daily)+' × '+s.days+' days';}
+    amt=Math.round(amt*100)/100;total+=amt;days+=s.days;
+    rows.push({label:monthLabel(s.y,s.m),days:s.days,calc:calc,amt:amt});
+  }
+  total=Math.round(total*100)/100;
+  return{rows:rows,total:total,days:days};
+}
+function updateMode(){
+  const m=$('mode').value;
+  $('d2wrap').style.display=m==='range'?'block':'none';
+  $('dateLabel1').textContent=m==='movein'?'Move-in date':m==='moveout'?'Move-out date':'Start date';
+}
+function calculate(){
+  const err=$('err');err.classList.remove('show');
+  const rent=parseFloat($('rent').value);
+  if(!(rent>0)){err.textContent='Please enter the monthly rent.';err.classList.add('show');return;}
+  const r=computeProration(rent,$('mode').value,$('d1').value,$('d2').value,$('method').value,$('inclusive').checked);
+  if(r.error){err.textContent=r.error;err.classList.add('show');return;}
+  const other=parseFloat($('other').value)||0;
+  const eff=r.days>0?r.total/r.days:0;
+  let h='<div class="stat-grid">'+
+    '<div class="stat good"><div class="stat-label">Prorated rent</div><div class="stat-value">'+money(r.total)+'</div></div>'+
+    '<div class="stat"><div class="stat-label">Days charged</div><div class="stat-value">'+r.days+'</div></div>'+
+    '<div class="stat"><div class="stat-label">Average daily rate</div><div class="stat-value">'+money(eff)+'</div></div>';
+  if(other>0)h+='<div class="stat"><div class="stat-label">Total due (with other charges)</div><div class="stat-value">'+money(r.total+other)+'</div></div>';
+  h+='</div><table class="rtable"><tr><th>Period</th><th class="num">Days</th><th>Calculation</th><th class="num">Amount</th></tr>';
+  for(const row of r.rows)h+='<tr><td>'+row.label+'</td><td class="num">'+row.days+'</td><td>'+row.calc+'</td><td class="num"><strong>'+money(row.amt)+'</strong></td></tr>';
+  h+='</table><div class="note-box">Estimate only. Your lease may use a different day-count method or round differently, so confirm the amount with your landlord.</div>';
+  $('resultContent').innerHTML=h;$('result').classList.add('show');
+}
+window.computeProration=computeProration;
+</script>
+</body>
+</html>

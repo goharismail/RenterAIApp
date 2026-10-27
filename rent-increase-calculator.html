@@ -21,8 +21,8 @@
 <meta property="og:title" content="Free Rent Increase Calculator — Is Your Increase Legal?">
 <meta property="og:description" content="Check if your landlord's rent increase is legal in your state. Free AI tool, no signup.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.renteraiapp.com/rent-increase-calculator.html">
-<link rel="canonical" href="https://www.renteraiapp.com/rent-increase-calculator.html">
+<meta property="og:url" content="https://www.renteraiapp.com/rent-increase-calculator">
+<link rel="canonical" href="https://www.renteraiapp.com/rent-increase-calculator">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
 <script type="application/ld+json">
 {
@@ -30,7 +30,7 @@
   "@type": "WebApplication",
   "name": "Rent Increase Calculator",
   "description": "Free AI tool that checks if a rent increase is legal based on state rent control laws.",
-  "url": "https://www.renteraiapp.com/rent-increase-calculator.html",
+  "url": "https://www.renteraiapp.com/rent-increase-calculator",
   "publisher": { "@type": "Organization", "name": "RenterAI", "url": "https://www.renteraiapp.com" },
   "applicationCategory": "LegalApplication",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -203,31 +203,31 @@
   <div class="other-tools">
     <h2>More Free Renter Tools</h2>
     <div class="tools-row">
-      <a href="lease-analyzer.html" class="tool-card">
+      <a href="/lease-analyzer" class="tool-card">
         <div class="tool-card-icon">📄</div>
         <div class="tool-card-name">AI Lease Analyzer</div>
         <div class="tool-card-desc">Paste your lease and AI finds red flags and hidden clauses instantly.</div>
         <span class="tool-card-badge">✓ Live</span>
       </a>
-      <a href="demand-letter.html" class="tool-card">
+      <a href="/demand-letter" class="tool-card">
         <div class="tool-card-icon">⚖️</div>
         <div class="tool-card-name">AI Demand Letter Writer</div>
         <div class="tool-card-desc">Generate a professional legal demand letter to your landlord in seconds.</div>
         <span class="tool-card-badge">✓ Live</span>
       </a>
-      <a href="tenant-rights.html" class="tool-card">
+      <a href="/tenant-rights" class="tool-card">
         <div class="tool-card-icon">🏛️</div>
         <div class="tool-card-name">Tenant Rights Checker</div>
         <div class="tool-card-desc">Know your exact legal rights by state and situation.</div>
         <span class="tool-card-badge">✓ Live</span>
       </a>
-      <a href="security-deposit-checker.html" class="tool-card">
+      <a href="/security-deposit-checker" class="tool-card">
         <div class="tool-card-icon">💰</div>
         <div class="tool-card-name">Security Deposit Checker</div>
         <div class="tool-card-desc">Find out if your landlord legally owes you your deposit back.</div>
         <span class="tool-card-badge">✓ Live</span>
       </a>
-      <a href="roommate-agreement.html" class="tool-card">
+      <a href="/roommate-agreement" class="tool-card">
         <div class="tool-card-icon">🤝</div>
         <div class="tool-card-name">Roommate Agreement Generator</div>
         <div class="tool-card-desc">Generate a legally-informed roommate agreement instantly.</div>
@@ -240,15 +240,15 @@
   <div class="related-blogs">
     <h2>Related Guides</h2>
     <div class="blogs-row">
-      <a href="blog-rent-increase.html" class="blog-card">
+      <a href="/blog-rent-increase" class="blog-card">
         <div class="blog-card-cat">📈 Rent Laws</div>
         <div class="blog-card-title">Rent Increase Laws in the USA</div>
       </a>
-      <a href="blog-tenant-rights-california.html" class="blog-card">
+      <a href="/blog-tenant-rights-california" class="blog-card">
         <div class="blog-card-cat">🏛️ State Rights</div>
         <div class="blog-card-title">Tenant Rights in California 2026</div>
       </a>
-      <a href="blog-demand-letter.html" class="blog-card">
+      <a href="/blog-demand-letter" class="blog-card">
         <div class="blog-card-cat">📝 Legal Action</div>
         <div class="blog-card-title">How to Write a Demand Letter</div>
       </a>
@@ -289,6 +289,8 @@
     });
   }
 
+  const AI_NOTE = '<br><br><em>⚠️ AI-generated general information, not legal advice. It may contain mistakes. Verify important details with an official source or a licensed attorney / legal aid organization before acting.</em>';
+
   async function callGemini(prompt) {
     const res = await fetch('/api/gemini', {
       method: 'POST',
@@ -321,7 +323,17 @@
     resultBox.classList.add('show');
     contentEl.innerHTML = `<div class="loading-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>`;
 
-    const prompt = `You are a tenant rights expert specializing in rent control law in ${state}, USA.
+    const prompt = `You are an AI assistant helping a renter understand a rent increase.
+
+Important rules:
+- You are an AI assistant giving general information only. You are not a lawyer and this is not legal advice. Never claim to be an attorney or legal expert.
+- Do not invent laws, statute or section numbers, deadlines, dollar amounts, fees, penalties, phone numbers, or website addresses. If you are not highly confident about a specific legal rule, say so and tell the user to verify it with an official source for their state or city.
+- Laws change and vary by city and county. Remind the user to confirm current rules with official sources, a local legal aid organization, or a licensed attorney.
+- Do not state that something is definitely legal or illegal, or that the user will win or recover money. Use careful wording such as "may", "could", or "worth checking".
+- Do not advise the user to withhold rent, stop paying, break a lease, change locks, record people, or take other risky action without first confirming local law with an official source or a legal aid organization/attorney.
+- Use only the facts the user provided. Do not make up facts, dates or amounts.
+- You cannot determine whether this specific increase is legal. Instead explain what rules may apply and what the renter should verify.
+- Do not state that a state or city has or does not have rent control, a cap, or a specific notice period unless you are highly confident; if you mention one, tell the user to verify it with an official source.
 
 State: ${state}
 Lease Type: ${leaseType}
@@ -331,20 +343,20 @@ Percentage Increase: ${percent}%
 Notice Given: ${notice || 'Not specified'} days
 Additional details: ${desc || 'None provided'}
 
-Provide a comprehensive analysis:
+Provide:
 
-1. ✅ IS THIS INCREASE LEGAL? — Clear answer based on ${state} law
-2. ⚖️ ${state.toUpperCase()} RENT CONTROL RULES — Does this state/city have rent control, and what are the limits?
-3. 📋 NOTICE REQUIREMENTS — Was proper notice given for this lease type in ${state}?
-4. 🚩 RED FLAGS — Any issues with this specific increase (mid-lease, retaliation, etc.)
-5. 📝 STEP-BY-STEP NEXT ACTIONS — What the tenant should do right now
-6. 🆘 WHERE TO GET HELP — Resources in ${state} if the increase is illegal
+1. 📊 WHAT THIS INCREASE LOOKS LIKE - the dollar and percentage change, and what it means per year
+2. ⚖️ RULES THAT MAY APPLY - factors such as state or local rent regulation, lease type (fixed-term vs month-to-month), and notice rules, with a reminder to verify each
+3. 📋 NOTICE TO CHECK - what the renter should confirm about the notice they received
+4. 🚩 THINGS WORTH A CLOSER LOOK - for example an increase in the middle of a fixed-term lease, or one that follows a repair request
+5. 📝 SUGGESTED NEXT STEPS - such as reviewing the lease, asking the landlord questions in writing, and negotiating
+6. 🆘 WHERE TO GET HELP - types of organizations in ${state}
 
-Be specific to ${state} and the lease type provided. Be practical and actionable.`;
+Be practical, neutral and easy to understand.`;
 
     try {
       const result = await callGemini(prompt);
-      contentEl.innerHTML = result.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      contentEl.innerHTML = result.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') + AI_NOTE;
     } catch (e) {
       contentEl.innerHTML = `<span style="color:var(--danger)">Error: ${e.message}</span>`;
     }

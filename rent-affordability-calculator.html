@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4583731085701106" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-39KXXC0T3M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-39KXXC0T3M');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="I1Adk5jxUz4kvs1_zF7SIr129NJIUfysOiG0nAxhG-0" />
+<meta name="google-adsense-account" content="ca-pub-4583731085701106">
+<meta name="nav-section" content="calculators">
+<title>Rent Affordability Calculator | How Much Rent Can I Afford?</title>
+<meta name="description" content="Free rent affordability calculator. See how much rent you can afford using the 30% rule, the 3x rent rule and the 40x rule, based on your income.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:title" content="Rent Affordability Calculator | How Much Rent Can I Afford?">
+<meta property="og:description" content="Free rent affordability calculator. See how much rent you can afford using the 30% rule, the 3x rent rule and the 40x rule, based on your income.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.renteraiapp.com/rent-affordability-calculator">
+<link rel="canonical" href="https://www.renteraiapp.com/rent-affordability-calculator">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Rent Affordability Calculator",
+  "description": "Free tool that shows how much rent you can afford using common guidelines such as the 30% rule, the 3x rent rule and the 40x rule.",
+  "url": "https://www.renteraiapp.com/rent-affordability-calculator",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RenterAI",
+    "url": "https://www.renteraiapp.com"
+  },
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much rent can I afford on $50,000 a year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Using the 30% rule, $50,000 a year is about $4,167 a month before taxes, so rent of about $1,250 a month. At 25% it is about $1,042, and under the 3× rule it is about $1,389. Your own budget may point to a different number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 40x rule for renting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some landlords ask for annual gross income of at least 40 times the monthly rent. For $1,500 rent, that is $60,000 a year. Requirements vary by landlord and city."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should rent be based on gross or take-home pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most guidelines, including the 30% rule and the 3× rule, use gross income. Looking at rent as a share of take-home pay is also useful, because that is the money you pay it from."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the rent guideline include utilities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 30% rule is usually applied to total housing costs, so utilities and renters insurance can count toward it. Some people apply it to rent alone. Decide which you are using before you compare."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I have roommates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use your share of the rent. A roommate's income can also change what a landlord requires, so ask how the property screens multiple applicants."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I enter hourly pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose Per hour, enter your hourly rate and your weekly hours. The calculator converts it to monthly income using 52 weeks per year."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #0a0f1e; --surface: #111827; --surface2: #1a2234; --accent: #3b82f6; --accent2: #60a5fa; --text: #f1f5f9; --text2: #94a3b8; --border: #1e293b; --success: #10b981; --danger: #ef4444; --gold: #f59e0b; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); }
+
+  .tool-hero { padding: 7rem 2rem 3rem; text-align: center; background: radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.12) 0%, transparent 60%); border-bottom: 1px solid var(--border); }
+  .tool-tag { font-size: 0.78rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
+  .tool-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+  .tool-hero h1 span { color: var(--accent); }
+  .tool-hero p { color: var(--text2); font-size: 1.05rem; max-width: 580px; margin: 0 auto; line-height: 1.7; }
+  .hero-badges { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
+  .hero-badge { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); color: #6ee7b7; padding: 0.3rem 0.9rem; border-radius: 50px; font-size: 0.78rem; font-weight: 500; }
+  .tool-main { max-width: 860px; margin: 0 auto; padding: 3rem 2rem; }
+  .tool-box { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; margin-bottom: 2rem; }
+  .tool-box-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .tool-box-sub { color: var(--text2); font-size: 0.9rem; margin-bottom: 2rem; }
+  .input-label { font-size: 0.85rem; font-weight: 500; color: var(--text2); margin-bottom: 0.5rem; display: block; }
+  .tool-input { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: var(--text); padding: 0.9rem 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; outline: none; transition: border-color 0.2s; margin-bottom: 1.2rem; }
+  .tool-input:focus { border-color: var(--accent); }
+  .tool-select { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: var(--text); padding: 0.9rem 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; outline: none; margin-bottom: 1.2rem; cursor: pointer; }
+  .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 600px) { .input-row { grid-template-columns: 1fr; } }
+  .analyze-btn { width: 100%; background: var(--accent); color: white; border: none; border-radius: 12px; padding: 1.1rem; font-size: 1rem; font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif; margin-top: 0.5rem; transition: all 0.2s; }
+  .analyze-btn:hover { background: var(--accent2); transform: translateY(-1px); }
+  .analyze-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+  .secondary-btn { width: 100%; background: transparent; color: var(--accent2); border: 1px solid var(--border); border-radius: 12px; padding: 0.9rem; font-size: 0.9rem; font-weight: 500; cursor: pointer; font-family: 'DM Sans', sans-serif; margin-top: 0.8rem; transition: all 0.2s; }
+  .secondary-btn:hover { border-color: var(--accent); }
+  .secondary-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+  .result-box { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 1.8rem; margin-top: 1.5rem; display: none; }
+  .result-box.show { display: block; }
+  .result-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: 0.8rem; }
+  .result-header h3 { font-size: 1rem; font-weight: 600; }
+  .result-content { font-size: 0.92rem; line-height: 1.85; color: var(--text2); white-space: pre-wrap; }
+  .result-content strong { color: var(--text); }
+  .copy-btn { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: rgba(16,185,129,0.1); color: var(--success); border: 1px solid rgba(16,185,129,0.3); border-radius: 8px; font-size: 0.82rem; font-weight: 500; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s; }
+  .copy-btn:hover { background: var(--success); color: white; }
+  .loading-dots { display: flex; gap: 6px; align-items: center; justify-content: center; padding: 2.5rem; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: bounce 1.2s infinite; }
+  .dot:nth-child(2) { animation-delay: 0.2s; }
+  .dot:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-10px); } }
+
+  .roommates-list { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1rem; }
+  .roommate-row { display: grid; grid-template-columns: 1.3fr 1fr auto; gap: 0.7rem; align-items: center; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 0.7rem 0.9rem; }
+  .roommate-row.equal-mode { grid-template-columns: 1fr auto; }
+  .roommate-row input { background: transparent; border: none; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; outline: none; padding: 0.4rem 0; }
+  .roommate-row input::placeholder { color: var(--text2); }
+  .remove-roommate { background: rgba(239,68,68,0.1); color: var(--danger); border: 1px solid rgba(239,68,68,0.25); border-radius: 8px; width: 30px; height: 30px; cursor: pointer; font-size: 0.85rem; flex-shrink: 0; }
+  .remove-roommate:hover { background: var(--danger); color: white; }
+  .add-roommate-btn { width: 100%; background: transparent; border: 1px dashed var(--border); color: var(--accent2); border-radius: 12px; padding: 0.8rem; font-size: 0.88rem; font-weight: 500; cursor: pointer; font-family: 'DM Sans', sans-serif; margin-bottom: 1.4rem; transition: all 0.2s; }
+  .add-roommate-btn:hover { border-color: var(--accent); background: rgba(59,130,246,0.06); }
+
+  .split-row { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 0; border-bottom: 1px solid var(--border); }
+  .split-row:last-of-type { border-bottom: none; }
+  .split-name { font-weight: 600; font-size: 0.95rem; }
+  .split-percent { color: var(--text2); font-size: 0.78rem; margin-top: 0.15rem; }
+  .split-amount { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--accent2); }
+  .split-total { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); font-weight: 600; }
+  .split-total .split-amount { color: var(--success); }
+  .ai-explain-box { margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px dashed var(--border); font-size: 0.9rem; line-height: 1.8; color: var(--text2); display: none; }
+  .ai-explain-box.show { display: block; }
+  .ai-explain-box strong { color: var(--text); }
+
+  .other-tools { margin-bottom: 2rem; }
+  .other-tools h2 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 1.2rem; }
+  .tools-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+  .tool-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 0.5rem; }
+  .tool-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-2px); }
+  .tool-card-icon { font-size: 1.5rem; }
+  .tool-card-name { font-weight: 600; font-size: 0.95rem; }
+  .tool-card-desc { color: var(--text2); font-size: 0.82rem; line-height: 1.5; }
+  .tool-card-badge { display: inline-flex; align-items: center; font-size: 0.72rem; color: var(--success); background: rgba(16,185,129,0.1); padding: 0.2rem 0.6rem; border-radius: 50px; border: 1px solid rgba(16,185,129,0.2); margin-top: auto; width: fit-content; }
+  .related-blogs { margin-bottom: 2rem; }
+  .related-blogs h2 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 1.2rem; }
+  .blogs-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .blog-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.2rem; text-decoration: none; color: var(--text); transition: all 0.2s; }
+  .blog-card:hover { border-color: rgba(59,130,246,0.4); }
+  .blog-card-cat { font-size: 0.72rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+  .blog-card-title { font-size: 0.88rem; font-weight: 600; line-height: 1.4; }
+  .disclaimer { background: rgba(245,158,11,0.05); border: 1px solid rgba(245,158,11,0.2); border-radius: 12px; padding: 1.2rem; margin-bottom: 2rem; font-size: 0.82rem; color: var(--text2); line-height: 1.7; }
+
+  @media (max-width: 640px) { .tool-box { padding: 1.5rem; } .roommate-row { grid-template-columns: 1fr; } .roommate-row.equal-mode { grid-template-columns: 1fr auto; } }
+
+  .seo-content { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; margin-bottom: 2rem; }
+  .seo-content h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin: 2rem 0 0.8rem; }
+  .seo-content h2:first-child { margin-top: 0; }
+  .seo-content h3 { font-size: 1rem; margin: 1.3rem 0 0.4rem; }
+  .seo-content p, .seo-content li { color: var(--text2); font-size: 0.92rem; line-height: 1.8; }
+  .seo-content ul { padding-left: 1.3rem; margin-top: 0.8rem; }
+  .seo-content li { margin-bottom: 0.4rem; }
+  @media (max-width: 640px) { .seo-content { padding: 1.5rem; } }
+
+  .stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:0.8rem; margin-bottom:1.2rem; }
+  .stat { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:1rem; }
+  .stat-label { font-size:0.75rem; color:var(--text2); margin-bottom:0.3rem; }
+  .stat-value { font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:700; color:var(--accent2); }
+  .stat.good .stat-value { color:var(--success); }
+  .rtable { width:100%; border-collapse:collapse; margin:0.8rem 0; font-size:0.88rem; }
+  .rtable th, .rtable td { padding:0.6rem 0.5rem; border-bottom:1px solid var(--border); text-align:left; color:var(--text2); }
+  .rtable th { font-weight:500; color:var(--text); }
+  .rtable td.num, .rtable th.num { text-align:right; }
+  .rtable td strong { color:var(--text); }
+  .checkbox-line { display:flex; gap:0.6rem; align-items:center; margin-bottom:1.2rem; font-size:0.88rem; color:var(--text2); }
+  .checkbox-line input { accent-color:var(--accent); width:16px; height:16px; }
+  .group-title { font-family:'Playfair Display',serif; font-size:1.05rem; margin:1.2rem 0 0.8rem; color:var(--text); }
+  .err { color:var(--danger); font-size:0.88rem; margin:0.6rem 0; display:none; }
+  .err.show { display:block; }
+  .note-box { background:rgba(59,130,246,0.06); border:1px solid rgba(59,130,246,0.25); border-radius:12px; padding:1rem 1.2rem; font-size:0.86rem; line-height:1.7; color:var(--text2); margin-top:1rem; }
+  .verdict { border-radius:12px; padding:1rem 1.2rem; font-size:0.92rem; line-height:1.7; margin:1rem 0; border:1px solid var(--border); color:var(--text2); }
+  .verdict.ok { background:rgba(16,185,129,0.08); border-color:rgba(16,185,129,0.3); }
+  .verdict.warn { background:rgba(245,158,11,0.08); border-color:rgba(245,158,11,0.3); }
+  .verdict strong { color:var(--text); }
+  .seo-content table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:0.88rem; }
+  .seo-content th, .seo-content td { padding:0.6rem 0.5rem; border-bottom:1px solid var(--border); text-align:left; color:var(--text2); }
+  .seo-content th { color:var(--text); font-weight:500; }
+  .seo-content ol { padding-left:1.3rem; margin-top:0.8rem; }
+  .seo-content ol li { color:var(--text2); font-size:0.92rem; line-height:1.8; margin-bottom:0.4rem; }
+  .bill-row, .person-row { display:grid; gap:0.6rem; align-items:center; background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:0.6rem 0.8rem; margin-bottom:0.6rem; }
+  .bill-row { grid-template-columns:1.2fr 0.8fr 1fr auto; }
+  .person-row { grid-template-columns:1.2fr 0.8fr auto; }
+  .bill-row input, .person-row input, .bill-row select { background:transparent; border:none; color:var(--text); font-family:'DM Sans',sans-serif; font-size:0.88rem; outline:none; padding:0.4rem 0; width:100%; }
+  .bill-row select option { background:#111827; }
+  .bill-row input::placeholder, .person-row input::placeholder { color:var(--text2); }
+  @media (max-width:640px) { .bill-row, .person-row { grid-template-columns:1fr 1fr; } }
+</style>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ytfr7ibt7a");
+</script>
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<div class="tool-hero">
+  <div class="tool-tag">🧮 Free Calculator</div>
+  <h1><span>Rent Affordability</span> Calculator</h1>
+  <p>Find out how much rent fits your income. See ranges from the 30% rule, the 3× rent rule and the 40× rule, and check a specific apartment price.</p>
+  <div class="hero-badges"><span class="hero-badge">✓ 100% Free</span><span class="hero-badge">✓ No Signup</span><span class="hero-badge">✓ 30%, 3× &amp; 40× Rules</span><span class="hero-badge">✓ Hourly or Salary</span></div>
+</div>
+
+<div class="tool-main">
+
+  <div class="tool-box">
+    <div class="tool-box-title">How Much Rent Can You Afford?</div>
+    <div class="tool-box-sub">Enter your income to see rent ranges based on common guidelines.</div>
+
+    <div class="input-row">
+      <div>
+        <label class="input-label" for="income">Income before taxes ($)</label>
+        <input type="number" class="tool-input" id="income" placeholder="e.g. 60000" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="period">Income period</label>
+        <select class="tool-select" id="period" onchange="togglePeriod()">
+          <option value="annual">Per year</option>
+          <option value="monthly">Per month</option>
+          <option value="biweekly">Every two weeks</option>
+          <option value="weekly">Per week</option>
+          <option value="hourly">Per hour</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="hoursWrap" style="display:none">
+      <label class="input-label" for="hours">Hours worked per week</label>
+      <input type="number" class="tool-input" id="hours" placeholder="e.g. 40" min="0" step="0.5">
+    </div>
+
+    <div class="input-row">
+      <div>
+        <label class="input-label" for="takehome">Monthly take-home pay ($, optional)</label>
+        <input type="number" class="tool-input" id="takehome" placeholder="After taxes" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="debts">Monthly debt payments ($, optional)</label>
+        <input type="number" class="tool-input" id="debts" placeholder="Loans, cards, etc." min="0" step="0.01">
+      </div>
+    </div>
+
+    <label class="input-label" for="considering">Rent you are considering ($/month, optional)</label>
+    <input type="number" class="tool-input" id="considering" placeholder="e.g. 1500" min="0" step="0.01">
+
+    <button class="analyze-btn" onclick="calculate()">🏠 Calculate Affordable Rent</button>
+    <div class="err" id="err"></div>
+
+    <div class="result-box" id="result">
+      <div class="result-header"><h3>🏠 Your Rent Ranges</h3></div>
+      <div id="resultContent"></div>
+    </div>
+  </div>
+
+  <section class="seo-content">
+    <h2>What Is the 30% Rule for Rent?</h2>
+    <p>The 30% rule is a common guideline that says you should spend no more than about 30% of your gross (before-tax) income on housing. The 30% figure is also a widely used benchmark in U.S. housing policy for judging whether housing costs are a heavy burden. It is a rule of thumb, not a legal requirement, and it does not fit every budget.</p>
+
+    <h2>Other Rules Landlords and Renters Use</h2>
+    <ul>
+      <li><strong>3× rent rule:</strong> some landlords ask for monthly gross income of at least three times the rent, which means rent of about one-third of income.</li>
+      <li><strong>40× rule:</strong> some landlords, especially in some large cities, ask for annual gross income of at least 40 times the monthly rent.</li>
+      <li><strong>Conservative budgeting:</strong> many people aim for 25% or less to leave room for savings, debt and emergencies.</li>
+    </ul>
+    <p>Screening requirements vary by landlord, city and building, so check the requirements of the places you are applying to.</p>
+
+    <h2>Rent by Income: 30% Rule Examples</h2>
+    <table>
+      <tr><th>Annual income</th><th>Monthly income</th><th>Rent at 30%</th></tr>
+      <tr><td>$36,000</td><td>$3,000</td><td>$900</td></tr>
+      <tr><td>$48,000</td><td>$4,000</td><td>$1,200</td></tr>
+      <tr><td>$60,000</td><td>$5,000</td><td>$1,500</td></tr>
+      <tr><td>$72,000</td><td>$6,000</td><td>$1,800</td></tr>
+      <tr><td>$90,000</td><td>$7,500</td><td>$2,250</td></tr>
+      <tr><td>$120,000</td><td>$10,000</td><td>$3,000</td></tr>
+    </table>
+
+    <h2>When a Rule of Thumb Does Not Fit</h2>
+    <ul>
+      <li><strong>High-cost cities:</strong> rents may be above 30% of income for many households.</li>
+      <li><strong>Debt:</strong> student loans, car payments and credit cards can leave less room than the percentage suggests.</li>
+      <li><strong>Total housing cost:</strong> utilities, renters insurance, parking and fees add to your rent.</li>
+      <li><strong>Roommates:</strong> splitting rent changes your share. Try the <a href="/rent-split-calculator" style="color:var(--accent2)">Rent Split Calculator</a>.</li>
+    </ul>
+
+    <h2>Gross Income vs. Take-Home Pay</h2>
+    <p>Most rent guidelines use gross income (before taxes). Because you pay rent from take-home pay, it also helps to look at rent as a share of what actually lands in your account. Enter your take-home pay above to see both numbers.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>How much rent can I afford on $50,000 a year?</h3>
+    <p>Using the 30% rule, $50,000 a year is about $4,167 a month before taxes, so rent of about $1,250 a month. At 25% it is about $1,042, and under the 3× rule it is about $1,389. Your own budget may point to a different number.</p>
+
+    <h3>What is the 40x rule for renting?</h3>
+    <p>Some landlords ask for annual gross income of at least 40 times the monthly rent. For $1,500 rent, that is $60,000 a year. Requirements vary by landlord and city.</p>
+
+    <h3>Should rent be based on gross or take-home pay?</h3>
+    <p>Most guidelines, including the 30% rule and the 3× rule, use gross income. Looking at rent as a share of take-home pay is also useful, because that is the money you pay it from.</p>
+
+    <h3>Does the rent guideline include utilities?</h3>
+    <p>The 30% rule is usually applied to total housing costs, so utilities and renters insurance can count toward it. Some people apply it to rent alone. Decide which you are using before you compare.</p>
+
+    <h3>What if I have roommates?</h3>
+    <p>Use your share of the rent. A roommate's income can also change what a landlord requires, so ask how the property screens multiple applicants.</p>
+
+    <h3>How do I enter hourly pay?</h3>
+    <p>Choose Per hour, enter your hourly rate and your weekly hours. The calculator converts it to monthly income using 52 weeks per year.</p>
+
+  </section>
+
+  <div class="other-tools">
+    <h2>More Free Renter Calculators and Tools</h2>
+    <div class="tools-row">
+      <a href="/rent-split-calculator" class="tool-card">
+        <div class="tool-card-icon">💰</div>
+        <div class="tool-card-name">Rent Split Calculator</div>
+        <div class="tool-card-desc">Split rent by room size, income, or equally.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/prorated-rent-calculator" class="tool-card">
+        <div class="tool-card-icon">📆</div>
+        <div class="tool-card-name">Prorated Rent Calculator</div>
+        <div class="tool-card-desc">Calculate partial-month rent for a move-in or move-out.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/moving-cost-calculator" class="tool-card">
+        <div class="tool-card-icon">📦</div>
+        <div class="tool-card-name">Moving & Move-In Cost Calculator</div>
+        <div class="tool-card-desc">Add up deposits, fees, and moving costs.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/utility-split-calculator" class="tool-card">
+        <div class="tool-card-icon">💡</div>
+        <div class="tool-card-name">Utility Split Calculator</div>
+        <div class="tool-card-desc">Split bills between roommates and see who owes whom.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/security-deposit-interest-calculator" class="tool-card">
+        <div class="tool-card-icon">🏦</div>
+        <div class="tool-card-name">Security Deposit Interest Calculator</div>
+        <div class="tool-card-desc">Estimate interest on a deposit.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/roommate-agreement" class="tool-card">
+        <div class="tool-card-icon">🤝</div>
+        <div class="tool-card-name">Roommate Agreement Generator</div>
+        <div class="tool-card-desc">Turn your arrangement into a written roommate agreement.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="related-blogs">
+    <h2>Related Guides</h2>
+    <div class="blogs-row">
+      <a href="/blog-how-to-read-lease" class="blog-card">
+        <div class="blog-card-cat">📄 Lease Guide</div>
+        <div class="blog-card-title">How to Read a Lease Agreement</div>
+      </a>
+      <a href="/blog-rent-increase" class="blog-card">
+        <div class="blog-card-cat">📈 Rent Increase</div>
+        <div class="blog-card-title">Rent Increase Guide for Renters</div>
+      </a>
+      <a href="/blog-renters-insurance" class="blog-card">
+        <div class="blog-card-cat">🛡️ Insurance</div>
+        <div class="blog-card-title">Renters Insurance Guide</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ <strong>Disclaimer:</strong> This calculator gives general estimates based on the numbers you enter. It is not financial or legal advice. Your lease and local law control what you actually owe, so confirm important figures with your landlord, lender or a qualified professional.
+  </div>
+
+</div>
+
+<div id="site-footer"></div>
+
+<script>
+function $(id){return document.getElementById(id);}
+const money=n=>'$'+n.toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:0});
+function toMonthly(amount,period,hours){
+  if(period==='monthly')return amount;
+  if(period==='annual')return amount/12;
+  if(period==='biweekly')return amount*26/12;
+  if(period==='weekly')return amount*52/12;
+  if(period==='hourly')return amount*hours*52/12;
+  return 0;
+}
+function togglePeriod(){$('hoursWrap').style.display=$('period').value==='hourly'?'block':'none';}
+function rentRanges(grossMonthly){
+  const annual=grossMonthly*12;
+  return[
+    {name:'Conservative (25% of gross income)',rent:grossMonthly*0.25},
+    {name:'Common guideline (30% of gross income)',rent:grossMonthly*0.30},
+    {name:'3× rent rule (income ≥ 3× rent)',rent:grossMonthly/3},
+    {name:'40× rule (annual income ≥ 40× rent)',rent:annual/40}
+  ];
+}
+function calculate(){
+  const err=$('err');err.classList.remove('show');
+  const income=parseFloat($('income').value);const period=$('period').value;const hours=parseFloat($('hours').value)||0;
+  if(!(income>0)){err.textContent='Please enter your income.';err.classList.add('show');return;}
+  if(period==='hourly'&&!(hours>0)){err.textContent='Please enter your weekly hours.';err.classList.add('show');return;}
+  const gross=toMonthly(income,period,hours);
+  const take=parseFloat($('takehome').value)||0;
+  const debts=parseFloat($('debts').value)||0;
+  const cons=parseFloat($('considering').value)||0;
+  const ranges=rentRanges(gross);
+  let h='<div class="stat-grid">'+
+    '<div class="stat"><div class="stat-label">Gross monthly income</div><div class="stat-value">'+money(gross)+'</div></div>'+
+    '<div class="stat"><div class="stat-label">Gross annual income</div><div class="stat-value">'+money(gross*12)+'</div></div>'+
+    '<div class="stat good"><div class="stat-label">Rent at 30%</div><div class="stat-value">'+money(gross*0.3)+'/mo</div></div></div>';
+  h+='<table class="rtable"><tr><th>Guideline</th><th class="num">Monthly rent</th><th class="num">Yearly</th></tr>';
+  for(const r of ranges)h+='<tr><td>'+r.name+'</td><td class="num"><strong>'+money(r.rent)+'</strong></td><td class="num">'+money(r.rent*12)+'</td></tr>';
+  h+='</table>';
+  if(cons>0){
+    const ratio=cons/gross*100;
+    let cls='warn',msg;
+    if(ratio<=25){cls='ok';msg='This rent is about <strong>'+ratio.toFixed(1)+'%</strong> of your gross income, which is within a conservative budget.';}
+    else if(ratio<=30){cls='ok';msg='This rent is about <strong>'+ratio.toFixed(1)+'%</strong> of your gross income, which is within the common 30% guideline.';}
+    else if(ratio<=100/3){msg='This rent is about <strong>'+ratio.toFixed(1)+'%</strong> of your gross income. That is above the 30% guideline but within the 3× rent rule some landlords use.';}
+    else{msg='This rent is about <strong>'+ratio.toFixed(1)+'%</strong> of your gross income, which is above the common guidelines. That does not mean you cannot afford it, but it may leave less room in your budget.';}
+    h+='<div class="verdict '+cls+'">'+msg;
+    if(take>0)h+='<br>That is about <strong>'+(cons/take*100).toFixed(1)+'%</strong> of your take-home pay.';
+    if(debts>0)h+='<br>Rent plus your monthly debt payments is about <strong>'+((cons+debts)/gross*100).toFixed(1)+'%</strong> of gross income.';
+    h+='</div>';
+    h+='<table class="rtable"><tr><th>Income needed for '+money(cons)+' rent</th><th class="num">Annual</th></tr>'+
+      '<tr><td>30% guideline</td><td class="num">'+money(cons/0.3*12)+'</td></tr>'+
+      '<tr><td>3× rent rule</td><td class="num">'+money(cons*3*12)+'</td></tr>'+
+      '<tr><td>40× rule</td><td class="num">'+money(cons*40)+'</td></tr></table>';
+  }else if(take>0){
+    h+='<div class="verdict">At 30% of gross income, rent would be about <strong>'+(gross*0.3/take*100).toFixed(1)+'%</strong> of your take-home pay.</div>';
+  }
+  h+='<div class="note-box">These are rules of thumb, not requirements. Your budget, debts, local rents and each landlord\'s screening rules matter too.</div>';
+  $('resultContent').innerHTML=h;$('result').classList.add('show');
+}
+window.toMonthly=toMonthly;window.rentRanges=rentRanges;
+</script>
+</body>
+</html>
