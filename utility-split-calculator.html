@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4583731085701106" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-39KXXC0T3M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-39KXXC0T3M');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="I1Adk5jxUz4kvs1_zF7SIr129NJIUfysOiG0nAxhG-0" />
+<meta name="google-adsense-account" content="ca-pub-4583731085701106">
+<meta name="nav-section" content="calculators">
+<title>Utility Split Calculator for Roommates | Split Bills Fairly</title>
+<meta name="description" content="Free utility split calculator for roommates. Split electric, internet, water, and gas bills equally, by days lived there, or by custom percentages, and see who owes whom.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:title" content="Utility Split Calculator for Roommates | Split Bills Fairly">
+<meta property="og:description" content="Free utility split calculator for roommates. Split electric, internet, water, and gas bills equally, by days lived there, or by custom percentages, and see who owes whom.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.renteraiapp.com/utility-split-calculator">
+<link rel="canonical" href="https://www.renteraiapp.com/utility-split-calculator">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Utility Split Calculator",
+  "description": "Free tool that splits shared utility bills between roommates and shows who owes whom.",
+  "url": "https://www.renteraiapp.com/utility-split-calculator",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RenterAI",
+    "url": "https://www.renteraiapp.com"
+  },
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I split utilities fairly with roommates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pick a method everyone agrees on before the first bill. An equal split is simplest. If someone lives there for only part of the period, splitting by days lived is fairer. Write down the agreement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I split utilities if someone moves in mid-month?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the days method and enter how many days each person lived in the home during the billing period. Each person's share is based on their days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I split internet between roommates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Internet is commonly split equally because everyone can use it. If usage differs a lot, agree on custom percentages."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if one roommate pays all the bills?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Select who paid each bill. The calculator subtracts what each person paid from their share and shows who owes whom."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should utilities be split the same way as rent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. Rent is often split by room size or income, while utilities are often split equally. You can use the Rent Split Calculator for rent and this tool for bills."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this tool legal advice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It is a calculator for sharing costs. Your lease and any written roommate agreement control who is responsible to the landlord."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #0a0f1e; --surface: #111827; --surface2: #1a2234; --accent: #3b82f6; --accent2: #60a5fa; --text: #f1f5f9; --text2: #94a3b8; --border: #1e293b; --success: #10b981; --danger: #ef4444; --gold: #f59e0b; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); }
+
+  .tool-hero { padding: 7rem 2rem 3rem; text-align: center; background: radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.12) 0%, transparent 60%); border-bottom: 1px solid var(--border); }
+  .tool-tag { font-size: 0.78rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
+  .tool-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+  .tool-hero h1 span { color: var(--accent); }
+  .tool-hero p { color: var(--text2); font-size: 1.05rem; max-width: 580px; margin: 0 auto; line-height: 1.7; }
+  .hero-badges { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
+  .hero-badge { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); color: #6ee7b7; padding: 0.3rem 0.9rem; border-radius: 50px; font-size: 0.78rem; font-weight: 500; }
+  .tool-main { max-width: 860px; margin: 0 auto; padding: 3rem 2rem; }
+  .tool-box { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; margin-bottom: 2rem; }
+  .tool-box-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .tool-box-sub { color: var(--text2); font-size: 0.9rem; margin-bottom: 2rem; }
+  .input-label { font-size: 0.85rem; font-weight: 500; color: var(--text2); margin-bottom: 0.5rem; display: block; }
+  .tool-input { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: var(--text); padding: 0.9rem 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; outline: none; transition: border-color 0.2s; margin-bottom: 1.2rem; }
+  .tool-input:focus { border-color: var(--accent); }
+  .tool-select { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: var(--text); padding: 0.9rem 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; outline: none; margin-bottom: 1.2rem; cursor: pointer; }
+  .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 600px) { .input-row { grid-template-columns: 1fr; } }
+  .analyze-btn { width: 100%; background: var(--accent); color: white; border: none; border-radius: 12px; padding: 1.1rem; font-size: 1rem; font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif; margin-top: 0.5rem; transition: all 0.2s; }
+  .analyze-btn:hover { background: var(--accent2); transform: translateY(-1px); }
+  .analyze-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+  .secondary-btn { width: 100%; background: transparent; color: var(--accent2); border: 1px solid var(--border); border-radius: 12px; padding: 0.9rem; font-size: 0.9rem; font-weight: 500; cursor: pointer; font-family: 'DM Sans', sans-serif; margin-top: 0.8rem; transition: all 0.2s; }
+  .secondary-btn:hover { border-color: var(--accent); }
+  .secondary-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+  .result-box { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 1.8rem; margin-top: 1.5rem; display: none; }
+  .result-box.show { display: block; }
+  .result-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: 0.8rem; }
+  .result-header h3 { font-size: 1rem; font-weight: 600; }
+  .result-content { font-size: 0.92rem; line-height: 1.85; color: var(--text2); white-space: pre-wrap; }
+  .result-content strong { color: var(--text); }
+  .copy-btn { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: rgba(16,185,129,0.1); color: var(--success); border: 1px solid rgba(16,185,129,0.3); border-radius: 8px; font-size: 0.82rem; font-weight: 500; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s; }
+  .copy-btn:hover { background: var(--success); color: white; }
+  .loading-dots { display: flex; gap: 6px; align-items: center; justify-content: center; padding: 2.5rem; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: bounce 1.2s infinite; }
+  .dot:nth-child(2) { animation-delay: 0.2s; }
+  .dot:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-10px); } }
+
+  .roommates-list { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1rem; }
+  .roommate-row { display: grid; grid-template-columns: 1.3fr 1fr auto; gap: 0.7rem; align-items: center; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 0.7rem 0.9rem; }
+  .roommate-row.equal-mode { grid-template-columns: 1fr auto; }
+  .roommate-row input { background: transparent; border: none; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; outline: none; padding: 0.4rem 0; }
+  .roommate-row input::placeholder { color: var(--text2); }
+  .remove-roommate { background: rgba(239,68,68,0.1); color: var(--danger); border: 1px solid rgba(239,68,68,0.25); border-radius: 8px; width: 30px; height: 30px; cursor: pointer; font-size: 0.85rem; flex-shrink: 0; }
+  .remove-roommate:hover { background: var(--danger); color: white; }
+  .add-roommate-btn { width: 100%; background: transparent; border: 1px dashed var(--border); color: var(--accent2); border-radius: 12px; padding: 0.8rem; font-size: 0.88rem; font-weight: 500; cursor: pointer; font-family: 'DM Sans', sans-serif; margin-bottom: 1.4rem; transition: all 0.2s; }
+  .add-roommate-btn:hover { border-color: var(--accent); background: rgba(59,130,246,0.06); }
+
+  .split-row { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 0; border-bottom: 1px solid var(--border); }
+  .split-row:last-of-type { border-bottom: none; }
+  .split-name { font-weight: 600; font-size: 0.95rem; }
+  .split-percent { color: var(--text2); font-size: 0.78rem; margin-top: 0.15rem; }
+  .split-amount { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--accent2); }
+  .split-total { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); font-weight: 600; }
+  .split-total .split-amount { color: var(--success); }
+  .ai-explain-box { margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px dashed var(--border); font-size: 0.9rem; line-height: 1.8; color: var(--text2); display: none; }
+  .ai-explain-box.show { display: block; }
+  .ai-explain-box strong { color: var(--text); }
+
+  .other-tools { margin-bottom: 2rem; }
+  .other-tools h2 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 1.2rem; }
+  .tools-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+  .tool-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 0.5rem; }
+  .tool-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-2px); }
+  .tool-card-icon { font-size: 1.5rem; }
+  .tool-card-name { font-weight: 600; font-size: 0.95rem; }
+  .tool-card-desc { color: var(--text2); font-size: 0.82rem; line-height: 1.5; }
+  .tool-card-badge { display: inline-flex; align-items: center; font-size: 0.72rem; color: var(--success); background: rgba(16,185,129,0.1); padding: 0.2rem 0.6rem; border-radius: 50px; border: 1px solid rgba(16,185,129,0.2); margin-top: auto; width: fit-content; }
+  .related-blogs { margin-bottom: 2rem; }
+  .related-blogs h2 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 1.2rem; }
+  .blogs-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .blog-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.2rem; text-decoration: none; color: var(--text); transition: all 0.2s; }
+  .blog-card:hover { border-color: rgba(59,130,246,0.4); }
+  .blog-card-cat { font-size: 0.72rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+  .blog-card-title { font-size: 0.88rem; font-weight: 600; line-height: 1.4; }
+  .disclaimer { background: rgba(245,158,11,0.05); border: 1px solid rgba(245,158,11,0.2); border-radius: 12px; padding: 1.2rem; margin-bottom: 2rem; font-size: 0.82rem; color: var(--text2); line-height: 1.7; }
+
+  @media (max-width: 640px) { .tool-box { padding: 1.5rem; } .roommate-row { grid-template-columns: 1fr; } .roommate-row.equal-mode { grid-template-columns: 1fr auto; } }
+
+  .seo-content { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; margin-bottom: 2rem; }
+  .seo-content h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin: 2rem 0 0.8rem; }
+  .seo-content h2:first-child { margin-top: 0; }
+  .seo-content h3 { font-size: 1rem; margin: 1.3rem 0 0.4rem; }
+  .seo-content p, .seo-content li { color: var(--text2); font-size: 0.92rem; line-height: 1.8; }
+  .seo-content ul { padding-left: 1.3rem; margin-top: 0.8rem; }
+  .seo-content li { margin-bottom: 0.4rem; }
+  @media (max-width: 640px) { .seo-content { padding: 1.5rem; } }
+
+  .stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:0.8rem; margin-bottom:1.2rem; }
+  .stat { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:1rem; }
+  .stat-label { font-size:0.75rem; color:var(--text2); margin-bottom:0.3rem; }
+  .stat-value { font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:700; color:var(--accent2); }
+  .stat.good .stat-value { color:var(--success); }
+  .rtable { width:100%; border-collapse:collapse; margin:0.8rem 0; font-size:0.88rem; }
+  .rtable th, .rtable td { padding:0.6rem 0.5rem; border-bottom:1px solid var(--border); text-align:left; color:var(--text2); }
+  .rtable th { font-weight:500; color:var(--text); }
+  .rtable td.num, .rtable th.num { text-align:right; }
+  .rtable td strong { color:var(--text); }
+  .checkbox-line { display:flex; gap:0.6rem; align-items:center; margin-bottom:1.2rem; font-size:0.88rem; color:var(--text2); }
+  .checkbox-line input { accent-color:var(--accent); width:16px; height:16px; }
+  .group-title { font-family:'Playfair Display',serif; font-size:1.05rem; margin:1.2rem 0 0.8rem; color:var(--text); }
+  .err { color:var(--danger); font-size:0.88rem; margin:0.6rem 0; display:none; }
+  .err.show { display:block; }
+  .note-box { background:rgba(59,130,246,0.06); border:1px solid rgba(59,130,246,0.25); border-radius:12px; padding:1rem 1.2rem; font-size:0.86rem; line-height:1.7; color:var(--text2); margin-top:1rem; }
+  .verdict { border-radius:12px; padding:1rem 1.2rem; font-size:0.92rem; line-height:1.7; margin:1rem 0; border:1px solid var(--border); color:var(--text2); }
+  .verdict.ok { background:rgba(16,185,129,0.08); border-color:rgba(16,185,129,0.3); }
+  .verdict.warn { background:rgba(245,158,11,0.08); border-color:rgba(245,158,11,0.3); }
+  .verdict strong { color:var(--text); }
+  .seo-content table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:0.88rem; }
+  .seo-content th, .seo-content td { padding:0.6rem 0.5rem; border-bottom:1px solid var(--border); text-align:left; color:var(--text2); }
+  .seo-content th { color:var(--text); font-weight:500; }
+  .seo-content ol { padding-left:1.3rem; margin-top:0.8rem; }
+  .seo-content ol li { color:var(--text2); font-size:0.92rem; line-height:1.8; margin-bottom:0.4rem; }
+  .bill-row, .person-row { display:grid; gap:0.6rem; align-items:center; background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:0.6rem 0.8rem; margin-bottom:0.6rem; }
+  .bill-row { grid-template-columns:1.2fr 0.8fr 1fr auto; }
+  .person-row { grid-template-columns:1.2fr 0.8fr auto; }
+  .bill-row input, .person-row input, .bill-row select { background:transparent; border:none; color:var(--text); font-family:'DM Sans',sans-serif; font-size:0.88rem; outline:none; padding:0.4rem 0; width:100%; }
+  .bill-row select option { background:#111827; }
+  .bill-row input::placeholder, .person-row input::placeholder { color:var(--text2); }
+  @media (max-width:640px) { .bill-row, .person-row { grid-template-columns:1fr 1fr; } }
+</style>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ytfr7ibt7a");
+</script>
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<div class="tool-hero">
+  <div class="tool-tag">🧮 Free Calculator</div>
+  <h1><span>Utility Split</span> Calculator</h1>
+  <p>Split electricity, internet, water, gas and other shared bills between roommates, then see exactly who owes whom.</p>
+  <div class="hero-badges"><span class="hero-badge">✓ 100% Free</span><span class="hero-badge">✓ No Signup</span><span class="hero-badge">✓ Equal, Days or Custom</span><span class="hero-badge">✓ Who Owes Whom</span></div>
+</div>
+
+<div class="tool-main">
+
+  <div class="tool-box">
+    <div class="tool-box-title">Split Shared Bills Between Roommates</div>
+    <div class="tool-box-sub">Add your roommates and bills, pick a method, and see each share and who owes whom.</div>
+
+    <label class="input-label" for="method">How should bills be split?</label>
+    <select class="tool-select" id="method" onchange="renderPeople()">
+      <option value="equal">Equally</option>
+      <option value="days">By days each person lived there</option>
+      <option value="custom">Custom percentages</option>
+    </select>
+
+    <label class="input-label">Roommates</label>
+    <div id="peopleList"></div>
+    <button type="button" class="add-roommate-btn" onclick="addPerson()">+ Add Roommate</button>
+
+    <label class="input-label">Bills this period</label>
+    <div id="billsList"></div>
+    <button type="button" class="add-roommate-btn" onclick="addBill()">+ Add Bill</button>
+
+    <button class="analyze-btn" onclick="calculate()">💡 Split the Bills</button>
+    <div class="err" id="err"></div>
+
+    <div class="result-box" id="result">
+      <div class="result-header"><h3>💡 Your Split</h3></div>
+      <div id="resultContent"></div>
+    </div>
+  </div>
+
+  <section class="seo-content">
+    <h2>How to Split Utilities Between Roommates</h2>
+    <p>Shared bills such as electricity, gas, water, internet and trash are a common source of roommate disputes. A clear method agreed on in advance keeps things fair and avoids awkward conversations.</p>
+
+    <h2>Three Common Ways to Split Bills</h2>
+    <ul>
+      <li><strong>Equal split:</strong> the simplest option. It works well when everyone lives there the whole time and uses the home similarly.</li>
+      <li><strong>By days lived there:</strong> useful when someone moves in or out mid-month or is away for part of the billing period.</li>
+      <li><strong>Custom percentages:</strong> useful when roommates agree that some people should pay more, for example for a larger room or heavier use.</li>
+    </ul>
+
+    <h2>Who Owes Whom?</h2>
+    <p>Often one person pays a bill and the others pay them back. Choose who paid each bill in the calculator and it will show each person's balance, then suggest a simple set of payments to settle up with the fewest transfers.</p>
+
+    <h2>Tips for Sharing Utilities</h2>
+    <ul>
+      <li>Agree on the method before the first bill arrives.</li>
+      <li>Keep copies of bills and payment confirmations.</li>
+      <li>Decide whose name is on each account, and what happens when someone moves out.</li>
+      <li>Write down your agreement. Our <a href="/roommate-agreement" style="color:var(--accent2)">Roommate Agreement Generator</a> can help.</li>
+      <li>Check your lease. It may say how utilities are handled or whether they are included in rent.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>How do I split utilities fairly with roommates?</h3>
+    <p>Pick a method everyone agrees on before the first bill. An equal split is simplest. If someone lives there for only part of the period, splitting by days lived is fairer. Write down the agreement.</p>
+
+    <h3>How do I split utilities if someone moves in mid-month?</h3>
+    <p>Use the days method and enter how many days each person lived in the home during the billing period. Each person's share is based on their days.</p>
+
+    <h3>How do I split internet between roommates?</h3>
+    <p>Internet is commonly split equally because everyone can use it. If usage differs a lot, agree on custom percentages.</p>
+
+    <h3>What if one roommate pays all the bills?</h3>
+    <p>Select who paid each bill. The calculator subtracts what each person paid from their share and shows who owes whom.</p>
+
+    <h3>Should utilities be split the same way as rent?</h3>
+    <p>Not necessarily. Rent is often split by room size or income, while utilities are often split equally. You can use the Rent Split Calculator for rent and this tool for bills.</p>
+
+    <h3>Is this tool legal advice?</h3>
+    <p>No. It is a calculator for sharing costs. Your lease and any written roommate agreement control who is responsible to the landlord.</p>
+
+  </section>
+
+  <div class="other-tools">
+    <h2>More Free Renter Calculators and Tools</h2>
+    <div class="tools-row">
+      <a href="/rent-split-calculator" class="tool-card">
+        <div class="tool-card-icon">💰</div>
+        <div class="tool-card-name">Rent Split Calculator</div>
+        <div class="tool-card-desc">Split rent by room size, income, or equally.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/prorated-rent-calculator" class="tool-card">
+        <div class="tool-card-icon">📆</div>
+        <div class="tool-card-name">Prorated Rent Calculator</div>
+        <div class="tool-card-desc">Calculate partial-month rent for a move-in or move-out.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/rent-affordability-calculator" class="tool-card">
+        <div class="tool-card-icon">🏠</div>
+        <div class="tool-card-name">Rent Affordability Calculator</div>
+        <div class="tool-card-desc">See how much rent fits your income.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/moving-cost-calculator" class="tool-card">
+        <div class="tool-card-icon">📦</div>
+        <div class="tool-card-name">Moving & Move-In Cost Calculator</div>
+        <div class="tool-card-desc">Add up deposits, fees, and moving costs.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/security-deposit-interest-calculator" class="tool-card">
+        <div class="tool-card-icon">🏦</div>
+        <div class="tool-card-name">Security Deposit Interest Calculator</div>
+        <div class="tool-card-desc">Estimate interest on a deposit.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/roommate-agreement" class="tool-card">
+        <div class="tool-card-icon">🤝</div>
+        <div class="tool-card-name">Roommate Agreement Generator</div>
+        <div class="tool-card-desc">Turn your arrangement into a written roommate agreement.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="related-blogs">
+    <h2>Related Guides</h2>
+    <div class="blogs-row">
+      <a href="/blog-how-to-split-rent-fairly" class="blog-card">
+        <div class="blog-card-cat">🤝 Roommates</div>
+        <div class="blog-card-title">How to Split Rent Fairly With Roommates</div>
+      </a>
+      <a href="/blog-roommate-agreement-guide" class="blog-card">
+        <div class="blog-card-cat">🤝 Roommates</div>
+        <div class="blog-card-title">Complete Guide to Roommate Agreements</div>
+      </a>
+      <a href="/blog-move-in-checklist" class="blog-card">
+        <div class="blog-card-cat">📦 Moving</div>
+        <div class="blog-card-title">Move-In Checklist for Renters</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ <strong>Disclaimer:</strong> This calculator gives general estimates based on the numbers you enter. It is not financial or legal advice. Your lease and local law control what you actually owe, so confirm important figures with your landlord, lender or a qualified professional.
+  </div>
+
+</div>
+
+<div id="site-footer"></div>
+
+<script>
+function $(id){return document.getElementById(id);}
+const money=n=>'$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+let pc=0,bc=0;
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function addPerson(name){
+  pc++;const id=pc;const m=$('method').value;
+  const row=document.createElement('div');row.className='person-row';row.id='p'+id;row.dataset.id=id;
+  const extra=m==='days'?'<input type="number" class="p-days" placeholder="Days there" min="0" step="1">':m==='custom'?'<input type="number" class="p-pct" placeholder="Percent" min="0" step="0.1">':'<span></span>';
+  row.innerHTML='<input type="text" class="p-name" placeholder="Roommate name" value="'+esc(name||'')+'" oninput="refreshPaidBy()">'+extra+'<button type="button" class="remove-roommate" onclick="removePerson('+id+')">✕</button>';
+  $('peopleList').appendChild(row);refreshPaidBy();
+}
+function removePerson(id){const r=$('p'+id);if(r)r.remove();refreshPaidBy();}
+function renderPeople(){
+  const names=[...document.querySelectorAll('.p-name')].map(e=>e.value);
+  $('peopleList').innerHTML='';pc=0;
+  (names.length?names:['','']).forEach(n=>addPerson(n));
+}
+function addBill(name){
+  bc++;const id=bc;
+  const row=document.createElement('div');row.className='bill-row';row.id='b'+id;
+  row.innerHTML='<input type="text" class="b-name" placeholder="Bill (e.g. Electric)" value="'+esc(name||'')+'"><input type="number" class="b-amt" placeholder="Amount $" min="0" step="0.01"><select class="b-paid"></select><button type="button" class="remove-roommate" onclick="removeBill('+id+')">✕</button>';
+  $('billsList').appendChild(row);refreshPaidBy();
+}
+function removeBill(id){const r=$('b'+id);if(r)r.remove();}
+function refreshPaidBy(){
+  const people=[...document.querySelectorAll('.person-row')].map((r,i)=>({id:r.dataset.id,name:(r.querySelector('.p-name').value||('Roommate '+(i+1)))}));
+  document.querySelectorAll('.b-paid').forEach(sel=>{
+    const cur=sel.value;
+    sel.innerHTML='<option value="">Paid by: (not set)</option>'+people.map(p=>'<option value="'+p.id+'">Paid by '+esc(p.name)+'</option>').join('');
+    if(people.some(p=>p.id===cur))sel.value=cur;
+  });
+}
+function computeUtilitySplit(people,bills,method){
+  if(people.length<2)return{error:'Add at least two roommates.'};
+  const total=bills.reduce((s,b)=>s+(b.amount>0?b.amount:0),0);
+  if(!(total>0))return{error:'Add at least one bill with an amount.'};
+  let w=people.map(p=>method==='equal'?1:method==='days'?(p.days>0?p.days:0):(p.pct>0?p.pct:0));
+  const ws=w.reduce((a,b)=>a+b,0);
+  if(!(ws>0))return{error:method==='days'?'Enter the number of days for each roommate.':'Enter a percentage for each roommate.'};
+  let shares=w.map(x=>Math.round(total*x/ws*100)/100);
+  const diff=Math.round((total-shares.reduce((a,b)=>a+b,0))*100)/100;
+  if(diff!==0){let mi=0;shares.forEach((s,i)=>{if(s>shares[mi])mi=i;});shares[mi]=Math.round((shares[mi]+diff)*100)/100;}
+  const anyPaid=bills.some(b=>b.paidBy);
+  const paid=people.map(p=>bills.filter(b=>b.paidBy===p.id).reduce((s,b)=>s+(b.amount>0?b.amount:0),0));
+  const rows=people.map((p,i)=>({id:p.id,name:p.name,share:shares[i],paid:paid[i],balance:Math.round((shares[i]-paid[i])*100)/100}));
+  const settlements=[];
+  if(anyPaid){
+    const debtors=rows.filter(r=>r.balance>0.004).map(r=>({name:r.name,amt:r.balance})).sort((a,b)=>b.amt-a.amt);
+    const creditors=rows.filter(r=>r.balance<-0.004).map(r=>({name:r.name,amt:-r.balance})).sort((a,b)=>b.amt-a.amt);
+    let i=0,j=0;
+    while(i<debtors.length&&j<creditors.length){
+      const x=Math.min(debtors[i].amt,creditors[j].amt);
+      settlements.push({from:debtors[i].name,to:creditors[j].name,amount:Math.round(x*100)/100});
+      debtors[i].amt-=x;creditors[j].amt-=x;
+      if(debtors[i].amt<0.005)i++;if(creditors[j].amt<0.005)j++;
+    }
+  }
+  return{total:total,rows:rows,anyPaid:anyPaid,settlements:settlements,pctSum:method==='custom'?ws:null};
+}
+function calculate(){
+  const err=$('err');err.classList.remove('show');
+  const method=$('method').value;
+  const people=[...document.querySelectorAll('.person-row')].map((r,i)=>({id:r.dataset.id,name:(r.querySelector('.p-name').value.trim()||('Roommate '+(i+1))),days:parseFloat((r.querySelector('.p-days')||{}).value)||0,pct:parseFloat((r.querySelector('.p-pct')||{}).value)||0}));
+  const bills=[...document.querySelectorAll('.bill-row')].map(r=>({name:r.querySelector('.b-name').value,amount:parseFloat(r.querySelector('.b-amt').value)||0,paidBy:r.querySelector('.b-paid').value}));
+  const r=computeUtilitySplit(people,bills,method);
+  if(r.error){err.textContent=r.error;err.classList.add('show');return;}
+  let h='<div class="stat-grid"><div class="stat good"><div class="stat-label">Total bills</div><div class="stat-value">'+money(r.total)+'</div></div></div>';
+  h+='<table class="rtable"><tr><th>Roommate</th><th class="num">Share</th>'+(r.anyPaid?'<th class="num">Paid</th><th class="num">Balance</th>':'')+'</tr>';
+  for(const x of r.rows){
+    h+='<tr><td>'+esc(x.name)+'</td><td class="num"><strong>'+money(x.share)+'</strong></td>';
+    if(r.anyPaid)h+='<td class="num">'+money(x.paid)+'</td><td class="num">'+(x.balance>0.004?'owes '+money(x.balance):x.balance<-0.004?'is owed '+money(-x.balance):'settled')+'</td>';
+    h+='</tr>';
+  }
+  h+='</table>';
+  if(r.settlements.length){h+='<div class="verdict ok"><strong>To settle up:</strong><br>'+r.settlements.map(s=>esc(s.from)+' pays '+esc(s.to)+' <strong>'+money(s.amount)+'</strong>').join('<br>')+'</div>';}
+  if(r.pctSum!==null&&Math.abs(r.pctSum-100)>0.5)h+='<div class="note-box">Your percentages add up to '+r.pctSum.toFixed(1)+'%, not 100%. The shares above are scaled to your percentages.</div>';
+  $('resultContent').innerHTML=h;$('result').classList.add('show');
+}
+window.computeUtilitySplit=computeUtilitySplit;
+addPerson('');addPerson('');addBill('Electric');addBill('Internet');
+</script>
+</body>
+</html>

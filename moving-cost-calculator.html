@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4583731085701106" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-39KXXC0T3M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-39KXXC0T3M');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="I1Adk5jxUz4kvs1_zF7SIr129NJIUfysOiG0nAxhG-0" />
+<meta name="google-adsense-account" content="ca-pub-4583731085701106">
+<meta name="nav-section" content="calculators">
+<title>Moving Cost Calculator for Renters | Move-In and Moving Costs</title>
+<meta name="description" content="Free moving and move-in cost calculator for renters. Add up your deposit, first month, fees, movers, truck, and setup costs to see how much cash you need.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:title" content="Moving Cost Calculator for Renters | Move-In and Moving Costs">
+<meta property="og:description" content="Free moving and move-in cost calculator for renters. Add up your deposit, first month, fees, movers, truck, and setup costs to see how much cash you need.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.renteraiapp.com/moving-cost-calculator">
+<link rel="canonical" href="https://www.renteraiapp.com/moving-cost-calculator">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Moving and Move-In Cost Calculator",
+  "description": "Free tool that adds up deposits, fees, moving costs and setup costs for a rental move.",
+  "url": "https://www.renteraiapp.com/moving-cost-calculator",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RenterAI",
+    "url": "https://www.renteraiapp.com"
+  },
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does it cost to move into an apartment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It varies widely by city, building and how you move. Add up your actual lease amounts and quotes: first month's rent, deposit, any other fees, moving costs and setup costs. The calculator totals them for you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are move-in costs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Move-in costs are the money due to the landlord before you move in, such as first month's rent, a security deposit and fees. Many people also include moving costs and setup costs in their move-in budget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to pay first and last month's rent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some landlords ask for first and last month's rent, and some ask for first month's rent plus a deposit. Requirements depend on the landlord, your lease and local law, so check your lease and ask for the amounts in writing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much extra should I budget for a move?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many people add a cushion of 10% or more to cover surprises. The calculator starts with 10%, and you can change it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are broker or admin fees common?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They exist in some cities and at some properties, but they are not universal. Ask whether any broker, admin or lease fees apply before you apply."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the security deposit part of my moving costs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a cost you pay up front, but it is generally refundable at the end of the lease, minus any lawful deductions. See our security deposit guide for how returns work."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #0a0f1e; --surface: #111827; --surface2: #1a2234; --accent: #3b82f6; --accent2: #60a5fa; --text: #f1f5f9; --text2: #94a3b8; --border: #1e293b; --success: #10b981; --danger: #ef4444; --gold: #f59e0b; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); }
+
+  .tool-hero { padding: 7rem 2rem 3rem; text-align: center; background: radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.12) 0%, transparent 60%); border-bottom: 1px solid var(--border); }
+  .tool-tag { font-size: 0.78rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
+  .tool-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+  .tool-hero h1 span { color: var(--accent); }
+  .tool-hero p { color: var(--text2); font-size: 1.05rem; max-width: 580px; margin: 0 auto; line-height: 1.7; }
+  .hero-badges { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
+  .hero-badge { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); color: #6ee7b7; padding: 0.3rem 0.9rem; border-radius: 50px; font-size: 0.78rem; font-weight: 500; }
+  .tool-main { max-width: 860px; margin: 0 auto; padding: 3rem 2rem; }
+  .tool-box { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; margin-bottom: 2rem; }
+  .tool-box-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .tool-box-sub { color: var(--text2); font-size: 0.9rem; margin-bottom: 2rem; }
+  .input-label { font-size: 0.85rem; font-weight: 500; color: var(--text2); margin-bottom: 0.5rem; display: block; }
+  .tool-input { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: var(--text); padding: 0.9rem 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; outline: none; transition: border-color 0.2s; margin-bottom: 1.2rem; }
+  .tool-input:focus { border-color: var(--accent); }
+  .tool-select { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: var(--text); padding: 0.9rem 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; outline: none; margin-bottom: 1.2rem; cursor: pointer; }
+  .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 600px) { .input-row { grid-template-columns: 1fr; } }
+  .analyze-btn { width: 100%; background: var(--accent); color: white; border: none; border-radius: 12px; padding: 1.1rem; font-size: 1rem; font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif; margin-top: 0.5rem; transition: all 0.2s; }
+  .analyze-btn:hover { background: var(--accent2); transform: translateY(-1px); }
+  .analyze-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+  .secondary-btn { width: 100%; background: transparent; color: var(--accent2); border: 1px solid var(--border); border-radius: 12px; padding: 0.9rem; font-size: 0.9rem; font-weight: 500; cursor: pointer; font-family: 'DM Sans', sans-serif; margin-top: 0.8rem; transition: all 0.2s; }
+  .secondary-btn:hover { border-color: var(--accent); }
+  .secondary-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+  .result-box { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 1.8rem; margin-top: 1.5rem; display: none; }
+  .result-box.show { display: block; }
+  .result-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: 0.8rem; }
+  .result-header h3 { font-size: 1rem; font-weight: 600; }
+  .result-content { font-size: 0.92rem; line-height: 1.85; color: var(--text2); white-space: pre-wrap; }
+  .result-content strong { color: var(--text); }
+  .copy-btn { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: rgba(16,185,129,0.1); color: var(--success); border: 1px solid rgba(16,185,129,0.3); border-radius: 8px; font-size: 0.82rem; font-weight: 500; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s; }
+  .copy-btn:hover { background: var(--success); color: white; }
+  .loading-dots { display: flex; gap: 6px; align-items: center; justify-content: center; padding: 2.5rem; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: bounce 1.2s infinite; }
+  .dot:nth-child(2) { animation-delay: 0.2s; }
+  .dot:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-10px); } }
+
+  .roommates-list { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1rem; }
+  .roommate-row { display: grid; grid-template-columns: 1.3fr 1fr auto; gap: 0.7rem; align-items: center; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 0.7rem 0.9rem; }
+  .roommate-row.equal-mode { grid-template-columns: 1fr auto; }
+  .roommate-row input { background: transparent; border: none; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; outline: none; padding: 0.4rem 0; }
+  .roommate-row input::placeholder { color: var(--text2); }
+  .remove-roommate { background: rgba(239,68,68,0.1); color: var(--danger); border: 1px solid rgba(239,68,68,0.25); border-radius: 8px; width: 30px; height: 30px; cursor: pointer; font-size: 0.85rem; flex-shrink: 0; }
+  .remove-roommate:hover { background: var(--danger); color: white; }
+  .add-roommate-btn { width: 100%; background: transparent; border: 1px dashed var(--border); color: var(--accent2); border-radius: 12px; padding: 0.8rem; font-size: 0.88rem; font-weight: 500; cursor: pointer; font-family: 'DM Sans', sans-serif; margin-bottom: 1.4rem; transition: all 0.2s; }
+  .add-roommate-btn:hover { border-color: var(--accent); background: rgba(59,130,246,0.06); }
+
+  .split-row { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 0; border-bottom: 1px solid var(--border); }
+  .split-row:last-of-type { border-bottom: none; }
+  .split-name { font-weight: 600; font-size: 0.95rem; }
+  .split-percent { color: var(--text2); font-size: 0.78rem; margin-top: 0.15rem; }
+  .split-amount { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--accent2); }
+  .split-total { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); font-weight: 600; }
+  .split-total .split-amount { color: var(--success); }
+  .ai-explain-box { margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px dashed var(--border); font-size: 0.9rem; line-height: 1.8; color: var(--text2); display: none; }
+  .ai-explain-box.show { display: block; }
+  .ai-explain-box strong { color: var(--text); }
+
+  .other-tools { margin-bottom: 2rem; }
+  .other-tools h2 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 1.2rem; }
+  .tools-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+  .tool-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem; text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 0.5rem; }
+  .tool-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-2px); }
+  .tool-card-icon { font-size: 1.5rem; }
+  .tool-card-name { font-weight: 600; font-size: 0.95rem; }
+  .tool-card-desc { color: var(--text2); font-size: 0.82rem; line-height: 1.5; }
+  .tool-card-badge { display: inline-flex; align-items: center; font-size: 0.72rem; color: var(--success); background: rgba(16,185,129,0.1); padding: 0.2rem 0.6rem; border-radius: 50px; border: 1px solid rgba(16,185,129,0.2); margin-top: auto; width: fit-content; }
+  .related-blogs { margin-bottom: 2rem; }
+  .related-blogs h2 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 1.2rem; }
+  .blogs-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .blog-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.2rem; text-decoration: none; color: var(--text); transition: all 0.2s; }
+  .blog-card:hover { border-color: rgba(59,130,246,0.4); }
+  .blog-card-cat { font-size: 0.72rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+  .blog-card-title { font-size: 0.88rem; font-weight: 600; line-height: 1.4; }
+  .disclaimer { background: rgba(245,158,11,0.05); border: 1px solid rgba(245,158,11,0.2); border-radius: 12px; padding: 1.2rem; margin-bottom: 2rem; font-size: 0.82rem; color: var(--text2); line-height: 1.7; }
+
+  @media (max-width: 640px) { .tool-box { padding: 1.5rem; } .roommate-row { grid-template-columns: 1fr; } .roommate-row.equal-mode { grid-template-columns: 1fr auto; } }
+
+  .seo-content { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; margin-bottom: 2rem; }
+  .seo-content h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin: 2rem 0 0.8rem; }
+  .seo-content h2:first-child { margin-top: 0; }
+  .seo-content h3 { font-size: 1rem; margin: 1.3rem 0 0.4rem; }
+  .seo-content p, .seo-content li { color: var(--text2); font-size: 0.92rem; line-height: 1.8; }
+  .seo-content ul { padding-left: 1.3rem; margin-top: 0.8rem; }
+  .seo-content li { margin-bottom: 0.4rem; }
+  @media (max-width: 640px) { .seo-content { padding: 1.5rem; } }
+
+  .stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:0.8rem; margin-bottom:1.2rem; }
+  .stat { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:1rem; }
+  .stat-label { font-size:0.75rem; color:var(--text2); margin-bottom:0.3rem; }
+  .stat-value { font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:700; color:var(--accent2); }
+  .stat.good .stat-value { color:var(--success); }
+  .rtable { width:100%; border-collapse:collapse; margin:0.8rem 0; font-size:0.88rem; }
+  .rtable th, .rtable td { padding:0.6rem 0.5rem; border-bottom:1px solid var(--border); text-align:left; color:var(--text2); }
+  .rtable th { font-weight:500; color:var(--text); }
+  .rtable td.num, .rtable th.num { text-align:right; }
+  .rtable td strong { color:var(--text); }
+  .checkbox-line { display:flex; gap:0.6rem; align-items:center; margin-bottom:1.2rem; font-size:0.88rem; color:var(--text2); }
+  .checkbox-line input { accent-color:var(--accent); width:16px; height:16px; }
+  .group-title { font-family:'Playfair Display',serif; font-size:1.05rem; margin:1.2rem 0 0.8rem; color:var(--text); }
+  .err { color:var(--danger); font-size:0.88rem; margin:0.6rem 0; display:none; }
+  .err.show { display:block; }
+  .note-box { background:rgba(59,130,246,0.06); border:1px solid rgba(59,130,246,0.25); border-radius:12px; padding:1rem 1.2rem; font-size:0.86rem; line-height:1.7; color:var(--text2); margin-top:1rem; }
+  .verdict { border-radius:12px; padding:1rem 1.2rem; font-size:0.92rem; line-height:1.7; margin:1rem 0; border:1px solid var(--border); color:var(--text2); }
+  .verdict.ok { background:rgba(16,185,129,0.08); border-color:rgba(16,185,129,0.3); }
+  .verdict.warn { background:rgba(245,158,11,0.08); border-color:rgba(245,158,11,0.3); }
+  .verdict strong { color:var(--text); }
+  .seo-content table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:0.88rem; }
+  .seo-content th, .seo-content td { padding:0.6rem 0.5rem; border-bottom:1px solid var(--border); text-align:left; color:var(--text2); }
+  .seo-content th { color:var(--text); font-weight:500; }
+  .seo-content ol { padding-left:1.3rem; margin-top:0.8rem; }
+  .seo-content ol li { color:var(--text2); font-size:0.92rem; line-height:1.8; margin-bottom:0.4rem; }
+  .bill-row, .person-row { display:grid; gap:0.6rem; align-items:center; background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:0.6rem 0.8rem; margin-bottom:0.6rem; }
+  .bill-row { grid-template-columns:1.2fr 0.8fr 1fr auto; }
+  .person-row { grid-template-columns:1.2fr 0.8fr auto; }
+  .bill-row input, .person-row input, .bill-row select { background:transparent; border:none; color:var(--text); font-family:'DM Sans',sans-serif; font-size:0.88rem; outline:none; padding:0.4rem 0; width:100%; }
+  .bill-row select option { background:#111827; }
+  .bill-row input::placeholder, .person-row input::placeholder { color:var(--text2); }
+  @media (max-width:640px) { .bill-row, .person-row { grid-template-columns:1fr 1fr; } }
+</style>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ytfr7ibt7a");
+</script>
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<div class="tool-hero">
+  <div class="tool-tag">🧮 Free Calculator</div>
+  <h1><span>Moving &amp; Move-In Cost</span> Calculator</h1>
+  <p>Add up everything you need before you get the keys: deposits, first month, fees, movers, supplies, and setup costs, with a cushion for surprises.</p>
+  <div class="hero-badges"><span class="hero-badge">✓ 100% Free</span><span class="hero-badge">✓ No Signup</span><span class="hero-badge">✓ Deposits &amp; Fees</span><span class="hero-badge">✓ Moving Costs</span></div>
+</div>
+
+<div class="tool-main">
+
+  <div class="tool-box">
+    <div class="tool-box-title">Add Up Your Move-In and Moving Costs</div>
+    <div class="tool-box-sub">Fill in only what applies to you. Leave the rest blank. Use real quotes and lease amounts for the best estimate.</div>
+
+    <div class="group-title">🏠 Upfront housing costs</div>
+    <div class="input-row">
+      <div>
+        <label class="input-label" for="firstRent">First month's rent ($)</label>
+        <input type="number" class="tool-input amt" data-group="housing" data-label="First month's rent" id="firstRent" placeholder="0" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="deposit">Security deposit ($)</label>
+        <input type="number" class="tool-input amt" data-group="housing" data-label="Security deposit" id="deposit" placeholder="0" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="lastRent">Last month's rent (if required) ($)</label>
+        <input type="number" class="tool-input amt" data-group="housing" data-label="Last month's rent (if required)" id="lastRent" placeholder="0" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="petFee">Pet deposit or pet fees ($)</label>
+        <input type="number" class="tool-input amt" data-group="housing" data-label="Pet deposit or pet fees" id="petFee" placeholder="0" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="appFee">Application fee(s) ($)</label>
+        <input type="number" class="tool-input amt" data-group="housing" data-label="Application fee(s)" id="appFee" placeholder="0" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="adminFee">Broker, admin or lease fee ($)</label>
+        <input type="number" class="tool-input amt" data-group="housing" data-label="Broker, admin or lease fee" id="adminFee" placeholder="0" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="parkFee">Parking, key or amenity fees ($)</label>
+        <input type="number" class="tool-input amt" data-group="housing" data-label="Parking, key or amenity fees" id="parkFee" placeholder="0" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="insurance">First renters insurance payment ($)</label>
+        <input type="number" class="tool-input amt" data-group="housing" data-label="First renters insurance payment" id="insurance" placeholder="0" min="0" step="0.01">
+      </div>
+    </div>
+    <div class="group-title">📦 Moving costs</div>
+    <div class="input-row">
+      <div>
+        <label class="input-label" for="movers">Professional movers (quote) ($)</label>
+        <input type="number" class="tool-input amt" data-group="moving" data-label="Professional movers (quote)" id="movers" placeholder="0" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="truck">Truck or van rental ($)</label>
+        <input type="number" class="tool-input amt" data-group="moving" data-label="Truck or van rental" id="truck" placeholder="0" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="fuel">Fuel and tolls ($)</label>
+        <input type="number" class="tool-input amt" data-group="moving" data-label="Fuel and tolls" id="fuel" placeholder="0" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="supplies">Boxes and packing supplies ($)</label>
+        <input type="number" class="tool-input amt" data-group="moving" data-label="Boxes and packing supplies" id="supplies" placeholder="0" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="storage">Storage ($)</label>
+        <input type="number" class="tool-input amt" data-group="moving" data-label="Storage" id="storage" placeholder="0" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="cleaning">Cleaning (old or new place) ($)</label>
+        <input type="number" class="tool-input amt" data-group="moving" data-label="Cleaning (old or new place)" id="cleaning" placeholder="0" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="travel">Travel, lodging and food on moving day ($)</label>
+        <input type="number" class="tool-input amt" data-group="moving" data-label="Travel, lodging and food on moving day" id="travel" placeholder="0" min="0" step="0.01">
+      </div>
+    </div>
+    <div class="group-title">🔌 Setting up your home</div>
+    <div class="input-row">
+      <div>
+        <label class="input-label" for="utilDep">Utility deposits and connection fees ($)</label>
+        <input type="number" class="tool-input amt" data-group="setup" data-label="Utility deposits and connection fees" id="utilDep" placeholder="0" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="internet">Internet installation or equipment ($)</label>
+        <input type="number" class="tool-input amt" data-group="setup" data-label="Internet installation or equipment" id="internet" placeholder="0" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="furniture">Furniture and household essentials ($)</label>
+        <input type="number" class="tool-input amt" data-group="setup" data-label="Furniture and household essentials" id="furniture" placeholder="0" min="0" step="0.01">
+      </div>
+      <div>
+        <label class="input-label" for="otherCost">Anything else ($)</label>
+        <input type="number" class="tool-input amt" data-group="setup" data-label="Anything else" id="otherCost" placeholder="0" min="0" step="0.01">
+      </div>
+    </div>
+
+    <div class="group-title">🛟 Safety buffer</div>
+    <label class="input-label" for="buffer">Extra cushion for surprises (%)</label>
+    <input type="number" class="tool-input" id="buffer" value="10" min="0" max="100" step="1">
+
+    <button class="analyze-btn" onclick="calculate()">📦 Calculate Total Cost</button>
+    <div class="err" id="err"></div>
+
+    <div class="result-box" id="result">
+      <div class="result-header"><h3>📦 Your Estimated Total</h3></div>
+      <div id="resultContent"></div>
+    </div>
+  </div>
+
+  <section class="seo-content">
+    <h2>What Does It Cost to Move Into a Rental?</h2>
+    <p>The monthly rent is only part of what you need before you get the keys. Most renters pay a combination of housing costs due to the landlord, moving costs, and the cost of setting up the new home. This calculator adds them together so you can see how much cash you need up front.</p>
+
+    <h2>Upfront Housing Costs</h2>
+    <ul>
+      <li><strong>First month's rent:</strong> usually due at or before move-in, sometimes prorated if you move in mid-month. See the <a href="/prorated-rent-calculator" style="color:var(--accent2)">Prorated Rent Calculator</a>.</li>
+      <li><strong>Security deposit:</strong> money held against damage or unpaid rent. The amount and rules depend on your state and lease.</li>
+      <li><strong>Last month's rent:</strong> required by some landlords. Ask whether it is applied to your final month.</li>
+      <li><strong>Pet deposits or fees, application fees, admin or broker fees:</strong> these vary by property and city. Ask for a full list of fees in writing.</li>
+      <li><strong>Renters insurance:</strong> some leases require it. Learn more in our <a href="/blog-renters-insurance" style="color:var(--accent2)">renters insurance guide</a>.</li>
+    </ul>
+
+    <h2>Moving Costs</h2>
+    <p>Moving costs depend on distance, the amount you are moving, the time of year and whether you hire help or do it yourself. If you hire movers or rent a truck, get written quotes, ask what is included, and ask whether a quote is binding or an estimate that can change. Add packing supplies, fuel, tolls, storage and any cleaning at your old or new home.</p>
+
+    <h2>Setting Up the New Home</h2>
+    <p>Utilities may require a deposit or connection fee, internet may need installation or equipment, and a new home often needs furniture and basic household items. These costs are easy to forget, so include them in your budget.</p>
+
+    <h2>Tips for Budgeting a Move</h2>
+    <ul>
+      <li>Ask the landlord for a written list of everything due at lease signing and at move-in.</li>
+      <li>Collect at least two moving quotes before choosing.</li>
+      <li>Add a cushion. Moves often cost more than the first estimate.</li>
+      <li>Use our <a href="/blog-move-in-checklist" style="color:var(--accent2)">move-in checklist</a> to document the condition of the home before you unpack.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>How much does it cost to move into an apartment?</h3>
+    <p>It varies widely by city, building and how you move. Add up your actual lease amounts and quotes: first month's rent, deposit, any other fees, moving costs and setup costs. The calculator totals them for you.</p>
+
+    <h3>What are move-in costs?</h3>
+    <p>Move-in costs are the money due to the landlord before you move in, such as first month's rent, a security deposit and fees. Many people also include moving costs and setup costs in their move-in budget.</p>
+
+    <h3>Do I have to pay first and last month's rent?</h3>
+    <p>Some landlords ask for first and last month's rent, and some ask for first month's rent plus a deposit. Requirements depend on the landlord, your lease and local law, so check your lease and ask for the amounts in writing.</p>
+
+    <h3>How much extra should I budget for a move?</h3>
+    <p>Many people add a cushion of 10% or more to cover surprises. The calculator starts with 10%, and you can change it.</p>
+
+    <h3>Are broker or admin fees common?</h3>
+    <p>They exist in some cities and at some properties, but they are not universal. Ask whether any broker, admin or lease fees apply before you apply.</p>
+
+    <h3>Is the security deposit part of my moving costs?</h3>
+    <p>It is a cost you pay up front, but it is generally refundable at the end of the lease, minus any lawful deductions. See our security deposit guide for how returns work.</p>
+
+  </section>
+
+  <div class="other-tools">
+    <h2>More Free Renter Calculators and Tools</h2>
+    <div class="tools-row">
+      <a href="/rent-split-calculator" class="tool-card">
+        <div class="tool-card-icon">💰</div>
+        <div class="tool-card-name">Rent Split Calculator</div>
+        <div class="tool-card-desc">Split rent by room size, income, or equally.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/prorated-rent-calculator" class="tool-card">
+        <div class="tool-card-icon">📆</div>
+        <div class="tool-card-name">Prorated Rent Calculator</div>
+        <div class="tool-card-desc">Calculate partial-month rent for a move-in or move-out.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/rent-affordability-calculator" class="tool-card">
+        <div class="tool-card-icon">🏠</div>
+        <div class="tool-card-name">Rent Affordability Calculator</div>
+        <div class="tool-card-desc">See how much rent fits your income.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/utility-split-calculator" class="tool-card">
+        <div class="tool-card-icon">💡</div>
+        <div class="tool-card-name">Utility Split Calculator</div>
+        <div class="tool-card-desc">Split bills between roommates and see who owes whom.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/security-deposit-interest-calculator" class="tool-card">
+        <div class="tool-card-icon">🏦</div>
+        <div class="tool-card-name">Security Deposit Interest Calculator</div>
+        <div class="tool-card-desc">Estimate interest on a deposit.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+      <a href="/roommate-agreement" class="tool-card">
+        <div class="tool-card-icon">🤝</div>
+        <div class="tool-card-name">Roommate Agreement Generator</div>
+        <div class="tool-card-desc">Turn your arrangement into a written roommate agreement.</div>
+        <span class="tool-card-badge">✓ Live</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="related-blogs">
+    <h2>Related Guides</h2>
+    <div class="blogs-row">
+      <a href="/blog-move-in-checklist" class="blog-card">
+        <div class="blog-card-cat">📦 Moving</div>
+        <div class="blog-card-title">Move-In Checklist for Renters</div>
+      </a>
+      <a href="/blog-renters-insurance" class="blog-card">
+        <div class="blog-card-cat">🛡️ Insurance</div>
+        <div class="blog-card-title">Renters Insurance Guide</div>
+      </a>
+      <a href="/blog-security-deposit" class="blog-card">
+        <div class="blog-card-cat">💰 Security Deposit</div>
+        <div class="blog-card-title">How to Get Your Security Deposit Back</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ <strong>Disclaimer:</strong> This calculator gives general estimates based on the numbers you enter. It is not financial or legal advice. Your lease and local law control what you actually owe, so confirm important figures with your landlord, lender or a qualified professional.
+  </div>
+
+</div>
+
+<div id="site-footer"></div>
+
+<script>
+function $(id){return document.getElementById(id);}
+const money=n=>'$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const TITLES={housing:'Upfront housing costs',moving:'Moving costs',setup:'Setting up your home'};
+function sumCosts(items,bufferPct){
+  const g={housing:0,moving:0,setup:0};const lines=[];
+  for(const it of items){const v=Number(it.value)||0;if(v>0){g[it.group]+=v;lines.push({group:it.group,label:it.label,value:v});}}
+  const subtotal=g.housing+g.moving+g.setup;
+  const buffer=subtotal*(Number(bufferPct)||0)/100;
+  return{groups:g,lines:lines,subtotal:subtotal,buffer:buffer,total:subtotal+buffer};
+}
+function calculate(){
+  const err=$('err');err.classList.remove('show');
+  const items=[...document.querySelectorAll('.amt')].map(el=>({group:el.dataset.group,label:el.dataset.label,value:el.value,id:el.id}));
+  const r=sumCosts(items,$('buffer').value);
+  if(r.subtotal<=0){err.textContent='Enter at least one cost.';err.classList.add('show');return;}
+  const first=parseFloat($('firstRent').value)||0;
+  let h='<div class="stat-grid">'+
+   '<div class="stat"><div class="stat-label">Upfront housing</div><div class="stat-value">'+money(r.groups.housing)+'</div></div>'+
+   '<div class="stat"><div class="stat-label">Moving</div><div class="stat-value">'+money(r.groups.moving)+'</div></div>'+
+   '<div class="stat"><div class="stat-label">Setting up</div><div class="stat-value">'+money(r.groups.setup)+'</div></div>'+
+   '<div class="stat good"><div class="stat-label">Total with cushion</div><div class="stat-value">'+money(r.total)+'</div></div></div>';
+  h+='<table class="rtable"><tr><th>Item</th><th class="num">Amount</th></tr>';
+  for(const k of ['housing','moving','setup']){
+    const ls=r.lines.filter(l=>l.group===k);
+    if(ls.length){h+='<tr><td colspan="2"><strong>'+TITLES[k]+'</strong></td></tr>';for(const l of ls)h+='<tr><td>'+l.label+'</td><td class="num">'+money(l.value)+'</td></tr>';}
+  }
+  h+='<tr><td>Subtotal</td><td class="num"><strong>'+money(r.subtotal)+'</strong></td></tr>';
+  if(r.buffer>0)h+='<tr><td>Cushion ('+(Number($('buffer').value)||0)+'%)</td><td class="num">'+money(r.buffer)+'</td></tr>';
+  h+='<tr><td><strong>Total cash to plan for</strong></td><td class="num"><strong>'+money(r.total)+'</strong></td></tr></table>';
+  if(first>0)h+='<div class="verdict">Your total is about <strong>'+(r.total/first).toFixed(1)+'×</strong> your first month\'s rent.</div>';
+  h+='<div class="note-box">Estimate only, based on the amounts you entered. Confirm lease charges with your landlord and use written quotes for moving services.</div>';
+  $('resultContent').innerHTML=h;$('result').classList.add('show');
+}
+window.sumCosts=sumCosts;
+</script>
+</body>
+</html>
