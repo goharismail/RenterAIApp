@@ -21,8 +21,8 @@
 <meta property="og:title" content="Free AI Demand Letter Writer — Write to Your Landlord Instantly">
 <meta property="og:description" content="Generate a professional legal demand letter to your landlord in seconds. Free, no signup required.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.renteraiapp.com/demand-letter.html">
-<link rel="canonical" href="https://www.renteraiapp.com/demand-letter.html">
+<meta property="og:url" content="https://www.renteraiapp.com/demand-letter">
+<link rel="canonical" href="https://www.renteraiapp.com/demand-letter">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
 <script type="application/ld+json">
 {
@@ -30,7 +30,7 @@
   "@type": "WebApplication",
   "name": "AI Demand Letter Writer",
   "description": "Free AI tool that generates professional demand letters to landlords for USA renters.",
-  "url": "https://www.renteraiapp.com/demand-letter.html",
+  "url": "https://www.renteraiapp.com/demand-letter",
   "publisher": { "@type": "Organization", "name": "RenterAI", "url": "https://www.renteraiapp.com" },
   "applicationCategory": "LegalApplication",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -190,31 +190,31 @@
   <div class="other-tools">
     <h2>More Free Renter Tools</h2>
     <div class="tools-row">
-      <a href="lease-analyzer.html" class="tool-card">
+      <a href="/lease-analyzer" class="tool-card">
         <div class="tool-card-icon">📄</div>
         <div class="tool-card-name">AI Lease Analyzer</div>
         <div class="tool-card-desc">Paste your lease and AI finds red flags and hidden clauses instantly.</div>
         <span class="tool-card-badge">✓ Live</span>
       </a>
-      <a href="tenant-rights.html" class="tool-card">
+      <a href="/tenant-rights" class="tool-card">
         <div class="tool-card-icon">🏛️</div>
         <div class="tool-card-name">Tenant Rights Checker</div>
         <div class="tool-card-desc">Know your exact legal rights by state and situation.</div>
         <span class="tool-card-badge">✓ Live</span>
       </a>
-      <a href="security-deposit-checker.html" class="tool-card">
+      <a href="/security-deposit-checker" class="tool-card">
         <div class="tool-card-icon">💰</div>
         <div class="tool-card-name">Security Deposit Checker</div>
         <div class="tool-card-desc">Find out if your landlord legally owes you your deposit back.</div>
         <span class="tool-card-badge coming">⚡ Coming Soon</span>
       </a>
-      <a href="rent-increase-calculator.html" class="tool-card">
+      <a href="/rent-increase-calculator" class="tool-card">
         <div class="tool-card-icon">📈</div>
         <div class="tool-card-name">Rent Increase Analyzer</div>
         <div class="tool-card-desc">Check if your landlord's rent increase is legal in your state.</div>
         <span class="tool-card-badge coming">⚡ Coming Soon</span>
       </a>
-      <a href="roommate-agreement.html" class="tool-card">
+      <a href="/roommate-agreement" class="tool-card">
         <div class="tool-card-icon">🤝</div>
         <div class="tool-card-name">Roommate Agreement Generator</div>
         <div class="tool-card-desc">Generate a legally-informed roommate agreement instantly.</div>
@@ -227,15 +227,15 @@
   <div class="related-blogs">
     <h2>Related Guides</h2>
     <div class="blogs-row">
-      <a href="blog-demand-letter.html" class="blog-card">
+      <a href="/blog-demand-letter" class="blog-card">
         <div class="blog-card-cat">📝 Legal Action</div>
         <div class="blog-card-title">How to Write a Demand Letter to Your Landlord</div>
       </a>
-      <a href="blog-security-deposit.html" class="blog-card">
+      <a href="/blog-security-deposit" class="blog-card">
         <div class="blog-card-cat">💰 Security Deposit</div>
         <div class="blog-card-title">How to Get Your Security Deposit Back</div>
       </a>
-      <a href="blog-landlord-wont-fix.html" class="blog-card">
+      <a href="/blog-landlord-wont-fix" class="blog-card">
         <div class="blog-card-cat">🔧 Repairs</div>
         <div class="blog-card-title">Landlord Won't Fix Repairs? Here's What To Do</div>
       </a>
@@ -259,6 +259,8 @@
       setTimeout(() => { btn.innerHTML = '📋 Copy Letter'; btn.classList.remove('copied'); }, 2000);
     });
   }
+
+  const AI_NOTE = '<br><br><em>⚠️ AI-generated general information, not legal advice. It may contain mistakes. Verify important details with an official source or a licensed attorney / legal aid organization before acting.</em>';
 
   async function callGemini(prompt) {
     const res = await fetch('/api/gemini', {
@@ -289,7 +291,18 @@
     resultBox.classList.add('show');
     contentEl.innerHTML = `<div class="loading-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>`;
 
-    const prompt = `Write a professional legal demand letter for a tenant in the USA.
+    const prompt = `You are an AI assistant helping a tenant draft a letter to their landlord.
+
+Important rules:
+- You are an AI assistant giving general information only. You are not a lawyer and this is not legal advice. Never claim to be an attorney or legal expert.
+- Do not invent laws, statute or section numbers, deadlines, dollar amounts, fees, penalties, phone numbers, or website addresses. If you are not highly confident about a specific legal rule, say so and tell the user to verify it with an official source for their state or city.
+- Laws change and vary by city and county. Remind the user to confirm current rules with official sources, a local legal aid organization, or a licensed attorney.
+- Do not state that something is definitely legal or illegal, or that the user will win or recover money. Use careful wording such as "may", "could", or "worth checking".
+- Do not advise the user to withhold rent, stop paying, break a lease, change locks, record people, or take other risky action without first confirming local law with an official source or a legal aid organization/attorney.
+- Use only the facts the user provided. Do not make up facts, dates or amounts.
+- Do not include specific statute or section citations. Where a legal reference would normally appear, write "applicable ${state} landlord-tenant law" and add the bracketed note [Add legal citation after verifying it with an official source].
+- Keep the tone firm but respectful. No threats, insults, or exaggerated claims.
+- Where facts, dates or amounts are missing, use clear placeholders such as [DATE], [AMOUNT] or [ADDRESS].
 
 Tenant Name: ${name}
 Landlord/Property Manager: ${landlord}
@@ -297,19 +310,17 @@ State: ${state}
 Issue: ${issue}
 Situation Details: ${desc || 'Not provided'}
 
-Write a formal demand letter that:
-- Is professional and legally appropriate for ${state}
-- States the issue clearly with specific facts
-- References relevant ${state} tenant rights laws
-- Makes a specific demand with a 7-14 day deadline
-- Mentions potential legal action if ignored
-- Is formatted as a proper letter ready to send
+Write a formal letter that:
+- States the issue clearly using only the facts provided
+- Makes a specific, reasonable request with a response deadline the tenant can adjust (for example [DEADLINE DATE])
+- Says the tenant reserves the right to pursue the remedies available under the law if the issue is not resolved, without making threats
+- Is formatted as a proper letter with date placeholder, addresses and a signature line
 
-Format with date placeholder, full addresses, and signature line.`;
+After the letter, add a short note: "Review every fact and amount before sending, keep a copy, and consider having a legal aid organization or attorney review it."`;
 
     try {
       const result = await callGemini(prompt);
-      contentEl.innerHTML = result.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      contentEl.innerHTML = result.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') + AI_NOTE;
     } catch (e) {
       contentEl.innerHTML = `<span style="color:var(--danger)">Error: ${e.message}</span>`;
     }

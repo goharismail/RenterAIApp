@@ -20,8 +20,8 @@
 <meta property="og:title" content="Free Roommate Agreement Generator — Create One Instantly">
 <meta property="og:description" content="Generate a legally-informed roommate agreement covering rent split, house rules, and dispute resolution. Free, instant.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.renteraiapp.com/roommate-agreement.html">
-<link rel="canonical" href="https://www.renteraiapp.com/roommate-agreement.html">
+<meta property="og:url" content="https://www.renteraiapp.com/roommate-agreement">
+<link rel="canonical" href="https://www.renteraiapp.com/roommate-agreement">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
 <script type="application/ld+json">
 {
@@ -29,7 +29,7 @@
   "@type": "WebApplication",
   "name": "Roommate Agreement Generator",
   "description": "Free AI tool that generates roommate agreements covering rent split, house rules, and dispute resolution.",
-  "url": "https://www.renteraiapp.com/roommate-agreement.html",
+  "url": "https://www.renteraiapp.com/roommate-agreement",
   "publisher": { "@type": "Organization", "name": "RenterAI", "url": "https://www.renteraiapp.com" },
   "applicationCategory": "LegalApplication",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -383,31 +383,31 @@
   <div class="other-tools">
     <h2>More Free Renter Tools</h2>
     <div class="tools-row">
-      <a href="lease-analyzer.html" class="tool-card">
+      <a href="/lease-analyzer" class="tool-card">
         <div class="tool-card-icon">📄</div>
         <div class="tool-card-name">AI Lease Analyzer</div>
         <div class="tool-card-desc">Paste your lease and AI finds red flags and hidden clauses instantly.</div>
         <span class="tool-card-badge">✓ Live</span>
       </a>
-      <a href="demand-letter.html" class="tool-card">
+      <a href="/demand-letter" class="tool-card">
         <div class="tool-card-icon">⚖️</div>
         <div class="tool-card-name">AI Demand Letter Writer</div>
         <div class="tool-card-desc">Generate a professional legal demand letter to your landlord in seconds.</div>
         <span class="tool-card-badge">✓ Live</span>
       </a>
-      <a href="tenant-rights.html" class="tool-card">
+      <a href="/tenant-rights" class="tool-card">
         <div class="tool-card-icon">🏛️</div>
         <div class="tool-card-name">Tenant Rights Checker</div>
         <div class="tool-card-desc">Know your exact legal rights by state and situation.</div>
         <span class="tool-card-badge">✓ Live</span>
       </a>
-      <a href="security-deposit-checker.html" class="tool-card">
+      <a href="/security-deposit-checker" class="tool-card">
         <div class="tool-card-icon">💰</div>
         <div class="tool-card-name">Security Deposit Checker</div>
         <div class="tool-card-desc">Find out if your landlord legally owes you your deposit back.</div>
         <span class="tool-card-badge">✓ Live</span>
       </a>
-      <a href="rent-increase-calculator.html" class="tool-card">
+      <a href="/rent-increase-calculator" class="tool-card">
         <div class="tool-card-icon">📈</div>
         <div class="tool-card-name">Rent Increase Analyzer</div>
         <div class="tool-card-desc">Check if your landlord's rent increase is legal in your state.</div>
@@ -420,15 +420,15 @@
   <div class="related-blogs">
     <h2>Related Guides</h2>
     <div class="blogs-row">
-      <a href="blog-roommate-agreement-guide.html" class="blog-card">
+      <a href="/blog-roommate-agreement-guide" class="blog-card">
         <div class="blog-card-cat">🤝 Roommates</div>
         <div class="blog-card-title">Complete Guide to Roommate Agreements</div>
       </a>
-      <a href="blog-how-to-read-lease.html" class="blog-card">
+      <a href="/blog-how-to-read-lease" class="blog-card">
         <div class="blog-card-cat">📄 Lease Guide</div>
         <div class="blog-card-title">How to Read a Lease Agreement</div>
       </a>
-      <a href="blog-lease-red-flags.html" class="blog-card">
+      <a href="/blog-lease-red-flags" class="blog-card">
         <div class="blog-card-cat">🚩 Warning Signs</div>
         <div class="blog-card-title">10 Lease Red Flags Every Renter Must Know</div>
       </a>
@@ -452,6 +452,8 @@
       setTimeout(() => { btn.innerHTML = '📋 Copy Agreement'; btn.classList.remove('copied'); }, 2000);
     });
   }
+
+  const AI_NOTE = '<br><br><em>⚠️ AI-generated general information, not legal advice. It may contain mistakes. Verify important details with an official source or a licensed attorney / legal aid organization before acting.</em>';
 
   async function callGemini(prompt) {
     const res = await fetch('/api/gemini', {
@@ -561,7 +563,7 @@ Format the result as a clean formal document that roommates can review, edit, pr
 
     try {
       const result = await callGemini(prompt);
-      contentEl.innerHTML = result.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      contentEl.innerHTML = result.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') + AI_NOTE;
     } catch (e) {
       contentEl.innerHTML = `<span style="color:var(--danger)">Error: ${e.message}</span>`;
     }
