@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
- <!-- <script async src="//www.ezojs.com/ezoic/sa.min.js"></script> -->
-<!-- <script>
-    window.ezstandalone = window.ezstandalone || {};
-    ezstandalone.cmd = ezstandalone.cmd || [];
-</script> -->
- <!-- <script src="//ezoicanalytics.com/analytics.js"></script> -->
- <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
-<script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script> 
+<head> 
  <!--  -->
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4583731085701106"
      crossorigin="anonymous"></script>
@@ -25,8 +17,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="I1Adk5jxUz4kvs1_zF7SIr129NJIUfysOiG0nAxhG-0" />
-<title>RenterAI - Free AI Lease Analyzer & Renter Tools</title>
-<meta name="description" content="Free AI tools for USA renters. Analyze leases, create demand letters, check tenant rights, and protect yourself from unfair landlords. Powered by AI.">
+<title>RenterAI: Free Lease Analyzer, Tenant Rights &amp; Calculators</title>
+<meta name="description" content="Free AI tools and calculators for US renters: analyze your lease, write a demand letter, check tenant rights, split rent and plan moving costs.">
 <meta name="keywords" content="lease analyzer, tenant rights, demand letter, rental agreement, AI lease review, renter tools">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
  <meta name="google-adsense-account" content="ca-pub-4583731085701106">
@@ -35,13 +27,13 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
 
 <!-- Open Graph -->
-<meta property="og:title" content="RenterAI - Free AI Tools for USA Renters">
-<meta property="og:description" content="Free AI-powered tools for USA renters. Analyze your lease, write demand letters, check tenant rights instantly.">
+<meta property="og:title" content="RenterAI: Free Lease Analyzer, Tenant Rights &amp; Calculators">
+<meta property="og:description" content="Free AI tools and calculators for US renters: analyze your lease, write a demand letter, check tenant rights, split rent and plan moving costs.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.renteraiapp.com/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="RenterAI - Free AI Tools for USA Renters">
-<meta name="twitter:description" content="Free AI tools for USA renters. Lease analyzer, demand letters, tenant rights checker.">
+<meta name="twitter:title" content="RenterAI: Free Lease Analyzer, Tenant Rights &amp; Calculators">
+<meta name="twitter:description" content="Free AI tools and calculators for US renters: analyze your lease, write a demand letter, check tenant rights, split rent and plan moving costs.">
 <link rel="canonical" href="https://www.renteraiapp.com/" />
 
 <!-- Schema Markup -->
@@ -50,6 +42,7 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "RenterAI",
+  "alternateName": ["Renter AI", "RenterAI App"],
   "url":"https://www.renteraiapp.com/",
   "description": "Free AI-powered tools for USA renters",
   "potentialAction": {
@@ -231,6 +224,7 @@
     padding: 0.7rem; font-size: 0.9rem; font-weight: 500;
     cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif;
   }
+  .use-tool-btn { text-align: center; text-decoration: none; }
   .use-tool-btn:hover { background: var(--accent); color: white; }
 
   /* TOOL INTERFACE */
@@ -337,6 +331,21 @@
   .dot:nth-child(2) { animation-delay: 0.2s; }
   .dot:nth-child(3) { animation-delay: 0.4s; }
 
+
+  /* GUIDES */
+  .guides-section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
+  .guides-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+  .guide-card { display: flex; flex-direction: column; gap: 0.4rem; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.3rem; text-decoration: none; color: var(--text); transition: all 0.2s; }
+  .guide-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-2px); }
+  .guide-card span { font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
+  .guide-card strong { font-size: 0.98rem; line-height: 1.4; }
+  .guides-more { text-align: center; margin-top: 1.5rem; }
+  .guides-more a { color: var(--accent2); text-decoration: none; font-size: 0.95rem; }
+
+  .state-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 0.6rem; }
+  .state-link { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 0.7rem 0.9rem; text-decoration: none; color: var(--text); font-size: 0.88rem; transition: all 0.2s; }
+  .state-link:hover { border-color: rgba(59,130,246,0.4); color: var(--accent2); }
+
   /* HOW IT WORKS */
   .how-section {
     padding: 5rem 2rem;
@@ -398,10 +407,47 @@
     })(window, document, "clarity", "script", "x6t7o64r5t");
 </script>
 
+<style>
+  :root { --bg:#0a0f1e; --surface:#111827; --surface2:#1a2234; --accent:#3b82f6; --accent2:#60a5fa; --text:#f1f5f9; --text2:#94a3b8; --border:#1e293b; --success:#10b981; --danger:#ef4444; --gold:#f59e0b; }
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:0.8rem 1.5rem; background:rgba(10,15,30,0.95); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; font-family:'DM Sans',sans-serif; }
+  .logo { font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:900; color:var(--text); text-decoration:none; }
+  .logo span { color:var(--accent); }
+  .nav-links { display:flex; gap:1.5rem; list-style:none; margin:0; padding:0; }
+  .nav-links a { color:var(--text2); text-decoration:none; font-size:0.88rem; transition:color 0.2s; white-space:nowrap; }
+  .nav-links a:hover, .nav-links a.active { color:var(--text); }
+  @media (max-width:640px) {
+    nav { flex-direction:column; align-items:center; padding:0.8rem 1rem; gap:0.6rem; }
+    .logo { font-size:1.4rem; }
+    .nav-links { gap:0.8rem; justify-content:center; flex-wrap:wrap; }
+    .nav-links a { font-size:0.8rem; }
+  }
+  .verify-box { background:rgba(59,130,246,0.06); border:1px solid rgba(59,130,246,0.25); border-radius:12px; padding:1.1rem 1.3rem; margin:2rem 0 1.2rem; font-size:0.88rem; line-height:1.7; color:var(--text2); }
+  .verify-box strong { color:var(--text); }
+  .verify-box a { color:var(--accent2); }
+  .verify-box p { margin:0.4rem 0 0; }
+</style>
+<style>
+  footer { padding:2rem; border-top:1px solid var(--border); text-align:center; color:var(--text2); font-size:0.85rem; font-family:'DM Sans',sans-serif; }
+  footer a { color:var(--text2); text-decoration:none; margin:0 0.8rem; white-space:nowrap; line-height:2; }
+  footer a:hover { color:var(--text); }
+  .footer-logo { font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:900; color:var(--text); margin-bottom:0.8rem; }
+  .footer-logo span { color:var(--accent); }
+  .footer-note { margin-top:1rem; font-size:0.78rem; opacity:0.8; }
+</style>
 </head>
 <body>
 
-<div id="site-header"></div>
+<nav>
+  <a href="/" class="logo">Renter<span>AI</span></a>
+  <ul class="nav-links">
+    <li><a href="/#tools" data-nav="tools">Tools</a></li>
+    <li><a href="/calculators" data-nav="calculators">Calculators</a></li>
+    <li><a href="/#how" data-nav="how">How It Works</a></li>
+    <li><a href="/blog" data-nav="blog">Blog</a></li>
+    <li><a href="/about" data-nav="about">About</a></li>
+    <li><a href="/contact" data-nav="contact">Contact</a></li>
+  </ul>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -456,7 +502,7 @@
       <div class="tool-name">AI Lease Analyzer</div>
       <div class="tool-desc">Paste your lease agreement and our AI will identify red flags, hidden clauses, and explain your rights in plain English.</div>
       <span class="tool-badge">✓ Live</span>
-       <button class="use-tool-btn" onclick="location.href='lease-analyzer.html'">Use This Tool →</button> 
+       <a class="use-tool-btn" href="/lease-analyzer">Use This Tool →</a> 
     </div>
 
     <!-- Tool 2: Demand Letter -->
@@ -465,7 +511,7 @@
       <div class="tool-name">AI Demand Letter Writer</div>
       <div class="tool-desc">Generate a professional legal demand letter to your landlord for repairs, deposit return, or lease violations — in seconds.</div>
       <span class="tool-badge">✓ Live</span>
-     <button class="use-tool-btn" onclick="location.href='demand-letter.html'">Use This Tool →</button> 
+     <a class="use-tool-btn" href="/demand-letter">Use This Tool →</a> 
     </div>
 
     <!-- Tool 3: Tenant Rights -->
@@ -474,7 +520,7 @@
       <div class="tool-name">Tenant Rights Checker</div>
       <div class="tool-desc">Enter your state and situation — AI explains your exact legal rights as a tenant, from eviction protection to habitability standards.</div>
       <span class="tool-badge">✓ Live</span>
-      <button class="use-tool-btn" onclick="location.href='tenant-rights.html'">Use This Tool →</button>
+      <a class="use-tool-btn" href="/tenant-rights">Use This Tool →</a>
     </div>
 
     <!-- Tool 4: Security Deposit -->
@@ -483,7 +529,7 @@
       <div class="tool-name">Security Deposit Checker</div>
       <div class="tool-desc">Find out if your landlord legally owes you your security deposit back, and what steps to take if they refuse to return it.</div>
      <span class="tool-badge">✓ Live</span>
-       <button class="use-tool-btn" onclick="location.href='security-deposit-checker.html'">Use This Tool →</button>
+       <a class="use-tool-btn" href="/security-deposit-checker">Use This Tool →</a>
     </div>
 
     <!-- Tool 5: Rent Increase -->
@@ -492,7 +538,7 @@
       <div class="tool-name">Rent Increase Analyzer</div>
       <div class="tool-desc">Is your rent increase legal? Check your state's rent control laws and find out if your landlord is within legal limits.</div>
      <span class="tool-badge">✓ Live</span>
-       <button class="use-tool-btn" onclick="location.href='rent-increase-calculator.html'">Use This Tool →</button>
+       <a class="use-tool-btn" href="/rent-increase-calculator">Use This Tool →</a>
     </div>
 
     <!-- Tool 6: Roommate Agreement -->
@@ -501,9 +547,43 @@
       <div class="tool-name">Roommate Agreement Generator</div>
       <div class="tool-desc">Generate a legally-informed roommate agreement covering rent split, house rules, and dispute resolution — free and instant.</div>
      <span class="tool-badge">✓ Live</span>
-       <button class="use-tool-btn" onclick="location.href='roommate-agreement.html'">Use This Tool →</button>
+       <a class="use-tool-btn" href="/roommate-agreement">Use This Tool →</a>
     </div>
 
+  </div>
+</section>
+
+
+<!-- POPULAR GUIDES -->
+<section class="guides-section" id="guides">
+  <div class="section-header">
+    <div class="section-tag">Guides</div>
+    <h2 class="section-title">Popular Renter Guides</h2>
+    <p class="section-sub">Plain-English guides that go with our tools.</p>
+  </div>
+  <div class="guides-grid">
+    <a class="guide-card" href="/blog-security-deposit"><span>💰 Security Deposit</span><strong>How to Get Your Security Deposit Back</strong></a>
+    <a class="guide-card" href="/blog-how-to-read-lease"><span>📄 Lease Guide</span><strong>How to Read a Lease Agreement</strong></a>
+    <a class="guide-card" href="/blog-lease-red-flags"><span>🚩 Warning Signs</span><strong>10 Lease Red Flags Every Renter Should Know</strong></a>
+    <a class="guide-card" href="/blog-illegal-eviction"><span>⚖️ Eviction</span><strong>What Is an Illegal Eviction?</strong></a>
+    <a class="guide-card" href="/blog-landlord-wont-fix"><span>🔧 Repairs</span><strong>What to Do When Your Landlord Won't Fix Things</strong></a>
+    <a class="guide-card" href="/blog-late-fees-guide"><span>💵 Late Fees</span><strong>Rent Late Fee Laws: What Landlords Can Charge</strong></a>
+    <a class="guide-card" href="/blog-landlord-harassment"><span>🚫 Harassment</span><strong>Landlord Harassment: Examples and What to Do</strong></a>
+    <a class="guide-card" href="/blog-how-to-split-rent-fairly"><span>🤝 Roommates</span><strong>How to Split Rent Fairly With Roommates</strong></a>
+  </div>
+  <p class="guides-more"><a href="/blog">Browse all guides, including tenant rights by state →</a></p>
+</section>
+
+
+<!-- TENANT RIGHTS BY STATE -->
+<section class="guides-section" id="states">
+  <div class="section-header">
+    <div class="section-tag">By State</div>
+    <h2 class="section-title">Tenant Rights by State</h2>
+    <p class="section-sub">Landlord-tenant rules differ by state. Find your state's guide.</p>
+  </div>
+  <div class="state-grid">
+    <a class="state-link" href="/blog-tenant-rights-arizona">Arizona</a><a class="state-link" href="/blog-tenant-rights-california">California</a><a class="state-link" href="/blog-tenant-rights-colorado">Colorado</a><a class="state-link" href="/blog-tenant-rights-connecticut">Connecticut</a><a class="state-link" href="/blog-tenant-rights-florida">Florida</a><a class="state-link" href="/blog-tenant-rights-georgia">Georgia</a><a class="state-link" href="/blog-tenant-rights-illinois">Illinois</a><a class="state-link" href="/blog-tenant-rights-indiana">Indiana</a><a class="state-link" href="/blog-tenant-rights-louisiana">Louisiana</a><a class="state-link" href="/blog-tenant-rights-maryland">Maryland</a><a class="state-link" href="/blog-tenant-rights-massachusetts">Massachusetts</a><a class="state-link" href="/blog-tenant-rights-michigan">Michigan</a><a class="state-link" href="/blog-tenant-rights-minnesota">Minnesota</a><a class="state-link" href="/blog-tenant-rights-missouri">Missouri</a><a class="state-link" href="/blog-tenant-rights-nevada">Nevada</a><a class="state-link" href="/blog-tenant-rights-new-jersey">New Jersey</a><a class="state-link" href="/blog-tenant-rights-new-york">New York</a><a class="state-link" href="/blog-tenant-rights-north-carolina">North Carolina</a><a class="state-link" href="/blog-tenant-rights-ohio">Ohio</a><a class="state-link" href="/blog-tenant-rights-oregon">Oregon</a><a class="state-link" href="/blog-tenant-rights-pennsylvania">Pennsylvania</a><a class="state-link" href="/blog-tenant-rights-south-carolina">South Carolina</a><a class="state-link" href="/blog-tenant-rights-tennessee">Tennessee</a><a class="state-link" href="/blog-tenant-rights-texas">Texas</a><a class="state-link" href="/blog-tenant-rights-virginia">Virginia</a><a class="state-link" href="/blog-tenant-rights-washington">Washington State</a><a class="state-link" href="/blog-tenant-rights-wisconsin">Wisconsin</a>
   </div>
 </section>
 
@@ -540,319 +620,30 @@
   </div>
 </section>
 
-<div id="site-footer"></div>
-
-<!-- ==================== TOOL MODALS ==================== -->
-
-<!-- LEASE ANALYZER -->
-<div class="tool-interface" id="leaseTool">
-  <div class="tool-modal">
-    <button class="modal-close" onclick="closeTool('leaseTool')">✕</button>
-    <div class="tool-icon">📄</div>
-    <div class="modal-title">AI Lease Analyzer</div>
-    <div class="modal-sub">Paste your lease agreement below. AI will find red flags, hidden clauses, and explain your rights.</div>
-    <label class="input-label">Paste Your Lease Agreement Text</label>
-    <textarea class="tool-textarea" id="leaseText" placeholder="Paste your full lease agreement here... (you can paste just a section too)"></textarea>
-    <button class="analyze-btn" onclick="analyzeLease()">🔍 Analyze My Lease</button>
-    <div class="result-box" id="leaseResult">
-      <div class="result-header">
-        <span>📋</span>
-        <h3>AI Lease Analysis</h3>
-      </div>
-      <div class="result-content" id="leaseResultContent"></div>
-      <button class="copy-btn" onclick="copyResult('leaseResultContent', this)">📋 Copy Result</button>
-    </div>
+<footer>
+  <div class="footer-logo">Renter<span>AI</span></div>
+  <div>
+    <a href="/">Home</a>
+    <a href="/blog">Blog</a>
+    <a href="/calculators">Calculators</a>
+    <a href="/about">About</a>
+    <a href="/editorial-policy">Editorial Policy</a>
+    <a href="/contact">Contact</a>
+    <a href="/privacy">Privacy Policy</a>
+    <a href="/terms">Terms of Service</a>
+    <a href="/cookies">Cookie Policy</a>
   </div>
-</div>
-
-<!-- DEMAND LETTER -->
-<div class="tool-interface" id="demandTool">
-  <div class="tool-modal">
-    <button class="modal-close" onclick="closeTool('demandTool')">✕</button>
-    <div class="tool-icon">⚖️</div>
-    <div class="modal-title">AI Demand Letter Writer</div>
-    <div class="modal-sub">Fill in the details and AI will write a professional demand letter to your landlord.</div>
-    <label class="input-label">Your Name</label>
-    <input type="text" class="tool-input" id="tenantName" placeholder="John Smith">
-    <label class="input-label">Landlord Name</label>
-    <input type="text" class="tool-input" id="landlordName" placeholder="ABC Property Management">
-    <label class="input-label">Your State</label>
-    <select class="tool-select" id="demandState">
-      <option value="">Select State...</option>
-      <option>California</option><option>Texas</option><option>Florida</option>
-      <option>New York</option><option>Illinois</option><option>Pennsylvania</option>
-      <option>Ohio</option><option>Georgia</option><option>North Carolina</option>
-      <option>Michigan</option><option>Other</option>
-    </select>
-    <label class="input-label">What is the Issue?</label>
-    <select class="tool-select" id="demandIssue">
-      <option value="">Select Issue...</option>
-      <option>Security deposit not returned</option>
-      <option>Needed repairs not done</option>
-      <option>Illegal rent increase</option>
-      <option>Lease violation by landlord</option>
-      <option>Harassment by landlord</option>
-      <option>Other issue</option>
-    </select>
-    <label class="input-label">Describe the Situation</label>
-    <textarea class="tool-textarea" id="demandDesc" placeholder="Describe what happened in detail..." style="min-height:120px;"></textarea>
-    <button class="analyze-btn" onclick="writeDemandLetter()">✍️ Generate Demand Letter</button>
-    <div class="result-box" id="demandResult">
-      <div class="result-header">
-        <span>⚖️</span>
-        <h3>Your Demand Letter</h3>
-      </div>
-      <div class="result-content" id="demandResultContent"></div>
-      <button class="copy-btn" onclick="copyResult('demandResultContent', this)">📋 Copy Letter</button>
-    </div>
-  </div>
-</div>
-
-<!-- TENANT RIGHTS -->
-<div class="tool-interface" id="rightsTool">
-  <div class="tool-modal">
-    <button class="modal-close" onclick="closeTool('rightsTool')">✕</button>
-    <div class="tool-icon">🏛️</div>
-    <div class="modal-title">Tenant Rights Checker</div>
-    <div class="modal-sub">Select your state and situation — AI will explain your exact legal rights as a tenant.</div>
-    <label class="input-label">Your State</label>
-    <select class="tool-select" id="rightsState">
-      <option value="">Select State...</option>
-      <option>California</option><option>Texas</option><option>Florida</option>
-      <option>New York</option><option>Illinois</option><option>Pennsylvania</option>
-      <option>Ohio</option><option>Georgia</option><option>North Carolina</option>
-      <option>Michigan</option><option>Washington</option><option>Arizona</option>
-      <option>Other</option>
-    </select>
-    <label class="input-label">What is Your Situation?</label>
-    <select class="tool-select" id="rightsSituation">
-      <option value="">Select Situation...</option>
-      <option>Landlord wants to evict me</option>
-      <option>My unit has serious repair issues</option>
-      <option>Landlord entered without notice</option>
-      <option>Security deposit dispute</option>
-      <option>Rent increase question</option>
-      <option>Landlord is harassing me</option>
-      <option>Lease ending / not renewing</option>
-      <option>General tenant rights question</option>
-    </select>
-    <label class="input-label">Any Additional Details? (Optional)</label>
-    <textarea class="tool-textarea" id="rightsDesc" placeholder="Add any extra details about your situation..." style="min-height:100px;"></textarea>
-    <button class="analyze-btn" onclick="checkRights()">🏛️ Check My Rights</button>
-    <div class="result-box" id="rightsResult">
-      <div class="result-header">
-        <span>📜</span>
-        <h3>Your Tenant Rights</h3>
-      </div>
-      <div class="result-content" id="rightsResultContent"></div>
-      <button class="copy-btn" onclick="copyResult('rightsResultContent', this)">📋 Copy Rights Info</button>
-    </div>
-  </div>
-</div>
-
+  <p class="footer-note">RenterAI provides general information and tools for renters. It is not legal advice.</p>
+  <p style="margin-top:0.6rem;">© 2026 RenterAI. All rights reserved.</p>
+</footer>
 <script>
-  // COPY FUNCTION
-  function copyResult(elementId, btn) {
-    const el = document.getElementById(elementId);
-    const text = el.innerText;
-    navigator.clipboard.writeText(text).then(() => {
-      btn.innerHTML = '✅ Copied!';
-      btn.classList.add('copied');
-      setTimeout(() => {
-        btn.innerHTML = '📋 Copy Result';
-        btn.classList.remove('copied');
-      }, 2000);
-    });
-  }
-
-  function openTool(tool) {
-    showTool(tool);
-  }
-
-  function showTool(tool) {
-    const map = { lease: 'leaseTool', demand: 'demandTool', rights: 'rightsTool' };
-    if (map[tool]) {
-      document.getElementById(map[tool]).classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-  }
-
-  function closeTool(id) {
-    document.getElementById(id).classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  // Call secure server - API key hidden
-  async function callGemini(prompt) {
-    const res = await fetch('/api/gemini', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ prompt: prompt })
-    });
-    const data = await res.json();
-    if (data.error) throw new Error(data.error);
-    return data.result;
-  }
-
-  function showLoading(contentId) {
-    document.getElementById(contentId).innerHTML = `
-      <div class="loading-dots">
-        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-      </div>`;
-  }
-
-  // LEASE ANALYZER
-  async function analyzeLease() {
-    const text = document.getElementById('leaseText').value.trim();
-    if (!text) { alert('Please paste your lease text first'); return; }
-    const resultBox = document.getElementById('leaseResult');
-    const contentEl = document.getElementById('leaseResultContent');
-    resultBox.classList.add('show');
-    showLoading('leaseResultContent');
-
-    const prompt = `You are a tenant rights expert. Analyze this lease agreement and provide:
-
-1. 🚩 RED FLAGS - List any concerning or unfair clauses
-2. ✅ GOOD CLAUSES - Mention any tenant-friendly terms
-3. 💡 PLAIN ENGLISH SUMMARY - Explain the key terms simply
-4. ⚠️ IMPORTANT THINGS TO KNOW - What the tenant must be aware of
-5. 📋 RECOMMENDED ACTIONS - What should the tenant do or negotiate
-
-Be specific, practical, and helpful. Format clearly with headers.
-
-LEASE TEXT:
-${text}`;
-
-    try {
-      const result = await callGemini(prompt);
-      contentEl.innerHTML = result.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-    } catch (e) {
-      contentEl.innerHTML = `<span style="color:var(--danger)">Error: ${e.message}. Please check your API key.</span>`;
-    }
-  }
-
-  // DEMAND LETTER
-  async function writeDemandLetter() {
-    const name = document.getElementById('tenantName').value.trim();
-    const landlord = document.getElementById('landlordName').value.trim();
-    const state = document.getElementById('demandState').value;
-    const issue = document.getElementById('demandIssue').value;
-    const desc = document.getElementById('demandDesc').value.trim();
-
-    if (!name || !landlord || !state || !issue) { alert('Please fill in all required fields'); return; }
-
-    const resultBox = document.getElementById('demandResult');
-    const contentEl = document.getElementById('demandResultContent');
-    resultBox.classList.add('show');
-    showLoading('demandResultContent');
-
-    const prompt = `Write a professional legal demand letter for a tenant in the USA.
-
-Tenant Name: ${name}
-Landlord/Property Manager: ${landlord}
-State: ${state}
-Issue: ${issue}
-Situation Details: ${desc || 'Not provided'}
-
-Write a formal demand letter that:
-- Is professional and legally appropriate for ${state}
-- States the issue clearly
-- References relevant tenant rights
-- Makes a specific demand with a deadline
-- Mentions potential legal action if ignored
-- Is ready to send
-
-Format as a proper letter with date placeholder, addresses, and signature line.`;
-
-    try {
-      const result = await callGemini(prompt);
-      contentEl.innerHTML = result.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-    } catch (e) {
-      contentEl.innerHTML = `<span style="color:var(--danger)">Error: ${e.message}. Please check your API key.</span>`;
-    }
-  }
-
-  // TENANT RIGHTS
-  async function checkRights() {
-    const state = document.getElementById('rightsState').value;
-    const situation = document.getElementById('rightsSituation').value;
-    const desc = document.getElementById('rightsDesc').value.trim();
-
-    if (!state || !situation) { alert('Please select your state and situation'); return; }
-
-    const resultBox = document.getElementById('rightsResult');
-    const contentEl = document.getElementById('rightsResultContent');
-    resultBox.classList.add('show');
-    showLoading('rightsResultContent');
-
-    const prompt = `You are a tenant rights expert for ${state}, USA.
-
-Situation: ${situation}
-Additional details: ${desc || 'None provided'}
-
-Provide a comprehensive, helpful explanation of:
-
-1. 📜 YOUR LEGAL RIGHTS in ${state} for this situation
-2. ⚖️ RELEVANT STATE LAWS that protect you
-3. 🛡️ WHAT YOUR LANDLORD CAN AND CANNOT DO
-4. 📋 STEP-BY-STEP ACTIONS you should take
-5. 🆘 WHERE TO GET HELP - organizations, hotlines, resources in ${state}
-
-Be specific to ${state} law. Be practical and actionable. Use clear headers.`;
-
-    try {
-      const result = await callGemini(prompt);
-      contentEl.innerHTML = result.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-    } catch (e) {
-      contentEl.innerHTML = `<span style="color:var(--danger)">Error: ${e.message}. Please check your API key.</span>`;
-    }
-  }
-
-  // Close on backdrop click
-  document.querySelectorAll('.tool-interface').forEach(el => {
-    el.addEventListener('click', function(e) {
-      if (e.target === this) {
-        this.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    });
-  });
-
-  // Smooth scroll
+  // Smooth scroll for in-page anchors
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       e.preventDefault();
       document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
     });
   });
-
-  // COOKIE CONSENT
-  function acceptCookies() {
-    localStorage.setItem('cookieConsent', 'accepted');
-    document.getElementById('cookieBanner').style.display = 'none';
-  }
-  function declineCookies() {
-    localStorage.setItem('cookieConsent', 'declined');
-    document.getElementById('cookieBanner').style.display = 'none';
-  }
-  window.addEventListener('DOMContentLoaded', function() {
-    if (!localStorage.getItem('cookieConsent')) {
-      document.getElementById('cookieBanner').style.display = 'flex';
-    }
-  });
 </script>
-
-<!-- COOKIE CONSENT BANNER -->
-<div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#111827;border-top:1px solid #1e293b;padding:1rem 2rem;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;display:none;">
-  <p style="color:#94a3b8;font-size:0.85rem;margin:0;max-width:700px;">
-    🍪 We use cookies to improve your experience and show relevant ads. By using RenterAI, you agree to our 
-    <a href="privacy.html" style="color:#3b82f6;">Privacy Policy</a>.
-  </p>
-  <div style="display:flex;gap:0.8rem;flex-shrink:0;">
-    <button onclick="acceptCookies()" style="background:#3b82f6;color:white;border:none;padding:0.6rem 1.4rem;border-radius:6px;cursor:pointer;font-size:0.85rem;font-family:'DM Sans',sans-serif;">Accept</button>
-    <button onclick="declineCookies()" style="background:transparent;color:#94a3b8;border:1px solid #1e293b;padding:0.6rem 1.4rem;border-radius:6px;cursor:pointer;font-size:0.85rem;font-family:'DM Sans',sans-serif;">Decline</button>
-  </div>
-</div>
-<script src="/include.js" defer></script>
 </body>
 </html>
