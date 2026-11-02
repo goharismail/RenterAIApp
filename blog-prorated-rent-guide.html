@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4583731085701106" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-39KXXC0T3M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-39KXXC0T3M');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="I1Adk5jxUz4kvs1_zF7SIr129NJIUfysOiG0nAxhG-0" />
+<title>How to Calculate Prorated Rent: Formula, Examples &amp; Tips</title>
+<meta name="description" content="How to calculate prorated rent with a simple formula, worked examples for moving in or out mid-month, and a free calculator. Includes 3 day-count methods.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="How to Calculate Prorated Rent: Formula, Examples &amp; Tips">
+<meta property="og:description" content="How to calculate prorated rent with a simple formula, worked examples for moving in or out mid-month, and a free calculator. Includes 3 day-count methods.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.renteraiapp.com/blog-prorated-rent-guide">
+<link rel="canonical" href="https://www.renteraiapp.com/blog-prorated-rent-guide">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root { --bg: #0a0f1e; --surface: #111827; --accent: #3b82f6; --accent2: #60a5fa; --text: #f1f5f9; --text2: #94a3b8; --border: #1e293b; --success: #10b981; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); }
+  .article-hero { padding: 8rem 2rem 3rem; text-align: center; background: radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.1) 0%, transparent 60%); border-bottom: 1px solid var(--border); }
+  .article-cat { font-size: 0.8rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
+  .article-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 900; max-width: 800px; margin: 0 auto 1.2rem; line-height: 1.2; }
+  .article-meta { color: var(--text2); font-size: 0.85rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+  .article-body { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+  .article-body h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text); }
+  .article-body h3 { font-size: 1.1rem; font-weight: 600; margin: 1.8rem 0 0.7rem; color: var(--text); }
+  .article-body p { color: var(--text2); line-height: 1.85; margin-bottom: 1.2rem; font-size: 0.95rem; }
+  .article-body ul, .article-body ol { color: var(--text2); padding-left: 1.5rem; margin-bottom: 1.2rem; }
+  .article-body li { margin-bottom: 0.6rem; line-height: 1.7; font-size: 0.95rem; }
+  .article-body strong { color: var(--text); }
+  .article-body a { color: var(--accent); text-decoration: none; }
+  .highlight-box { background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.2); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+  .highlight-box p { margin: 0; color: var(--text); }
+  .warning-box { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.2); border-left: 4px solid #ef4444; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+  .warning-box p { margin: 0; color: #fca5a5; }
+  .success-box { background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.2); border-left: 4px solid var(--success); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+  .success-box p { margin: 0; color: #6ee7b7; }
+  .law-box { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+  .law-box h4 { color: var(--accent); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+  .law-box p { margin: 0; color: var(--text2); font-size: 0.9rem; line-height: 1.7; }
+  .checklist-box { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.8rem; margin: 2rem 0; }
+  .checklist-box h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin-bottom: 1rem; color: var(--accent); }
+  .checklist-box ul { list-style: none; padding: 0; }
+  .checklist-box li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); color: var(--text2); font-size: 0.9rem; display: flex; align-items: flex-start; gap: 0.8rem; line-height: 1.6; }
+  .checklist-box li:last-child { border-bottom: none; }
+  .checklist-box li::before { content: '☐'; color: var(--accent); font-size: 1rem; flex-shrink: 0; }
+  .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; margin: 3rem 0; text-align: center; }
+  .cta-box h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 0.7rem; }
+  .cta-box p { color: var(--text2); margin-bottom: 1.2rem; font-size: 0.9rem; }
+  .cta-btn { display: inline-block; background: var(--accent); color: #ffffff !important; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none !important; font-weight: 600; transition: all 0.2s; font-size: 0.95rem; }
+  .cta-btn:hover { background: var(--accent2); }
+  .faq-section { margin-top: 3rem; }
+  .faq-item { border: 1px solid var(--border); border-radius: 12px; margin-bottom: 0.8rem; overflow: hidden; }
+  .faq-q { padding: 1.1rem 1.3rem; font-weight: 600; font-size: 0.95rem; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--surface); }
+  .faq-q:hover { background: rgba(59,130,246,0.06); }
+  .faq-q span { color: var(--accent); font-size: 1.2rem; font-weight: 300; }
+  .faq-a { padding: 0 1.3rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s; }
+  .faq-a.open { max-height: 300px; padding: 1rem 1.3rem; }
+  .faq-a p { margin: 0; color: var(--text2); font-size: 0.9rem; line-height: 1.75; }
+  .disclaimer { background: rgba(245,158,11,0.05); border: 1px solid rgba(245,158,11,0.2); border-radius: 10px; padding: 1.2rem; margin-top: 3rem; font-size: 0.82rem; color: var(--text2); line-height: 1.7; }
+  .related-articles { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+  .related-articles h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 1.5rem; }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .related-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.2rem; text-decoration: none; color: var(--text); transition: all 0.2s; }
+  .related-card:hover { border-color: rgba(59,130,246,0.4); }
+  .related-card .cat { font-size: 0.75rem; color: var(--accent); margin-bottom: 0.5rem; }
+  .related-card .title { font-size: 0.9rem; font-weight: 600; line-height: 1.4; }
+</style>
+<style>
+  .article-body table { width:100%; border-collapse:collapse; margin:1.2rem 0; font-size:0.9rem; }
+  .article-body th, .article-body td { padding:0.7rem 0.6rem; border-bottom:1px solid var(--border); text-align:left; color:var(--text2); }
+  .article-body th { color:var(--text); font-weight:500; }
+  .article-body td strong { color:var(--text); }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Calculate Prorated Rent: Formula, Examples &amp; Tips",
+  "description": "How to calculate prorated rent with a simple formula, worked examples for moving in or out mid-month, and a free calculator. Includes 3 day-count methods.",
+  "url": "https://www.renteraiapp.com/blog-prorated-rent-guide",
+  "datePublished": "2026-10-29",
+  "dateModified": "2026-10-29",
+  "author": {
+    "@type": "Organization",
+    "name": "RenterAI Editorial Team",
+    "url": "https://www.renteraiapp.com/editorial-policy"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "RenterAI",
+    "url": "https://www.renteraiapp.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.renteraiapp.com/blog-prorated-rent-guide"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you calculate prorated rent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the monthly rent by the number of days in the month to get a daily rate, then multiply by the number of days you will occupy the home. For $1,800 rent and 12 days in a 31-day month, that is $1,800 ÷ 31 × 12 = $696.77."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is prorated rent calculated on 30 days or the actual days in the month?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the lease. Many use the actual days in the month, while some use a 30-day month or a 365-day year. The result can differ by a few dollars to a few dozen, so check which method your lease uses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to pay prorated rent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you move in or out in the middle of a month, you generally pay for the days you have the home, but how it is handled depends on your lease and landlord. Ask how the first or last month will be calculated and get it in writing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a security deposit prorated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deposits are usually charged in full rather than prorated, but your lease controls. Check your lease and ask your landlord."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the easiest way to calculate prorated rent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use a calculator. Our free Prorated Rent Calculator takes your rent and dates and shows the amount using actual days, a 30-day month or a 365-day year."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  :root { --bg:#0a0f1e; --surface:#111827; --surface2:#1a2234; --accent:#3b82f6; --accent2:#60a5fa; --text:#f1f5f9; --text2:#94a3b8; --border:#1e293b; --success:#10b981; --danger:#ef4444; --gold:#f59e0b; }
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:0.8rem 1.5rem; background:rgba(10,15,30,0.95); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; font-family:'DM Sans',sans-serif; }
+  .logo { font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:900; color:var(--text); text-decoration:none; }
+  .logo span { color:var(--accent); }
+  .nav-links { display:flex; gap:1.5rem; list-style:none; margin:0; padding:0; }
+  .nav-links a { color:var(--text2); text-decoration:none; font-size:0.88rem; transition:color 0.2s; white-space:nowrap; }
+  .nav-links a:hover, .nav-links a.active { color:var(--text); }
+  @media (max-width:640px) {
+    nav { flex-direction:column; align-items:center; padding:0.8rem 1rem; gap:0.6rem; }
+    .logo { font-size:1.4rem; }
+    .nav-links { gap:0.8rem; justify-content:center; flex-wrap:wrap; }
+    .nav-links a { font-size:0.8rem; }
+  }
+  .verify-box { background:rgba(59,130,246,0.06); border:1px solid rgba(59,130,246,0.25); border-radius:12px; padding:1.1rem 1.3rem; margin:2rem 0 1.2rem; font-size:0.88rem; line-height:1.7; color:var(--text2); }
+  .verify-box strong { color:var(--text); }
+  .verify-box a { color:var(--accent2); }
+  .verify-box p { margin:0.4rem 0 0; }
+</style>
+<style>
+  footer { padding:2rem; border-top:1px solid var(--border); text-align:center; color:var(--text2); font-size:0.85rem; font-family:'DM Sans',sans-serif; }
+  footer a { color:var(--text2); text-decoration:none; margin:0 0.8rem; white-space:nowrap; line-height:2; }
+  footer a:hover { color:var(--text); }
+  .footer-logo { font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:900; color:var(--text); margin-bottom:0.8rem; }
+  .footer-logo span { color:var(--accent); }
+  .footer-note { margin-top:1rem; font-size:0.78rem; opacity:0.8; }
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="logo">Renter<span>AI</span></a>
+  <ul class="nav-links">
+    <li><a href="/#tools" data-nav="tools">Tools</a></li>
+    <li><a href="/calculators" data-nav="calculators">Calculators</a></li>
+    <li><a href="/#how" data-nav="how">How It Works</a></li>
+    <li><a href="/blog" data-nav="blog" class="active" aria-current="page">Blog</a></li>
+    <li><a href="/about" data-nav="about">About</a></li>
+    <li><a href="/contact" data-nav="contact">Contact</a></li>
+  </ul>
+</nav>
+<div class="article-hero">
+  <div class="article-cat">🧮 Rent Math</div>
+  <h1 class="article-title">How to Calculate Prorated Rent: Formula, Examples &amp; Tips</h1>
+  <div class="article-meta">
+    <span>✍️ RenterAI Editorial Team</span>
+    <span>📅 October 2026</span>
+    <span>⏱️ 6 min read</span>
+    <span>🧮 Includes a free calculator</span>
+  </div>
+</div>
+<div class="article-body">
+  <p>Moving in on the 15th? Moving out on the 10th? Most leases run from the first of the month to the last, so a mid-month date means you pay for only part of a month. That partial payment is called prorated rent, and the math is simple once you see it laid out.</p>
+  <div class="highlight-box">
+    <p>🧮 <strong>Free Tool:</strong> Skip the arithmetic with our <a href="/prorated-rent-calculator">Prorated Rent Calculator</a>. Enter your rent and dates and it shows the amount and the steps.</p>
+  </div>
+  <h2>What Is Prorated Rent?</h2>
+  <p>Prorated rent is rent charged for part of a rental period instead of the whole period. It usually comes up in three situations: your lease starts in the middle of a month, your lease ends in the middle of a month, or you move in early or stay a few extra days. Instead of paying a full month, you pay for the days you actually have the home.</p>
+  <h2>The Prorated Rent Formula</h2>
+  <p>There are two steps:</p>
+  <p><strong>1. Daily rent = monthly rent ÷ number of days in the month</strong><br><strong>2. Prorated rent = daily rent × number of days you occupy the home</strong></p>
+  <p>The only part that varies is how the "number of days in the month" is counted, which we cover below.</p>
+  <h2>Example 1: Moving In Mid-Month</h2>
+  <p>Say your rent is $1,800 and you move in on March 20. March has 31 days, and counting March 20 through March 31 gives you 12 days.</p>
+  <table>
+    <tr><th>Step</th><th>Calculation</th><th>Result</th></tr>
+    <tr><td>Daily rent</td><td>$1,800 ÷ 31</td><td>$58.06</td></tr>
+    <tr><td>Days you occupy</td><td>March 20 to March 31</td><td>12 days</td></tr>
+    <tr><td><strong>Prorated rent</strong></td><td>$1,800 × 12 ÷ 31</td><td><strong>$696.77</strong></td></tr>
+  </table>
+  <p>On April 1 you would then pay the first full month of rent, so your first two payments are the prorated March amount and the full April rent.</p>
+  <h2>Example 2: Moving Out Mid-Month</h2>
+  <p>Say rent is $1,500 and your last day is June 10. June has 30 days, so the daily rent is $1,500 ÷ 30 = $50.00, and 10 days of June gives you $50.00 × 10 = <strong>$500.00</strong>.</p>
+  <h2>Three Ways Landlords Count Days</h2>
+  <p>Not every lease uses the actual number of days in the month. Using Example 1 ($1,800 rent, 12 days in March):</p>
+  <table>
+    <tr><th>Method</th><th>How it works</th><th>Result</th></tr>
+    <tr><td>Actual days in the month</td><td>$1,800 × 12 ÷ 31</td><td>$696.77</td></tr>
+    <tr><td>30-day month</td><td>$1,800 × 12 ÷ 30</td><td>$720.00</td></tr>
+    <tr><td>365-day year</td><td>$1,800 × 12 ÷ 365 × 12 days</td><td>$710.14</td></tr>
+  </table>
+  <p>The difference between methods is about $23 here. It is worth knowing which one your lease uses before you compare numbers.</p>
+  <h2>Does the Move-In Day Count?</h2>
+  <p>Many leases count the move-in day as a rented day, but some start charging the next day. In Example 1, not counting March 20 would make it 11 days instead of 12 and lower the prorated rent by about $58. Check the exact wording in your lease or ask your landlord how they count.</p>
+  <h2>Common Mistakes</h2>
+  <ul>
+    <li><strong>Using the wrong month length.</strong> February, April and 31-day months give different daily rates.</li>
+    <li><strong>Miscounting days.</strong> Count both the first and last day if your lease counts both.</li>
+    <li><strong>Forgetting other charges.</strong> A security deposit, pet fee or application fee is usually separate from prorated rent. Our <a href="/moving-cost-calculator">Moving and Move-In Cost Calculator</a> helps you add everything up.</li>
+    <li><strong>Assuming it is automatic.</strong> Some landlords prorate and some do not, so confirm before you sign.</li>
+  </ul>
+  <h2>Questions to Ask Your Landlord</h2>
+  <ul>
+    <li>How is the first (or last) partial month calculated?</li>
+    <li>Does the move-in or move-out day count?</li>
+    <li>When is the next full rent payment due?</li>
+    <li>Are deposits and fees charged in full?</li>
+  </ul>
+  <p>Get the answers and the final amount in writing, and keep a copy with your lease.</p>
+  <h2>Sharing the Place?</h2>
+  <p>If you split rent with roommates, proration can apply to each person's share. Use the <a href="/rent-split-calculator">Rent Split Calculator</a> for the monthly split, and see our guide on <a href="/blog-how-to-split-rent-fairly">how to split rent fairly</a>.</p>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do you calculate prorated rent?<span>+</span></div>
+      <div class="faq-a"><p>Divide the monthly rent by the number of days in the month to get a daily rate, then multiply by the number of days you will occupy the home. For $1,800 rent and 12 days in a 31-day month, that is $1,800 ÷ 31 × 12 = $696.77.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Is prorated rent calculated on 30 days or the actual days in the month?<span>+</span></div>
+      <div class="faq-a"><p>It depends on the lease. Many use the actual days in the month, while some use a 30-day month or a 365-day year. The result can differ by a few dollars to a few dozen, so check which method your lease uses.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Do I have to pay prorated rent?<span>+</span></div>
+      <div class="faq-a"><p>If you move in or out in the middle of a month, you generally pay for the days you have the home, but how it is handled depends on your lease and landlord. Ask how the first or last month will be calculated and get it in writing.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Is a security deposit prorated?<span>+</span></div>
+      <div class="faq-a"><p>Deposits are usually charged in full rather than prorated, but your lease controls. Check your lease and ask your landlord.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is the easiest way to calculate prorated rent?<span>+</span></div>
+      <div class="faq-a"><p>Use a calculator. Our free Prorated Rent Calculator takes your rent and dates and shows the amount using actual days, a 30-day month or a 365-day year.</p></div>
+    </div>
+  </div>
+<div class="verify-box">
+  <strong>📌 Verify before you act</strong>
+  <p>This guide is general information, not financial or legal advice. Your lease and local rules control what you owe, so confirm important amounts with your landlord or a qualified professional. See how we research and check our guides in our <a href="/editorial-policy">Editorial Policy</a>.</p>
+</div>
+<div class="disclaimer">
+    ⚠️ <strong>Disclaimer:</strong> This article is for general informational purposes only and does not constitute legal or financial advice. The examples use round numbers for illustration.
+  </div>
+  <div class="related-articles">
+    <h2>Related Articles</h2>
+    <div class="related-grid">
+      <a href="/prorated-rent-calculator" class="related-card"><div class="cat">🧮 Calculator</div><div class="title">Prorated Rent Calculator</div></a>
+      <a href="/blog-move-in-checklist" class="related-card"><div class="cat">🏠 Lease Guide</div><div class="title">Move-In Checklist for Renters</div></a>
+      <a href="/moving-cost-calculator" class="related-card"><div class="cat">📦 Calculator</div><div class="title">Moving and Move-In Cost Calculator</div></a>
+      <a href="/blog-how-to-read-lease" class="related-card"><div class="cat">📄 Lease Guide</div><div class="title">How to Read a Lease Agreement</div></a>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-logo">Renter<span>AI</span></div>
+  <div>
+    <a href="/">Home</a>
+    <a href="/blog">Blog</a>
+    <a href="/calculators">Calculators</a>
+    <a href="/about">About</a>
+    <a href="/editorial-policy">Editorial Policy</a>
+    <a href="/contact">Contact</a>
+    <a href="/privacy">Privacy Policy</a>
+    <a href="/terms">Terms of Service</a>
+    <a href="/cookies">Cookie Policy</a>
+  </div>
+  <p class="footer-note">RenterAI provides general information and tools for renters. It is not legal advice.</p>
+  <p style="margin-top:0.6rem;">© 2026 RenterAI. All rights reserved.</p>
+</footer>
+<script>
+  function toggleFaq(el) {
+    const answer = el.nextElementSibling;
+    const icon = el.querySelector('span');
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-q span').forEach(s => s.textContent = '+');
+    if (!isOpen) { answer.classList.add('open'); icon.textContent = '−'; }
+  }
+</script>
+</body>
+</html>
